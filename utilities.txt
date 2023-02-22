@@ -1,0 +1,9 @@
+$primary: #C4A1F0,
+$secondary: #333,
+$background:#EAEAEA,
+$sometextcolor: #555,
+$size: 1rem,
+$pad: 2rem,
+
+
+
