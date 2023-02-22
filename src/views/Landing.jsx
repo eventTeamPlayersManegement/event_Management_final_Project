@@ -2,7 +2,9 @@ import React from 'react'
 
 function Landing() {
   return (
-    <div>Landing Page</div>
+    <div>
+      <h1>Event Management</h1>
+    </div>
   )
 }
 
