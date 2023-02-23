@@ -4,20 +4,12 @@ import navItems from "./content/data.json";
 import About from "./views/About.jsx";
 import { Route, Routes } from "react-router-dom";
 import Services from "./views/Services.jsx";
-import Suppliers from "./views/Suppliers.jsx";
-import Contact from "./views/Contact.jsx";
-import Login from "./views/Login.jsx";
-import Register from "./views/Register.jsx";
-import Chat from "./views/Chat.jsx";
-import Dashbord from "./views/Dashbord.jsx";
-import Page404 from "./views/Page404.jsx";
-import Invoice from "./views/Invoice.jsx";
-import Payment from "./components/Payment/Index.jsx";
 
 function App() {
   return (
     <div className="App">
-      <h1>Event Management</h1>
+      <Header />
+
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
