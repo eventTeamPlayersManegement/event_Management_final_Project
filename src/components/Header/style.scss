@@ -6,15 +6,10 @@ $size: 1rem;
 $pad: 2rem;
 
 .header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  background-color: rgb(189, 189, 189);
+  background: transparent;
 
   .nav {
-    height: calc((3rem) + 1.5rem);
+    height: calc(3rem + 1.5rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
