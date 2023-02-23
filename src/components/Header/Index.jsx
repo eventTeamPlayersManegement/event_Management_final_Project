@@ -16,7 +16,7 @@ export default function Header() {
             return (
               <ul className="nav__list">
                 <li className="nav__item" key={el}>
-                  <Link to={el.id} className="nav__link">
+                  <Link to={el} className="nav__link">
                     {el}
                   </Link>
                 </li>
@@ -28,6 +28,10 @@ export default function Header() {
             className="uil uil-times-circle nav__close"
             onClick={() => setToggle(!toggle)}
           ></i>
+        </div>
+        <div>
+          <i className="uil uil-signin"></i>
+          <i className="uil uil-comment-message"></i>
         </div>
         <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
           <i className="uil uil-bars nav__icon"></i>
