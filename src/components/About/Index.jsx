@@ -5,25 +5,22 @@ import about from "../../content/data.json";
 export default function About() {
   return (
     <div className="about">
-      <h1 className="about__title">{about.aboutUs.map((el) => el.title)}</h1>
+      <h1 className="about__title">{about.aboutUs[0].title}</h1>
 
       <section className="about__description">
-        {about.aboutUs.map((el) => el.description)}
-      </section>
-      <section className="about__image-title">
-        {about.aboutUs.map((el) => (
-          <img src={el.image} alt="" />
-        ))}
-      </section>
-      <section className="about__text">
-        {about.aboutUs.map((el) => (
-          <p>{el.text}</p>
-        ))}
-      </section>
-      <section className="about__images">
-        {about.aboutUs.map((el) => (
-          <img src={el.url} alt="" />
-        ))}
+        <>
+          <p>{about.aboutUs[0].description}</p>
+          <img
+            className="about__image"
+            src={about.aboutUs[0].image}
+            alt="married"
+          />
+          <p className="about__text">{about.aboutUs[0].text}</p>
+          <div className="about__images">
+            <img src={about.aboutUs[0].url1} alt="" />
+            <img src={about.aboutUs[0].url2} alt="" />
+          </div>
+        </>
       </section>
     </div>
   );
