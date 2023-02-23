@@ -29,6 +29,10 @@ export default function Header() {
             onClick={() => setToggle(!toggle)}
           ></i>
         </div>
+        <div>
+          <i className="uil uil-signin"></i>
+          <i className="uil uil-comment-message"></i>
+        </div>
         <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
           <i className="uil uil-bars nav__icon"></i>
         </div>
