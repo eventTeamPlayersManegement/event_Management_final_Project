@@ -12,12 +12,12 @@ export default function Header() {
           LOGO
         </a>
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
-          {navitems.navItems.map((el) => {
+          {navitems.navItems.map((el, i) => {
             return (
               <ul className="nav__list">
-                <li className="nav__item" key={el}>
-                  <Link to={el} className="nav__link">
-                    {el}
+                <li className="nav__item" key={i}>
+                  <Link to={`/${el}`} className="nav__link">
+                    {el.charAt(0).toUpperCase() + el.slice(1)}
                   </Link>
                 </li>
               </ul>
