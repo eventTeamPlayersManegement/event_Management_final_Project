@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Event Management</h1>
 
       <Routes>
         <Route path="/" element={<Landing />} />

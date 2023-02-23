@@ -16,7 +16,7 @@ export default function Header() {
             return (
               <ul className="nav__list">
                 <li className="nav__item" key={el}>
-                  <Link to={el.id} className="nav__link">
+                  <Link to={`/${el}`} className="nav__link">
                     {el}
                   </Link>
                 </li>
