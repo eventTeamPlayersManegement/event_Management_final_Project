@@ -1,3 +1,9 @@
 {
-  "navItems": ["about", "services", "suppliers", "contact"]
+    "navItems": ["about", "services", "suppliers", "contact"],
+    "payment": {
+        "h1": "Payment",
+        "h2": "Payment Methods",
+
+        "paragraph": ["Your invoice", "Total", "3247€", "Paypal", "MasterCard"]
+    }
 }

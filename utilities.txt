@@ -6,4 +6,138 @@ $size: 1rem,
 $pad: 2rem,
 
 
+{
+  "tutorial": {
+    "title": [
+      "Learn useState In 15 Minutes",
+      "Learn useEffect In 13 Minutes",
+      "Learn useMemo In 10 Minutes",
+      "Learn useRef in 11 Minutes     ",
+      "Learn useContext In 13 Minutes"
+    ],
+    "link": [
+      "O6P86uwfdR0",
+      "0ZJgIjIuY7U",
+      "THL1OPn72vo",
+      "t2ypzz6gJm0",
+      "5LrDIWkK_Bc"
+    ]
+  },
+
+  "navItems": ["react", "docs", "tutorial", "subscription", "contacts"],
+
+  "docs": [
+    {
+      "title": "Try React",
+      "description": "React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started."
+    },
+    {
+      "title": "Online Playgrounds",
+      "description": "If you're interested in playing around with React, you can use an online code playground. Try a Hello World template on CodePen, CodeSandbox, or Stackblitz.If you prefer to use your own text editor, you can also download this HTML file, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we'd only recommend using this for simple demos."
+    },
+    {
+      "title": "Add React to a Website",
+      "description": "You can add React to an HTML page in one minute. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets."
+    },
+    {
+      "title": "Create a New React App",
+      "description": "When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!.As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. Learn how."
+    },
+    {
+      "title": "Learn React",
+      "description": "People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you'll find this section helpful.If you prefer to learn by doing, start with our practical tutorial.If you prefer to learn concepts step by step, start with our guide to main concepts.Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it."
+    },
+    {
+      "title": "First Examples",
+      "description": "The React homepage contains a few small React examples with a live editor. Even if you don't know anything about React yet, try changing their code and see how it affects the result."
+    },
+    {
+      "title": "React for Beginners",
+      "description": "If you feel that the React documentation goes at a faster pace than you’re comfortable with, check out this overview of React by Tania Rascia. It introduces the most important React concepts in a detailed, beginner-friendly way. Once you’re done, give the documentation another try!"
+    },
+    {
+      "title": "React for Designers",
+      "description": "If you're coming from a design background, these resources are a great place to get started."
+    },
+    {
+      "title": "JavaScript Resources",
+      "description": "The React documentation assumes some familiarity with programming in the JavaScript language. You don't have to be an expert, but it’s harder to learn both React and JavaScript at the same time.We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React."
+    },
+    {
+      "title": "Practical Tutorial",
+      "description": "If you prefer to learn by doing, check out our practical tutorial. In this tutorial, we build a tic-tac-toe game in React. You might be tempted to skip it because you’re not into building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React apps, and mastering it will give you a much deeper understanding."
+    },
+    {
+      "title": "Step-by-Step Guide",
+      "description": "If you prefer to learn concepts step by step, our guide to main concepts is the best place to start. Every next chapter in it builds on the knowledge introduced in the previous chapters so you won’t miss anything as you go along."
+    },
+    {
+      "title": "Thinking in React",
+      "description": "Many React users credit reading Thinking in React as the moment React finally “clicked” for them. It’s probably the oldest React walkthrough but it’s still just as relevant."
+    },
+    {
+      "title": "Recommended Courses",
+      "description": "Sometimes people find third-party books and video courses more helpful than the official documentation. We maintain a list of commonly recommended resources, some of which are free"
+    },
+    {
+      "title": "Advanced Concepts",
+      "description": "Once you’re comfortable with the main concepts and played with React a little bit, you might be interested in more advanced topics. This section will introduce you to the powerful, but less commonly used React features like context and refs."
+    },
+    {
+      "title": "API Reference",
+      "description": "This documentation section is useful when you want to learn more details about a particular React API. For example, React.Component API reference can provide you with details on how setState() works, and what different lifecycle methods are useful for."
+    },
+    {
+      "title": "Glossary and FAQ",
+      "description": "The glossary contains an overview of the most common terms you’ll see in the React documentation. There is also a FAQ section dedicated to short questions and answers about common topics, including making AJAX requests, component state, and file structure."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Free",
+      "text1": "10 Questions monthly",
+      "text2": "Avaible :",
+      "text2a": "Mo-Fr 09.00-12.00",
+      "text3": ["Basics", "Operators", "OneHook"]
+    },
+    {
+      "title": "On demand",
+      "text1": "$0.1 per Question",
+      "text2": "Avaible :",
+      "text2a": "Mo-Fr 09.00-18.00",
+      "text3": ["Basics", "Hooks", "Components"]
+    },
+    {
+      "title": "Vip/Pro",
+      "text1": "$9.99 per Month",
+      "text2": "Avaible : ",
+      "text2a": "24/7",
+      "text3": ["CustomHooks", "Insider", "Components"]
+    }
+  ],
+  "home": {
+    "h1": "Welcome to Hackerteam, the platform to learn React",
+    "h2": "Answers to most frequent asked questions",
+
+    "paragraph": [
+      [
+        "Why use React instead of Javascript?",
+        "Depending on the task, React can be helpfull when creating a large aplication with multiple components. React uses something called the virtual DOM (Document Object Model) a copy of the real DOM, and then only update the componends wich have been changed, in contrast to the entire DOM. This allows the rendering process to take less time and be efficient."
+      ],
+      [
+        "How does one go about creating a react app?",
+        "Download NodeJS from official website: https://nodejs.org/en/",
+        "Install text editor i.e. Visual-Studio-Code",
+        "Write in Terminal: create-react-app my-react-app"
+      ],
+      [
+        "Is there a dissadvantage to using React?",
+        "A drawback could be the constand need to relearn how to work with React since it is always changes. But this depends more on the developers attitude towards keeping up with each iteration."
+      ]
+    ]
+  }
+}
+
+
+
 
