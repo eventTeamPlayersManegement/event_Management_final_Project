@@ -15,8 +15,17 @@ $pad: 2rem;
     align-items: center;
     column-gap: 1rem;
 
+    .nav__icons {
+      color: $primary;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+
     .nav__logo {
       font-size: 20px;
+      width: 80px;
+      height: 80px;
     }
 
     .nav__menu {
@@ -31,6 +40,11 @@ $pad: 2rem;
 
         .nav__link {
           text-decoration: none;
+          color: $primary;
+          font-weight: 600;
+          font-size: 1rem;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
         }
       }
     }
@@ -85,8 +99,10 @@ $pad: 2rem;
 
       font-size: 1.5rem;
       cursor: pointer;
+      margin-right: 0px;
       .nav__icon {
         display: block;
+        color: $primary;
       }
     }
 
