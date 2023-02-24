@@ -1,3 +1,21 @@
 {
-  "navItems": ["about", "services", "suppliers", "contact"]
+  "navItems": ["about", "services", "suppliers", "contact"],
+  "authData": {
+    "login": {
+      "fields": {
+        "email": "email",
+        "password": "password"
+      },
+      "submit": "signin"
+    },
+    "register": {
+      "fields": {
+        "firstName": "text",
+        "lastName": "text",
+        "email": "email",
+        "password": "password"
+      },
+      "submit": "signup"
+    }
+  }
 }

@@ -17,6 +17,9 @@ $pad: 2rem;
 
     .nav__logo {
       font-size: 20px;
+      .logo {
+        width: calc($size * 6);
+      }
     }
     // für nav__list akseptiert nicht mein Style
     .nav__menu {
@@ -52,7 +55,6 @@ $pad: 2rem;
   .header {
     .nav {
       .nav__menu {
-        // background color: covers navigation
         position: fixed;
         width: 100%;
         height: 100%;
