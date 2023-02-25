@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 
 export default function Header() {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   return (
     <header className="header">
       <nav className="nav container">
@@ -15,7 +15,11 @@ export default function Header() {
           {navitems.navItems.map((el, i) => {
             return (
               <ul className="nav__list">
-                <li className="nav__item" key={i}>
+                <li
+                  className="nav__item"
+                  key={i}
+                  onClick={() => setToggle(!toggle)}
+                >
                   <Link to={`/${el}`} className="nav__link">
                     {el.charAt(0).toUpperCase() + el.slice(1)}
                   </Link>
@@ -23,6 +27,7 @@ export default function Header() {
               </ul>
             );
           })}
+
           <i
             className="uil uil-times-circle nav__close"
             onClick={() => setToggle(!toggle)}
