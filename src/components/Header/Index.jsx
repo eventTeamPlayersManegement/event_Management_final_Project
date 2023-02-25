@@ -23,12 +23,12 @@ export default function Header() {
               </ul>
             );
           })}
-
           <i
             className="uil uil-times-circle nav__close"
             onClick={() => setToggle(!toggle)}
           ></i>
         </div>
+
         <div className="nav__icons">
           <i className="uil uil-signin"></i>
           <i className="uil uil-comment-message"></i>
