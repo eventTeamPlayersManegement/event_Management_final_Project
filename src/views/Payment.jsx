@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Payment from "../components/Payment";
+import Button from "../components/Button";
 
-function Payment() {
-  return (
-    <div>Payment</div>
-  )
+export default function () {
+    return (
+        <>
+            <Payment />
+            <Button label="Pay now" />
+        </>
+    );
 }
-
-export default Payment

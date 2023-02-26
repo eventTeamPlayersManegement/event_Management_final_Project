@@ -12,7 +12,7 @@ import Auth from "./views/Auth.jsx";
 import Chat from "./views/Chat.jsx";
 import Dashbord from "./views/Dashbord.jsx";
 import Invoice from "./views/Invoice.jsx";
-import Payment from "./components/Payment/Index.jsx";
+import Payment from "./views/Payment";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Toaster position="top-right" />
+      {/* <Toaster position="top-right" /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
