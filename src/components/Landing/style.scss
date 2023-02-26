@@ -1,6 +1,25 @@
-$primary: #9962d7;
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+$primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+
+.landingPageContainer {
+  background-color: $secondary;
+  display: grid;
+  grid-template-rows: repeat(1fr, 3);
+  .landingImg {
+    width: 390px;
+    filter: blur(1.3px);
+  }
+  .moto {
+    text-align: center;
+    font-family: "Italianno", cursive;
+    color: $primary;
+    font-size: calc($pad * 1.2);
+    padding: $pad 0 $pad 0;
+  }
+}

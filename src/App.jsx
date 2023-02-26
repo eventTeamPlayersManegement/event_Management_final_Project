@@ -15,6 +15,7 @@ import Invoice from "./views/Invoice.jsx";
 import Payment from "./components/Payment/Index.jsx";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer/Index.jsx";
 function App() {
   return (
     <div className="App">
@@ -40,6 +41,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

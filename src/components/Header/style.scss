@@ -1,4 +1,4 @@
-$primary: #9962d7;
+$primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
 $sometextcolor: #555;
@@ -6,7 +6,7 @@ $size: 1rem;
 $pad: 2rem;
 
 .header {
-  background: transparent;
+  background: $secondary;
 
   .nav {
     height: calc(3rem + 1.5rem);
@@ -28,9 +28,15 @@ $pad: 2rem;
 
       .nav__list {
         list-style-type: none;
+        padding-right: calc($pad / 2);
       }
       .nav__item {
         text-decoration: none;
+        a {
+          color: $primary;
+          font-size: calc($size * 1.2);
+          font-weight: 900;
+        }
 
         .nav__link {
           text-decoration: none;
@@ -88,6 +94,7 @@ $pad: 2rem;
       cursor: pointer;
       .nav__icon {
         display: block;
+        color: $primary;
       }
     }
 
