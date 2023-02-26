@@ -17,5 +17,12 @@
       },
       "submit": "signup"
     }
+  },
+  "landingText": {
+    "wish": "Your Event, Your Wish",
+    "our": "Our Pleasure"
+  },
+  "footer": {
+    "copyright": "Copyright @ Event Elite Planners 2023"
   }
 }

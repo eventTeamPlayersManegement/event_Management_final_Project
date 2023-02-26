@@ -1,0 +1,17 @@
+$primary: #9505e3;
+$secondary: #333;
+$background: #eaeaea;
+$sometextcolor: #666;
+$size: 1rem;
+$pad: 2rem;
+
+.footer {
+  background-color: transparent;
+  text-align: center;
+  padding: calc($pad / 2);
+  background-color: $secondary;
+  .footerContent {
+    color: $sometextcolor;
+    font-size: calc($size);
+  }
+}
