@@ -4,75 +4,51 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
-
-.nav__logo {
-  font-size: 20px;
-  width: 80px;
-  height: 80px;
+.header {
+  background-color: $secondary;
+  .nav__logo {
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
-
 .nav {
   height: calc((3rem) + 1.5rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
+  gap: 1rem;
   .nav__menu {
     display: flex;
-    column-gap: 2rem;
-
-    .nav__logo {
-      font-size: 20px;
-      .logo {
-        width: calc($size * 6);
-      }
-    }
-    // für nav__list akseptiert nicht mein Style
-    .nav__menu {
-      display: flex;
-      column-gap: 2rem;
-
-      .nav__list {
-        list-style-type: none;
-        padding-right: calc($pad / 2);
-      }
-      .nav__item {
+    gap: 2rem;
+    .nav__item {
+      list-style-type: none;
+      .nav__link {
+        color: $primary;
+        font-size: calc($pad * 0.7);
+        font-weight: 900;
         text-decoration: none;
-        a {
-          color: $primary;
-          font-size: calc($size * 1.2);
-          font-weight: 900;
-        }
-
-        .nav__link {
-          text-decoration: none;
-        }
       }
     }
-    .nav__link {
-      text-decoration: none;
-      color: $primary;
-      font-weight: 600;
-      font-size: 1rem;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    }
-  }
-  .nav__icons {
-    color: $primary;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
   }
 
-  .nav__logo,
-  .nav__toggle {
-    color: rgb(34, 28, 28);
-    font-weight: 500;
+  .nav__icons {
+    display: flex;
+    gap: $size;
+    color: $primary;
+    font-size: calc($pad * 0.75);
+    padding-right: $size;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .nav__icon,
   .nav__close,
-  .nav__toggle {
+  .logo {
     display: none;
   }
 }
@@ -80,7 +56,6 @@ $pad: 2rem;
 @media screen and (max-width: 550px) {
   .header {
     .nav {
-      height: 3rem;
       .nav__menu {
         position: fixed;
         bottom: -100%;
@@ -93,46 +68,58 @@ $pad: 2rem;
 
       .show-menu {
         top: 0;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: $pad;
         padding-top: 100px;
+        z-index: 100;
+        background-color: $secondary;
+        .logo {
+          display: block;
+          width: 350px;
+          // filter: blur(1px);
+        }
 
-        .nav__list {
-          .nav__item {
-            .nav__link {
-              justify-content: center;
-              font-size: 18px;
-              font-family: "Roboto", sans-serif;
-              top: 10px;
-            }
+        .nav__item {
+          list-style-type: none;
+
+          .nav__link {
+            justify-content: center;
+            font-size: calc($pad * 0.75);
+            top: 10px;
           }
+        }
+        .nav__close {
+          display: inline;
+          position: absolute;
+          right: 20px;
+          top: 0.5rem;
+          font-size: calc($pad * 0.75);
+          cursor: pointer;
+          color: $primary;
         }
       }
 
-      .nav__icon {
-        font-size: 1.2rem;
-      }
-      .nav__close {
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: $primary;
+      .nav__icons {
+        font-size: calc($pad * 0.75);
+        display: flex;
+        gap: calc($size / 2);
+        padding-right: $size;
       }
     }
     .nav__toggle {
       display: block;
       display: flex;
-      font-size: 1.5rem;
+      font-size: calc($pad * 0.75);
       cursor: pointer;
       .nav__icon {
         display: block;
         color: $primary;
+        font-size: calc($pad * 0.75);
       }
 
       .nav__icon,
-      .nav__close,
       .nav__toggle {
         display: block;
       }
