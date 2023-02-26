@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Toaster position="top-right" /> */}
+      <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
