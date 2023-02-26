@@ -1,0 +1,47 @@
+$primary: #9505e3;
+$secondary: #333;
+$background: #eaeaea;
+$sometextcolor: #666;
+$size: 1rem;
+$pad: 2rem;
+.formContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    color: $primary;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $size;
+    .input {
+      outline: none;
+      border: none;
+      background: inherit;
+      border-bottom: 1px solid $sometextcolor;
+      padding: calc($pad / 5);
+      font-size: $size;
+    }
+  }
+  .logo {
+    position: absolute;
+    bottom: -25px;
+    width: 300px;
+    filter: blur(1.5px);
+  }
+  .routeText {
+    padding: calc($pad / 3);
+    color: $sometextcolor;
+    font-size: calc($size / 1.1);
+    a {
+      font-weight: 900;
+      text-decoration: none;
+    }
+  }
+}

@@ -8,3 +8,7 @@ Vaso: Navigation Frontend, Aboutus data erstellen einfügen, kontakt us frontend
 Vladisalva: Text auf AboutUs Seite/ Backstory
 Leo: Payment seite und Suppieres
 Marcel: Backend Signin Login cookies,
+
+# run npm i
+
+# run "npm run dev"
