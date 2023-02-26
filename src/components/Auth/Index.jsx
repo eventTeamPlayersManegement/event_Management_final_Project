@@ -2,6 +2,10 @@ import { useState } from "react";
 import Input from "./Input.jsx";
 import toast from "react-hot-toast";
 import { NavLink } from "react-router-dom";
+import "./style.scss";
+import CustomButton from "../lib/CustomButton.jsx";
+import logo from "../../assets/Logo.svg";
+
 export default function Index({ data }) {
   const INITIAL = Object.keys(data.fields).reduce((acc, el) => {
     acc[el] = "";
@@ -43,9 +47,18 @@ export default function Index({ data }) {
         }
       });
   };
+  const capitalize = (str) => {
+    const result =
+      str[0].toUpperCase() +
+      str.slice(1, -2) +
+      str[str.length - 2].toUpperCase() +
+      str.slice(-1);
+    return result;
+  };
   return (
     <div className="formContainer">
-      <h1>{data.submit}</h1>
+      <img className="logo" src={logo} alt="logo" />
+      <h1>{capitalize(data.submit)}</h1>
       <form className="form" onSubmit={handleSubmit}>
         {Object.keys(data.fields).map((el, id) => (
           <Input
@@ -55,11 +68,19 @@ export default function Index({ data }) {
             dataUser={dataUser}
           />
         ))}
-        <button>{data.submit}</button>
+        <CustomButton
+          submit={capitalize(data.submit)}
+          style={"customBtnDefault"}
+        />
       </form>
-      <NavLink to={data.submit === "signin" ? "/signup" : "/signin"}>
-        Go to the {data.submit === "signin" ? "signup" : "signin"}
-      </NavLink>
+      <p className="routeText">
+        {data.submit === "register"
+          ? "Have already an account"
+          : "Create an account"}{" "}
+        <NavLink to={data.submit === "signin" ? "/signup" : "/signin"}>
+          {data.submit === "signup" ? "SignIn" : "SignUp"}
+        </NavLink>
+      </p>
     </div>
   );
 }

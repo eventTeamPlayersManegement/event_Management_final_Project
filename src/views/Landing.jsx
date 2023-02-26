@@ -1,11 +1,7 @@
-import React from "react";
+import Index from "../components/Landing/Index.jsx";
 
 function Landing() {
-  return (
-    <div>
-      <h1>Landing Page</h1>
-    </div>
-  );
+  return <Index />;
 }
 
 export default Landing;
