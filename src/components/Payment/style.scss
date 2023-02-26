@@ -4,3 +4,21 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+
+.page-title {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+  margin: 2em;
+  &:last-of-type {
+    color: $sometextcolor;
+  }
+}
+.page-paragraph {
+  margin-right: 4rem;
+  text-align: end;
+  padding-top: 2em;
+  &:first-of-type {
+    color: $sometextcolor;
+  }
+}

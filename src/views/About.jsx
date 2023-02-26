@@ -1,7 +1,10 @@
 import React from "react";
+import About from "../components/About/Index.jsx";
 
-function About() {
-  return <div></div>;
+export default function () {
+  return (
+    <div>
+      <About />
+    </div>
+  );
 }
-
-export default About;
