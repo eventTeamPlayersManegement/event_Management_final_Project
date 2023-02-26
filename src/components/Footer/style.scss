@@ -11,6 +11,6 @@ $pad: 2rem;
   background-color: $secondary;
   .footerContent {
     color: $sometextcolor;
-    font-size: calc($size);
+    font-size: calc($size / 1.3);
   }
 }
