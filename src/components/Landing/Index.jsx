@@ -6,15 +6,15 @@ import "./style.scss";
 export default function Landing() {
   return (
     <div className="landingPageContainer">
-      <div>
-        <img className="landingImg" src={img1} alt="happycouple" />
+      <div className="landingImg">
+        <img src={img1} alt="happycouple" />
       </div>
       <div className="moto">
         <p>{data.landingText.wish}</p>
         <p>{data.landingText.our}</p>
       </div>
-      <div>
-        <img className="landingImg" src={img2} alt="decor" />
+      <div className="landingImg">
+        <img src={img2} alt="decor" />
       </div>
     </div>
   );
