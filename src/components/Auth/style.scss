@@ -1,6 +1,43 @@
-$primary: #c4a1f0;
+$primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
-$sometextcolor: #555;
+$sometextcolor: #666;
 $size: 1rem;
 $pad: 2rem;
+.formContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    color: $primary;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $size;
+    .input {
+      outline: none;
+      border: none;
+      background: inherit;
+      border-bottom: 1px solid $sometextcolor;
+      padding: calc($pad / 4);
+      font-size: calc($size * 1.1);
+    }
+  }
+  .logo {
+    position: absolute;
+    bottom: 10px;
+    width: 300px;
+    filter: blur(1.5px);
+  }
+  .routeText {
+    padding: calc($pad / 3);
+    color: $sometextcolor;
+    font-size: calc($size / 1.1);
+  }
+}
