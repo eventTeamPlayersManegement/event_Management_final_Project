@@ -4,3 +4,25 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+
+.title {
+  margin: 0 auto;
+  font-size: 1.5rem;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.input-select-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: center;
+  width: 100%;
+
+  #option-select {
+    width: 300px;
+    outline: none;
+    border: none;
+    background: inherit;
+    border-bottom: 1px solid $sometextcolor;
+  }
+}
