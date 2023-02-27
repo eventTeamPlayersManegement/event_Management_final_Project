@@ -1,23 +1,6 @@
 {
   "navItems": ["about", "services", "suppliers", "contact"],
-  "payment": {
-    "h1": "Payment",
-    "h2": "Payment Methods",
 
-    "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
-  },
-
-  "aboutUs": [
-    {
-      "title": "About Us",
-      "description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu velit sit amet urna tincidunt egestas eu eget arcu. Maecenas elementum malesuada neque vitae tempus. Vivamus elementum orci ac ullamcorper tristique. In hac habitasse platea dictumst. Nulla aliquam risus eget neque viverra iaculis. Pellentesque dapibus quam molestie, accumsan tortor eu, gravida augue. Sed dignissim, nisl non egestas aliquet, purus ante mattis enim, et venenatis odio neque id turpis. Praesent vitae mi auctor, varius enim a, lacinia massa. Vivamus imperdiet nibh ac volutpat aliquet. Nunc venenatis est non lorem dignissim tempus. Vivamus et tempor dui. Nunc non arcu eu urna interdum ullamcorper pulvinar eu turpis. Pellentesque maximus ligula vitae lectus malesuada placerat. Aliquam tortor velit, molestie sit amet pretium nec, semper egestas eros. Nam eu est ipsum. ",
-      "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "url1": "https://images.unsplash.com/photo-1553710120-23dd1551da41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1130&q=80",
-      "url2": "https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-
-      "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
-    }
-  ],
   "contactUs": ["Contact Us"],
   "authData": {
     "login": {
@@ -42,6 +25,24 @@
     "our": "Our Pleasure"
   },
   "footer": {
-    "copyright": "Copyright @ Event Elite Planners 2023"
-  }
+    "copyright": "Copyright @ 2023 Event Elite Planners "
+  },
+  "payment": {
+    "h1": "Payment",
+    "h2": "Payment Methods",
+
+    "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
+  },
+
+  "aboutUs": [
+    {
+      "title": "About Us",
+      "description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu velit sit amet urna tincidunt egestas eu eget arcu. Maecenas elementum malesuada neque vitae tempus. Vivamus elementum orci ac ullamcorper tristique. In hac habitasse platea dictumst. Nulla aliquam risus eget neque viverra iaculis. Pellentesque dapibus quam molestie, accumsan tortor eu, gravida augue. Sed dignissim, nisl non egestas aliquet, purus ante mattis enim, et venenatis odio neque id turpis. Praesent vitae mi auctor, varius enim a, lacinia massa. Vivamus imperdiet nibh ac volutpat aliquet. Nunc venenatis est non lorem dignissim tempus. Vivamus et tempor dui. Nunc non arcu eu urna interdum ullamcorper pulvinar eu turpis. Pellentesque maximus ligula vitae lectus malesuada placerat. Aliquam tortor velit, molestie sit amet pretium nec, semper egestas eros. Nam eu est ipsum. ",
+      "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "url1": "https://images.unsplash.com/photo-1553710120-23dd1551da41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1130&q=80",
+      "url2": "https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+
+      "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
+    }
+  ]
 }

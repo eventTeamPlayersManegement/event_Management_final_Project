@@ -6,12 +6,14 @@ $size: 1rem;
 $pad: 2rem;
 
 .footer {
-  background-color: transparent;
   text-align: center;
   padding: calc($pad / 2);
   background-color: $secondary;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   .footerContent {
     color: $sometextcolor;
-    font-size: calc($size);
+    font-size: calc($size / 1.3);
   }
 }
