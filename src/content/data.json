@@ -34,15 +34,15 @@
         "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
     },
     "invoice": {
-        "h2": "Your desire - Our pleasure",
+        "h2": ["Your desire - Our pleasure", "Your wishes"],
 
         "paragraph": [
-            "Your wishes",
             "Photographer",
             "Flower decoration",
             "Church expenses",
             "band"
-        ]
+        ],
+        "costs": ["2000€", "100€", "200€", "3000€"]
     },
 
     "aboutUs": [

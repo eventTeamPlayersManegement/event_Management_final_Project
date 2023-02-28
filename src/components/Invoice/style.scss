@@ -4,3 +4,24 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.heading {
+    margin: 2em;
+}
+.article-invoice {
+    height: 20em;
+    width: 80vw;
+    flex-direction: column;
+    background-color: #9962d7;
+    border-radius: $pad + 3;
+
+    & .list-item {
+        list-style-type: none;
+        padding: $pad;
+    }
+}
