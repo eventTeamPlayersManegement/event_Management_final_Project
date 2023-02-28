@@ -37,12 +37,9 @@
         "h2": ["Your desire - Our pleasure", "Your wishes"],
 
         "paragraph": [
-            "Photographer",
-            "Flower decoration",
-            "Church expenses",
-            "band"
-        ],
-        "costs": ["2000€", "100€", "200€", "3000€"]
+            { "name": "Photographer", "price": "2000€" },
+            { "name": "Catering", "price": "3000€" }
+        ]
     },
 
     "aboutUs": [
