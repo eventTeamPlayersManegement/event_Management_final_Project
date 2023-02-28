@@ -52,7 +52,8 @@
       "select2": "Select Location",
       "select3": "Select Date",
       "select4": "Select Space Preference",
-      "select5": "Select Deckor, Select Entertainment"
+      "select5": "Select Deckor",
+      "select6": "Select Entertainment"
     },
     "options": {
       "option1": "Birthday",

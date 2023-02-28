@@ -8,7 +8,7 @@ $pad: 2rem;
 .title {
   margin: 0 auto;
   font-size: 1.5rem;
-
+  margin-bottom: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .input-select-container {
@@ -17,12 +17,34 @@ $pad: 2rem;
   margin-bottom: 1rem;
   align-items: center;
   width: 100%;
-
-  #option-select {
-    width: 300px;
+  select {
+    width: 50%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    appearance: none;
     outline: none;
     border: none;
-    background: inherit;
-    border-bottom: 1px solid $sometextcolor;
+    background-color: inherit;
+
+    border-bottom: 1px solid $secondary;
+    &:focus {
+      border-bottom-color: $primary;
+    }
+    option {
+      font-weight: &$size;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: #333;
+    }
   }
 }

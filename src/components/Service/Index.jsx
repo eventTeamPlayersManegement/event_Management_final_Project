@@ -3,78 +3,105 @@ import "./style.scss";
 import { useState } from "react";
 import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
-const submit = "submit";
 export default function Service() {
-  const [option, setOption] = useState("");
+  const inicialValues = {
+    select1: "",
+    select2: "",
+    select3: "",
+    select4: "",
+    select5: "",
+    select6: "",
+    select7: "",
+  };
+
+  const [values, setValues] = useState(inicialValues);
 
   function handleOptionChange(event) {
-    setOption(event.target.value);
+    setValues({ ...values, [event.target.name]: event.target.value });
   }
-  const handleClick = (event) => {
+
+  const onSubmitHandler = (event) => {
     event.preventDefault();
     console.log("submited");
+    setValues(inicialValues);
   };
 
   return (
     <>
       <h1 className="title">{ServiceData.Services.title}</h1>
-      <form onClick={handleClick}>
+
+      <form onSubmit={onSubmitHandler}>
         <div className="input-select-container">
-          <label>Select an option:</label>
+          <label htmlFor="option1"></label>
           <select
-            id="option-select"
-            value={option.value}
+            id="option1"
+            name="select1"
+            value={values.select1}
             onChange={handleOptionChange}
           >
-            <option value={option.value}>
-              {ServiceData.Services.select.select1}
-            </option>
-            <option value={option.value}>
+            <option value="">{ServiceData.Services.select.select1}</option>
+            <option value="option1">
               {ServiceData.Services.options.option1}
             </option>
-            <option value={option.value}>
+            <option value="option2">
               {ServiceData.Services.options.option2}
             </option>
           </select>
+
+          <label htmlFor="option2"></label>
           <select
-            id="option-select"
-            value={option.value}
+            id="option2"
+            name="select2"
+            value={values.select2}
             onChange={handleOptionChange}
           >
-            <option value={option.value}>
-              {ServiceData.Services.select.select2}
-            </option>
-            <option value={option.value}>Locations</option>
+            <option value="">{ServiceData.Services.select.select2}</option>
+            <option value="option1">Locations</option>
           </select>
+
+          <label htmlFor="option3"></label>
           <select
-            id="option-select"
-            value={option.value}
+            id="option3"
+            value={values.select3}
+            name="select3"
             onChange={handleOptionChange}
           >
-            <option value={option.value}>
-              {ServiceData.Services.select.select3}
-            </option>
-            <option value={option.value}>Date</option>
+            <option value="">{ServiceData.Services.select.select3}</option>
+            <option value="option1">Date</option>
           </select>
+
+          <label htmlFor="option4"></label>
           <select
-            id="option-select"
-            value={option.value}
+            id="option4"
+            value={values.select4}
+            name="select4"
             onChange={handleOptionChange}
           >
-            <option value={option.value}>
+            <option value="select4">
               {ServiceData.Services.select.select4}
             </option>
-            <option value={option.value}>Space</option>
+            <option value="option1">Space</option>
           </select>
+
+          <label htmlFor="option5"></label>
           <select
-            id="option-select"
-            value={option.value}
+            id="option5"
+            value={values.select5}
+            name="select5"
             onChange={handleOptionChange}
           >
-            <option value={option.value}>
-              {ServiceData.Services.select.select5}
-            </option>
-            <option value={option.value}>Deckor</option>
+            <option value="">{ServiceData.Services.select.select5}</option>
+            <option value="option1">Deckor</option>
+          </select>
+          <label htmlFor="option6"></label>
+          <select
+            id="option6"
+            value={values.select6}
+            name="select6"
+            onChange={handleOptionChange}
+          >
+            <option value="">{ServiceData.Services.select.select6}</option>
+            <option value="option1">Deckor</option>
           </select>
           <CustomButton
             type="submit"
