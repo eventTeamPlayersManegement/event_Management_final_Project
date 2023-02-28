@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Service from "../components/Service/Index.jsx";
 
-function Services() {
+export default function () {
   return (
-    <div>Services</div>
-  )
+    <>
+      <Service />
+    </>
+  );
 }
-
-export default Services
