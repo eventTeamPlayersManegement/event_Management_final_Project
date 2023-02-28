@@ -3,11 +3,12 @@ import "./style.scss";
 import { useState } from "react";
 import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 export default function Service() {
   const inicialValues = {
     select1: "",
     select2: "",
-    select3: "",
     select4: "",
     select5: "",
     select6: "",
@@ -15,6 +16,7 @@ export default function Service() {
   };
 
   const [values, setValues] = useState(inicialValues);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   function handleOptionChange(event) {
     setValues({ ...values, [event.target.name]: event.target.value });
@@ -24,6 +26,7 @@ export default function Service() {
     event.preventDefault();
     console.log("submited");
     setValues(inicialValues);
+    setSelectedDate(new Date());
   };
 
   return (
@@ -58,18 +61,13 @@ export default function Service() {
             <option value="">{ServiceData.Services.select.select2}</option>
             <option value="option1">Locations</option>
           </select>
-
-          <label htmlFor="option3"></label>
-          <select
-            id="option3"
-            value={values.select3}
-            name="select3"
-            onChange={handleOptionChange}
-          >
-            <option value="">{ServiceData.Services.select.select3}</option>
-            <option value="option1">Date</option>
-          </select>
-
+          <p>
+            <DatePicker
+              className="datepicker"
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+            />
+          </p>
           <label htmlFor="option4"></label>
           <select
             id="option4"
