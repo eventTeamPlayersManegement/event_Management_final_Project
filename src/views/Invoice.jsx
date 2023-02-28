@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Invoice from "../components/Invoice";
 
-function Invoice() {
-  return (
-    <div>Invoice</div>
-  )
+export default function () {
+    return (
+        <>
+            <Invoice />
+        </>
+    );
 }
-
-export default Invoice
