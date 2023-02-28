@@ -3,13 +3,25 @@ import data from "../../content/data.json";
 import "./style.scss";
 
 export default function () {
-    const { h2, paragraph } = data.invoice;
+    const { h2, paragraph, costs } = data.invoice;
+    let names = paragraph.map((el) => (
+        <li key={el} className="list-item">
+            {el}
+        </li>
+    ));
+    let money = costs.map((el) => (
+        <li key={el} className="list-item">
+            {el}
+        </li>
+    ));
     return (
-        <>
-            <h2>{h2}</h2>
-            <div>
-                <p>test{paragraph[0]}</p>
-            </div>
-        </>
+        <section>
+            <h2 className="heading">{h2[0]}</h2>
+            <article className="article-invoice">
+                <h3>{h2[1]}</h3>
+                <ul>{names}</ul>
+                <ul>{money}</ul>
+            </article>
+        </section>
     );
 }
