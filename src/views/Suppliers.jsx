@@ -1,8 +1,11 @@
 import React from 'react'
+import Photographer from '../components/Photographer'
 
 function Suppliers() {
   return (
-    <div>Suppliers</div>
+    <>
+      <Photographer/>
+    </>
   )
 }
 
