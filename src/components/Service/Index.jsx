@@ -21,8 +21,8 @@ export default function Service() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const germanyCities = City.getCitiesOfCountry("DE");
 
-  const cityOptions = germanyCities.map((city) => (
-    <option key={city.name} value={city.name}>
+  const cityOptions = germanyCities.map((city, i) => (
+    <option key={i} value={city.name}>
       {city.name}
     </option>
   ));
@@ -70,13 +70,13 @@ export default function Service() {
             <option>{ServiceData.Services.select.select2}</option>
             {cityOptions}
           </select>
-          <p>
+          <div>
             <DatePicker
               className="datepicker"
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
             />
-          </p>
+          </div>
           <label htmlFor="option4"></label>
           <select
             id="option4"
