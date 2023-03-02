@@ -16,6 +16,7 @@ import Payment from "./views/Payment";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
+import Photographer from "./views/Photographer.jsx";
 function App() {
   return (
     <div className="App">
@@ -35,10 +36,11 @@ function App() {
           path="/signup"
           element={<Auth data={navItems.authData.register} />}
         />
-        <Route path="/chat" element={<Chat />} />
+        <Route path="/chat" element={<Chat />} />Q
         <Route path="/dashboard" element={<Dashbord />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/photographer" element={<Photographer />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />

@@ -1,10 +1,10 @@
 import React from 'react';
-import Photographer from '../components/Photographer';
+import Photographers from '../components/Photographers';
 
 function Photographer() {
   return (
     <>
-        <Photographer/>
+        <Photographers/>
     </>
   )
 }
