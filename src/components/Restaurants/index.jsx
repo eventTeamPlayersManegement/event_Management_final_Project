@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
-import { getRestaurant } from "../../library/api";
-const database = await getRestaurant();
+import { getPath } from "../../library/api";
+const database = await getPath("restaurant");
 // console.log(database);
 export default function index() {
   const Restaurant = ({ restaurant }) => {
