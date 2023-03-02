@@ -1,0 +1,289 @@
+openapi: 3.0.0
+info:
+  title: Event Management E-Comerce Platform
+  description: |
+    This API is used to display Data for an ebent maneger platform e-comerce.
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/leovolwahsen/final-project/1.0.0
+  description: API for Data used in Event Management
+- url: https://final-project-backend-lkvb.onrender.com/api
+tags:
+- name: api
+  description: Event Management E-Comerce
+  externalDocs:
+    description: Find out more
+    url: https://final-project-backend-lkvb.onrender.com/api
+paths:
+  /event:
+    get:
+      tags:
+      - event
+      summary: receive all data
+      operationId: eventGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Event
+    post:
+      tags:
+      - event
+      summary: create new data
+      operationId: eventPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Event
+  /photographer:
+    get:
+      tags:
+      - photographer
+      summary: get all data
+      operationId: photographerGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Photographer
+    post:
+      tags:
+      - photographer
+      summary: create new data
+      operationId: photographerPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Photographer
+  /restaurant:
+    get:
+      tags:
+      - restaurant
+      summary: get all data
+      operationId: restaurantGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Restaurant
+    post:
+      tags:
+      - restaurant
+      summary: create new data
+      operationId: restaurantPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Restaurant
+  /entertainment:
+    get:
+      tags:
+      - entertainment
+      summary: get all data
+      operationId: entertainmentGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Entertainment
+    post:
+      tags:
+      - entertainment
+      summary: create new data
+      operationId: entertainmentPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Entertainment
+  /rentauto:
+    get:
+      tags:
+      - rentauto
+      summary: get all data
+      operationId: rentautoGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Rentauto
+    post:
+      tags:
+      - rentauto
+      summary: create new data
+      operationId: rentautoPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Rentauto
+  /suppliers:
+    get:
+      tags:
+      - suppliers
+      summary: get all data
+      operationId: suppliersGET
+      responses:
+        "200":
+          description: get Entry
+      x-swagger-router-controller: Suppliers
+    post:
+      tags:
+      - suppliers
+      summary: create new data
+      operationId: suppliersPOST
+      responses:
+        "201":
+          description: Created Entry
+      x-swagger-router-controller: Suppliers
+components:
+  schemas:
+    event:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        userId:
+          type: integer
+          format: int64
+        guestNumber:
+          type: integer
+          format: int32
+        eventDate:
+          type: string
+          format: date-time
+    photographer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        photos:
+          type: array
+          items:
+            type: object
+        photoId:
+          type: integer
+          format: int64
+        url:
+          type: string
+    restaurant:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        capacity:
+          type: integer
+          format: int32
+        adress:
+          $ref: '#/components/schemas/restaurant_adress'
+        photos:
+          type: array
+          items:
+            type: object
+        photoId:
+          type: integer
+          format: int64
+        url:
+          type: string
+        price:
+          type: integer
+          format: int32
+    entertainment:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        adress:
+          $ref: '#/components/schemas/restaurant_adress'
+        photos:
+          type: array
+          items:
+            type: object
+        photoId:
+          type: integer
+          format: int64
+        url:
+          type: string
+        price:
+          type: integer
+          format: int32
+    rentauto:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        year:
+          type: integer
+          format: int32
+        model:
+          type: string
+        description:
+          type: string
+        capacity:
+          type: integer
+          format: int32
+        adress:
+          $ref: '#/components/schemas/restaurant_adress'
+        photos:
+          type: array
+          items:
+            type: object
+        photoId:
+          type: integer
+          format: int64
+        url:
+          type: string
+        price:
+          type: integer
+          format: int32
+    messages:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        year:
+          type: integer
+          format: int32
+        model:
+          type: string
+        description:
+          type: string
+        capacity:
+          type: integer
+          format: int32
+        adress:
+          $ref: '#/components/schemas/restaurant_adress'
+        photos:
+          type: array
+          items:
+            type: object
+        photoId:
+          type: integer
+          format: int64
+        url:
+          type: string
+        price:
+          type: integer
+          format: int32
+    restaurant_adress:
+      type: object
+      properties:
+        street:
+          type: string
+        houseNumber:
+          type: string
+        zipCode:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
