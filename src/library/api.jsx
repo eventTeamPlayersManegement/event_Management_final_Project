@@ -1,5 +1,4 @@
-// const baseUrl = "https://final-project-backend-lkvb.onrender.com/api";
-const baseUrl = "http://localhost:4001/api";
+const baseUrl = "https://final-project-backend-lkvb.onrender.com/api";
 
 export const getPhotographer = async () => {
   try {
