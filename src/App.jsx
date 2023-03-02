@@ -16,22 +16,26 @@ import Payment from "./views/Payment";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
+import Photographer from "./views/Photographer.jsx";
 function App() {
   return (
     <div className="App">
       <Header />
-      <Toaster position="top-right" />
+      <Toaster position="top-right" />>>>>>>> main
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
         <Route path={navItems.navItems[1]} element={<Services />} />
         <Route path={navItems.navItems[2]} element={<Suppliers />} />
         <Route path={navItems.navItems[3]} element={<Contact />} />
+
         <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />
+
         <Route path="/dashboard" element={<Dashbord />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/photographer" element={<Photographer />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
