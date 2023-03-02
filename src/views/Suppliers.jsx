@@ -1,12 +1,7 @@
-import React from 'react'
-
+import Index from "../components/Supliers/Index.jsx";
 
 function Suppliers() {
-  return (
-    <>
-      
-    </>
-  )
+  return <Index />;
 }
 
-export default Suppliers
+export default Suppliers;
