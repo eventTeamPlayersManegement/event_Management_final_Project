@@ -18,6 +18,7 @@ import Footer from "./components/Footer/Index.jsx";
 import Photographer from "./views/Photographer.jsx";
 import Restaurant from "./views/Restaurant.jsx";
 import Entertainment from "./views/Entertainment.jsx";
+import Rentauto from "./views/Rentauto.jsx";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,7 @@ function App() {
         <Route path="/photographer" element={<Photographer />} />
         <Route path="/restaurant" element={<Restaurant />} />
         <Route path="/entertainement" element={<Entertainment />} />
+        <Route path="/rentauto" element={<Rentauto />} />
 
         <Route path="/suppliers" element={<Suppliers />} />
         <Route path="*" element={<Page404 />} />
