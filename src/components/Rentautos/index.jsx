@@ -4,7 +4,8 @@ import "./style.scss";
 import { getPath } from "../../library/api";
 
 const database = await getPath("rentauto");
-console.log(database);
+console.log("data", database);
+
 export default function index() {
   const Rentauto = ({ rentauto }) => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { getPath } from "../../library/api";
 const database = await getPath("entertainment");
-console.log(database);
+console.log("entertainment", database);
 export default function index() {
   const Entertainment = ({ entertainment }) => {
     return (
