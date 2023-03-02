@@ -3,6 +3,7 @@ import { getPhotographer } from '../../library/api'
 const daten = await getPhotographer()
 console.log(daten)
 
+
 function index() {
     // const [data, setData] = useState(daten)
     const Photograph = (({photograph}) => {
