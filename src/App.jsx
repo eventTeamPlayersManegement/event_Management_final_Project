@@ -8,7 +8,6 @@ import Header from "./components/Header/Index.jsx";
 import Suppliers from "./views/Suppliers.jsx";
 import Contact from "./views/Contact.jsx";
 import Auth from "./views/Auth.jsx";
-// import Register from "./views/Register.jsx";
 import Chat from "./views/Chat.jsx";
 import Dashbord from "./views/Dashbord.jsx";
 import Invoice from "./views/Invoice.jsx";
@@ -29,16 +28,15 @@ function App() {
         <Route path={navItems.navItems[1]} element={<Services />} />
         <Route path={navItems.navItems[2]} element={<Suppliers />} />
         <Route path={navItems.navItems[3]} element={<Contact />} />
-
         <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />
-
         <Route path="/dashboard" element={<Dashbord />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />
         <Route path="/restaurant" element={<Restaurant />} />
 
+        <Route path="/suppliers" element={<Suppliers />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
