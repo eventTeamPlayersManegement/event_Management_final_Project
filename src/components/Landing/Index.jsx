@@ -1,3 +1,6 @@
+import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 import img1 from "../../assets/5.jpg";
 import img2 from "../../assets/7.jpg";
 import data from "../../content/data.json";
