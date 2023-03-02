@@ -1,5 +1,7 @@
 {
   "navItems": ["about", "services", "suppliers", "contact"],
+
+  "contactUs": ["Contact Us"],
   "authData": {
     "login": {
       "fields": {
@@ -42,6 +44,7 @@
 
       "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
     }
+
   ],
   "contactUs": ["Contact Us"],
   "Services": {
@@ -60,4 +63,7 @@
       "option2": "Wedding"
     }
   }
+
+  ]
+
 }

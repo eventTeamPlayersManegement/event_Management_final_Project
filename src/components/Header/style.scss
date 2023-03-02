@@ -21,6 +21,16 @@ $pad: 2rem;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  .userData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc($pad / 2);
+    .avatar {
+      border-radius: 50%;
+      width: 35px;
+    }
+  }
   .nav__menu {
     display: flex;
     gap: 2rem;
@@ -99,20 +109,22 @@ $pad: 2rem;
         gap: calc($size / 2);
         padding-right: $size;
       }
-    }
-    .nav__toggle {
-      display: block;
-      display: flex;
-      font-size: calc($pad * 0.75);
-      cursor: pointer;
-      .nav__icon {
-        display: block;
-        color: $primary;
-        font-size: calc($pad * 0.75);
-      }
-      .nav__icon,
+
       .nav__toggle {
         display: block;
+        display: flex;
+        font-size: calc($pad * 0.75);
+        cursor: pointer;
+        .nav__icon {
+          display: block;
+          color: $primary;
+          font-size: calc($pad * 0.75);
+        }
+
+        .nav__icon,
+        .nav__toggle {
+          display: block;
+        }
       }
     }
   }

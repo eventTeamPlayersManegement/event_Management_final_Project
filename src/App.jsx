@@ -27,14 +27,7 @@ function App() {
         <Route path={navItems.navItems[1]} element={<Services />} />
         <Route path={navItems.navItems[2]} element={<Suppliers />} />
         <Route path={navItems.navItems[3]} element={<Contact />} />
-        <Route
-          path="/signin"
-          element={<Auth data={navItems.authData.login} />}
-        />
-        <Route
-          path="/signup"
-          element={<Auth data={navItems.authData.register} />}
-        />
+        <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/dashboard" element={<Dashbord />} />
         <Route path="/invoice" element={<Invoice />} />
