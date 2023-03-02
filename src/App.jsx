@@ -17,6 +17,7 @@ import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
 import Photographer from "./views/Photographer.jsx";
+import Restaurant from "./views/Restaurant.jsx";
 function App() {
   return (
     <div className="App">
@@ -36,6 +37,8 @@ function App() {
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />
+        <Route path="/restaurant" element={<Restaurant />} />
+
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
