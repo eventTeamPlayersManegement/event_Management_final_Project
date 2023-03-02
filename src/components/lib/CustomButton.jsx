@@ -1,7 +1,11 @@
 import "./generalStyle.scss";
 function CustomButton(props) {
-  const { submit, style } = props;
-  return <button className={style}>{submit}</button>;
+  const { submit, style, dispach } = props;
+  return (
+    <button onClick={dispach} className={style}>
+      {submit}
+    </button>
+  );
 }
 
 export default CustomButton;

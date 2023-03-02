@@ -5,6 +5,8 @@ import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { City } from "country-state-city";
+
 export default function Service() {
   const inicialValues = {
     select1: "",
@@ -17,6 +19,13 @@ export default function Service() {
 
   const [values, setValues] = useState(inicialValues);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const germanyCities = City.getCitiesOfCountry("DE");
+
+  const cityOptions = germanyCities.map((city, i) => (
+    <option key={i} value={city.name}>
+      {city.name}
+    </option>
+  ));
 
   function handleOptionChange(event) {
     setValues({ ...values, [event.target.name]: event.target.value });
@@ -51,23 +60,23 @@ export default function Service() {
             </option>
           </select>
 
-          <label htmlFor="option2"></label>
+          <label htmlFor="city"></label>
           <select
-            id="option2"
+            id="city"
             name="select2"
             value={values.select2}
             onChange={handleOptionChange}
           >
-            <option value="">{ServiceData.Services.select.select2}</option>
-            <option value="option1">Locations</option>
+            <option>{ServiceData.Services.select.select2}</option>
+            {cityOptions}
           </select>
-          <p>
+          <div>
             <DatePicker
               className="datepicker"
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
             />
-          </p>
+          </div>
           <label htmlFor="option4"></label>
           <select
             id="option4"
