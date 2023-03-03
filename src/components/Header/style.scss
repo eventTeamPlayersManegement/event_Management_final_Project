@@ -26,6 +26,8 @@ $pad: 2rem;
     justify-content: center;
     align-items: center;
     gap: calc($pad / 2);
+    font-size: $size;
+    font-weight: 600;
     .avatar {
       border-radius: 50%;
       width: 35px;

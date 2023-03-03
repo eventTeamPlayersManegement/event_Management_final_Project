@@ -3,7 +3,7 @@ import { getPath } from "../../library/api";
 
 const daten = await getPath("photographer");
 
-function index() {
+function index({ photo }) {
   // const [data, setData] = useState(daten)
   const Photograph = ({ photograph }) => {
     return (

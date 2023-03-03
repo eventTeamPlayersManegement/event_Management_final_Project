@@ -9,7 +9,7 @@ export default function Header() {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
   const { user, isAuthenticated, isLoading, logout } = useAuth0();
-
+  console.log(user);
   return (
     <header className="header">
       <nav className="nav container">
