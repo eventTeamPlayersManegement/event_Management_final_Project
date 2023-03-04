@@ -3,15 +3,18 @@ import CustomButton from "../lib/CustomButton.jsx";
 import logo from "../../assets/Logo.svg";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect, useState } from "react";
 
 export default function Index() {
-  const { isAuthenticated, logout, loginWithRedirect } = useAuth0();
+  // const { isAuthenticated, logout, loginWithRedirect } = useAuth0();
+  const [user, setUser] = useState({});
 
   return (
     <div className="signContainer">
       <div className="center">
         <h1>With One Click</h1>
-        {isAuthenticated ? (
+        <button onClick={handleLog}>log</button>
+        {/* {isAuthenticated ? (
           <CustomButton
             submit={"SignOut"}
             style={"customBtnDefault"}
@@ -27,7 +30,7 @@ export default function Index() {
             style={"customBtnDefault"}
             dispach={loginWithRedirect}
           />
-        )}
+        )} */}
         <img className="img" src={logo} alt="logo" />
       </div>
     </div>
