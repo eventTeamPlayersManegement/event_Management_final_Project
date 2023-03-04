@@ -8,7 +8,6 @@ import Header from "./components/Header/Index.jsx";
 import Suppliers from "./views/Suppliers.jsx";
 import Contact from "./views/Contact.jsx";
 import Auth from "./views/Auth.jsx";
-// import Register from "./views/Register.jsx";
 import Chat from "./views/Chat.jsx";
 import Dashbord from "./views/Dashbord.jsx";
 import Invoice from "./views/Invoice.jsx";
@@ -16,6 +15,7 @@ import Payment from "./views/Payment";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
+import Photographer from "./views/Photographer.jsx";
 function App() {
   return (
     <div className="App">
@@ -32,6 +32,8 @@ function App() {
         <Route path="/dashboard" element={<Dashbord />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/photographer" element={<Photographer />} />
+        <Route path="/suppliers" element={<Suppliers />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
