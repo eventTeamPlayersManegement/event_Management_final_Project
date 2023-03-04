@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import "./style.scss";
 import navitems from "../../content/data.json";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Footer from "../Footer/Index.jsx";
-import { useAuth0 } from "@auth0/auth0-react";
+import { EventContext } from "../../context/Context.jsx";
+import { toast } from "react-hot-toast";
+
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
-  const { user, isAuthenticated, isLoading, logout } = useAuth0();
-  console.log(user);
+  const [data, setData] = useContext(EventContext);
+
   return (
     <header className="header">
       <nav className="nav container">
@@ -44,30 +46,31 @@ export default function Header() {
         </ul>
 
         <div className="nav__icons">
-          {isAuthenticated ? (
+          {data.user && (
             <div className="userData">
-              <img src={user.picture} alt="avatar" className="avatar" />
-              <p className="nickName">{user.nickname}</p>
+              <img src={data?.user?.picture} alt="avatar" className="avatar" />
+              <p className="nickName">{data?.user?.nickname}</p>
             </div>
-          ) : (
+          )}
+          {data.user ? (
             <i
               className="uil uil-signin"
               onClick={() => {
                 navigate("/signin");
               }}
             ></i>
+          ) : (
+            <i
+              className="uil uil-signout"
+              onClick={() => {
+                navigate("/signin");
+              }}
+            ></i>
           )}
-          <i
-            className="uil uil-signout"
-            onClick={() => {
-              navigate("/signin");
-            }}
-          ></i>
           <i
             className="uil uil-comment-message"
             onClick={() => navigate("/chat")}
           ></i>
-
           <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
             <i className="uil uil-bars nav__icon"></i>
           </div>

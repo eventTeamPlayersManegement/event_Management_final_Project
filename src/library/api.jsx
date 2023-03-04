@@ -13,3 +13,13 @@ export const getPath = async (path) => {
     return;
   }
 };
+export const checkProfile = async () => {
+  const res = await fetch("http://localhost:3000/profile", {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+    credentials: "include",
+  });
+
+  return await res.json();
+};
