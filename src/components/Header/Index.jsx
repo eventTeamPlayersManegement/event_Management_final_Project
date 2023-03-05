@@ -6,14 +6,18 @@ import Logo from "../../assets/Logo.svg";
 import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
 import { toast } from "react-hot-toast";
+import Index from "../Chat/Index.jsx";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
+  const [toggleChat, setToggleChat] = useState(false);
+
   const navigate = useNavigate();
   const [data, setData] = useContext(EventContext);
 
   return (
     <header className="header">
+      {toggleChat && <Index />}
       <nav className="nav container">
         <img
           src={Logo}
@@ -48,8 +52,12 @@ export default function Header() {
         <div className="nav__icons">
           {data.user && (
             <div className="userData">
-              <img src={data?.user?.picture} alt="avatar" className="avatar" />
-              <p className="nickName">{data?.user?.nickname}</p>
+              <img
+                src={data?.user?.user?.picture}
+                alt="avatar"
+                className="avatar"
+              />
+              <p className="nickName">{data?.user?.user?.nickname}</p>
             </div>
           )}
           {data.user ? (
@@ -69,7 +77,7 @@ export default function Header() {
           )}
           <i
             className="uil uil-comment-message"
-            onClick={() => navigate("/chat")}
+            onClick={() => setToggleChat(!toggleChat)}
           ></i>
           <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
             <i className="uil uil-bars nav__icon"></i>

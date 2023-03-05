@@ -4,3 +4,34 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+.chat {
+  position: absolute;
+  inset: 100px 16px 16px 16px;
+  z-index: 9999;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 640px) {
+    inset: 100px 16px 16px 50%;
+  }
+  .chatList {
+    flex: 1;
+    overflow-y: auto;
+    .message {
+      display: flex;
+
+      img {
+        width: 32px;
+      }
+    }
+  }
+  .chatInput {
+    background-color: $sometextcolor;
+    display: flex;
+    input {
+      flex: 1;
+      padding: $size;
+      background-color: inherit;
+    }
+  }
+}

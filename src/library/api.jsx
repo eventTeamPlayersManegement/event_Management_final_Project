@@ -13,6 +13,8 @@ export const getPath = async (path) => {
     return;
   }
 };
+
+// we are checking wich user is logged with :
 export const checkProfile = async () => {
   const res = await fetch("http://localhost:3000/profile", {
     headers: {
@@ -23,3 +25,5 @@ export const checkProfile = async () => {
 
   return await res.json();
 };
+
+export const fetcher = (...args) => fetch(...args).then((res) => res.json());
