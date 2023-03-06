@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
-import "./style.scss"
+import "./style.scss";
+import text from "../../content/data.json";
 
 
 function Index() {
     const [data, setData] = useState([])
     async function getData () {
         const daten = await getPath("photographer");
-        setData(daten)
-    }
-    console.log(data)
+        setData(daten);
+    };
     useEffect(() => {
         getData();
-    }, [])
+    }, []);
   const Photograph = ({ photograph }) => {
     return (
       <>
@@ -38,7 +38,7 @@ function Index() {
 
   return (
     <>
-      <h1>Photographers</h1>
+      <h1>{text.photographer.title}</h1>
       {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
       ))}
