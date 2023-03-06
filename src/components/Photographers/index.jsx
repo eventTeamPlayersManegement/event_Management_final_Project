@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
+import "./style.scss"
 
 
 function Index() {
@@ -8,24 +9,29 @@ function Index() {
         const daten = await getPath("photographer");
         setData(daten)
     }
+    console.log(data)
     useEffect(() => {
         getData();
     }, [])
   const Photograph = ({ photograph }) => {
     return (
       <>
-        <h2>{photograph.name}</h2>
-        {photograph.fotos.map((el, i) => (
-          <Images key={i} image={el} />
-        ))}
+        <div className="home-galerie__container">
+            {photograph.fotos.map((el, i) => (
+                <Images key={i} image={el} />
+                ))}
+
+        </div>
       </>
     );
   };
   const Images = ({ image }) => {
     return (
-      <div className="image">
-        <p>{image.title}</p>
-        <img src={image.url} alt="image" />
+      <div className="photo-card__container--polaroid">
+        <img className='photo-card--image__item' src={image.url} alt="image" />
+        <div className='photo-card--image__text'>
+            <p>{image.title}</p>
+        </div>
       </div>
     );
   };
