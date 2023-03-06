@@ -4,14 +4,16 @@ function Conversations({ conversations, setSelected, createConversation }) {
   const [conversationList, setConversationList] = useState(conversations);
 
   const setSelection = async (id) => {
-    const res = await fetch("http://localhost:3000/api/conversation/" + id);
+    const res = await fetch(
+      "https://final-project-backend-lkvb.onrender.com/api/conversation/" + id
+    );
     const data = await res.json();
     setSelected(data);
   };
 
   useEffect(() => {
     if (conversations.admin) {
-      fetch("http://localhost:3000/api/conversation")
+      fetch("https://final-project-backend-lkvb.onrender.com/api/conversation")
         .then((res) => res.json())
         .then((json) => setConversationList(json));
     }

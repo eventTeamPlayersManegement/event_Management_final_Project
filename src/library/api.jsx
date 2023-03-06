@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000/api";
+const baseUrl = "https://final-project-backend-lkvb.onrender.com/api";
 
 export const getPath = async (path) => {
   try {
@@ -16,7 +16,7 @@ export const getPath = async (path) => {
 
 // we are checking wich user is logged with :
 export const checkProfile = async () => {
-  const res = await fetch("http://localhost:3000/profile", {
+  const res = await fetch(`${baseUrl}/profile`, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
