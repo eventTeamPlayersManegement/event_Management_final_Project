@@ -13,7 +13,7 @@ function Conversations({ conversations, setSelected, createConversation }) {
 
   useEffect(() => {
     if (conversations.admin) {
-      fetch("https://final-project-backend-lkvb.onrender.com/api/conversation")
+      fetch("/api/conversation")
         .then((res) => res.json())
         .then((json) => setConversationList(json));
     }

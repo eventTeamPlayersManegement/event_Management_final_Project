@@ -7,14 +7,9 @@ function ChatList({ selected }) {
     data: conversations,
     error,
     isLoading,
-  } = useSWR(
-    "https://final-project-backend-lkvb.onrender.com/api/conversation/" +
-      selected,
-    fetcher,
-    {
-      refreshInterval: 1000,
-    }
-  );
+  } = useSWR("/api/conversation/" + selected, fetcher, {
+    refreshInterval: 1000,
+  });
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
   console.log(conversations);
