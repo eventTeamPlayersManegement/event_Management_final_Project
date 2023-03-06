@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
+import config from "../../content/data.json";
 
 function Conversations({ conversations, setSelected, createConversation }) {
   const [conversationList, setConversationList] = useState(conversations);
 
   const setSelection = async (id) => {
-    const res = await fetch(
-      "https://final-project-backend-lkvb.onrender.com/api/conversation/" + id
-    );
+    const res = await fetch(`${config.baseURL}/api/conversation/${id}`);
     const data = await res.json();
     setSelected(data);
   };

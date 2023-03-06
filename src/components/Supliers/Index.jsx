@@ -5,7 +5,7 @@ import "./style.scss";
 
 const daten = await getPath("suppliers");
 const photo = await getPath("photographer");
-console.log(photo);
+
 export default function Supliers() {
   const Images = ({ image }) => {
     return <img style={{ width: "200px" }} src={image.url} alt="image" />;

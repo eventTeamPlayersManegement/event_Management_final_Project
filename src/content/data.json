@@ -43,5 +43,6 @@
       "option2": "Wedding"
     }
   },
-  "suppliers": { "title": "Our Suppliers" }
+  "suppliers": { "title": "Our Suppliers" },
+  "baseURL": "https://final-project-backend-lkvb.onrender.com"
 }
