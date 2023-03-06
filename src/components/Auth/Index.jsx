@@ -1,33 +1,22 @@
 import "./style.scss";
-import CustomButton from "../lib/CustomButton.jsx";
 import logo from "../../assets/Logo.svg";
 
-import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { EventContext } from "../../context/Context.jsx";
 
 export default function Index() {
-  const { isAuthenticated, logout, loginWithRedirect } = useAuth0();
-
+  const [data, setData] = useContext(EventContext);
   return (
     <div className="signContainer">
       <div className="center">
         <h1>With One Click</h1>
-        {isAuthenticated ? (
-          <CustomButton
-            submit={"SignOut"}
-            style={"customBtnDefault"}
-            dispach={() =>
-              logout({
-                logoutParams: { returnTo: window.location.origin },
-              })
-            }
-          />
+        {!data.user ? (
+          <Link to={"http://localhost:3000/login"}>Login</Link>
         ) : (
-          <CustomButton
-            submit={"SignIn"}
-            style={"customBtnDefault"}
-            dispach={loginWithRedirect}
-          />
+          <Link to={"http://localhost:3000/logout"}>Logout</Link>
         )}
+
         <img className="img" src={logo} alt="logo" />
       </div>
     </div>
