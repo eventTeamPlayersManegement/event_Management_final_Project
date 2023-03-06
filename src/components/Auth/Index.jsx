@@ -1,6 +1,5 @@
 import "./style.scss";
 import logo from "../../assets/Logo.svg";
-
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { EventContext } from "../../context/Context.jsx";
