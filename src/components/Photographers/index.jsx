@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
 
-async function index({ photo }) {
-  const daten = await getPath("photographer");
-  // const [data, setData] = useState(daten)
+
+function Index() {
+    const [data, setData] = useState([])
+    async function getData () {
+        const daten = await getPath("photographer");
+        setData(daten)
+    }
+    useEffect(() => {
+        getData();
+    }, [])
   const Photograph = ({ photograph }) => {
     return (
       <>
@@ -26,11 +33,11 @@ async function index({ photo }) {
   return (
     <>
       <h1>Photographers</h1>
-      {daten.map((el, i) => (
+      {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
       ))}
     </>
   );
 }
 
-export default index;
+export default Index;

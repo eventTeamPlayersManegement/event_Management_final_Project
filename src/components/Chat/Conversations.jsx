@@ -12,7 +12,7 @@ function Conversations({ conversations, setSelected, createConversation }) {
 
   useEffect(() => {
     if (conversations.admin) {
-      fetch("/api/conversation")
+      fetch(`${config.baseURL}/api/conversation`)
         .then((res) => res.json())
         .then((json) => setConversationList(json));
     }
