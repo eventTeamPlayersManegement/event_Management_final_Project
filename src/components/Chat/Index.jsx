@@ -6,13 +6,14 @@ import { useContext, useState } from "react";
 import useSWR from "swr";
 import { EventContext } from "../../context/Context.jsx";
 import { fetcher } from "../../library/api.jsx";
+import config from "../../content/data.json";
 
 export default function () {
   const [data, setData] = useContext(EventContext);
   const [selected, setSelected] = useState([]);
 
   const createConversation = () => {
-    fetch("/api/conversation", {
+    fetch(`${config.baseURL}/api/conversation`, {
       method: "POST",
       body: JSON.stringify({
         id: data.id,
@@ -27,13 +28,9 @@ export default function () {
     data: conversations,
     error,
     isLoading,
-  } = useSWR(
-    "/api/users/sub/" + data.id,
-    fetcher,
-    {
-      refreshInterval: 1000,
-    }
-  );
+  } = useSWR(`${config.baseURL}/api/users/sub/${data.id}`, fetcher, {
+    refreshInterval: 1000,
+  });
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
 

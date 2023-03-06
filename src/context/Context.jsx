@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { checkProfile } from "../library/api.jsx";
-
+import config from "../content/data.json";
 export const EventContext = createContext();
 
 /*
@@ -14,11 +14,11 @@ function Context({ children }) {
   useEffect(() => {
     checkProfile().then(async (res) => {
       const userId = res.user.sub.split("|")[1];
-      const userRes = await fetch("/api/users/sub/" + userId);
+      const userRes = await fetch(`${config.baseURL}/api/users/sub/` + userId);
       const user = await userRes.json();
       console.log(user);
       if (!user) {
-        await fetch("/api/users", {
+        await fetch(`${config.baseURL}/api/users`, {
           method: "POST",
           body: JSON.stringify({
             sub: userId,

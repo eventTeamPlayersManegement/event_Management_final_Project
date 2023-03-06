@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import { fetcher } from "../../library/api.jsx";
+import config from "../../content/data.json";
 
 function ChatList({ selected }) {
   console.log(selected);
@@ -7,7 +8,7 @@ function ChatList({ selected }) {
     data: conversations,
     error,
     isLoading,
-  } = useSWR("/api/conversation/" + selected, fetcher, {
+  } = useSWR(`${config.baseURL}/api/conversation/${selected}`, fetcher, {
     refreshInterval: 1000,
   });
   if (error) return <div className="chatList">failed to load</div>;
