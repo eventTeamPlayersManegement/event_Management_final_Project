@@ -6,16 +6,20 @@ function ChatInput({ conversationId, userId }) {
   const [data, setData] = useContext(EventContext);
   const saveNewMessage = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/api/conversation/" + conversationId, {
-      method: "PATCH",
-      body: JSON.stringify({
-        writer: userId,
-        message: message,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
+    await fetch(
+      "https://final-project-backend-lkvb.onrender.com/api/conversation/" +
+        conversationId,
+      {
+        method: "PATCH",
+        body: JSON.stringify({
+          writer: userId,
+          message: message,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    );
     setMessage("");
   };
   return (

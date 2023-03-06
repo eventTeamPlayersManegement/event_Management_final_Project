@@ -12,7 +12,7 @@ export default function () {
   const [selected, setSelected] = useState([]);
 
   const createConversation = () => {
-    fetch("http://localhost:3000/api/conversation", {
+    fetch("https://final-project-backend-lkvb.onrender.com/api/conversation", {
       method: "POST",
       body: JSON.stringify({
         id: data.id,
@@ -27,9 +27,13 @@ export default function () {
     data: conversations,
     error,
     isLoading,
-  } = useSWR("http://localhost:3000/api/users/sub/" + data.id, fetcher, {
-    refreshInterval: 1000,
-  });
+  } = useSWR(
+    "https://final-project-backend-lkvb.onrender.com/api/users/sub/" + data.id,
+    fetcher,
+    {
+      refreshInterval: 1000,
+    }
+  );
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
 
