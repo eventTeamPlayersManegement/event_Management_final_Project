@@ -14,13 +14,11 @@ function Context({ children }) {
   useEffect(() => {
     checkProfile().then(async (res) => {
       const userId = res.user.sub.split("|")[1];
-      const userRes = await fetch(
-        "http://localhost:3000/api/users/sub/" + userId
-      );
+      const userRes = await fetch("/api/users/sub/" + userId);
       const user = await userRes.json();
       console.log(user);
       if (!user) {
-        await fetch("http://localhost:3000/api/users", {
+        await fetch("/api/users", {
           method: "POST",
           body: JSON.stringify({
             sub: userId,

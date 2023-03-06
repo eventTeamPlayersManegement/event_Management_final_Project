@@ -12,7 +12,7 @@ export default function () {
   const [selected, setSelected] = useState([]);
 
   const createConversation = () => {
-    fetch("https://final-project-backend-lkvb.onrender.com/api/conversation", {
+    fetch("/api/conversation", {
       method: "POST",
       body: JSON.stringify({
         id: data.id,
@@ -28,7 +28,7 @@ export default function () {
     error,
     isLoading,
   } = useSWR(
-    "https://final-project-backend-lkvb.onrender.com/api/users/sub/" + data.id,
+    "/api/users/sub/" + data.id,
     fetcher,
     {
       refreshInterval: 1000,
