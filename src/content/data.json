@@ -43,5 +43,6 @@
       "option2": "Wedding"
     }
   },
-  "suppliers": { "title": "Our Suppliers" }
+  "suppliers": { "title": "Our Suppliers" },
+  "baseURL": "http://localhost:3000"
 }

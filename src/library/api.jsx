@@ -1,6 +1,8 @@
+import config from "../content/data.json";
+
 export const getPath = async (path) => {
   try {
-    let urlGetAll = `/api/${path}`;
+    let urlGetAll = `${config.baseURL}/api/${path}`;
 
     const response = await fetch(urlGetAll);
     const data = await response.json();
@@ -14,7 +16,7 @@ export const getPath = async (path) => {
 
 // we are checking wich user is logged with :
 export const checkProfile = async () => {
-  const res = await fetch(`/api/profile`, {
+  const res = await fetch(`${config.baseURL}/profile`, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
