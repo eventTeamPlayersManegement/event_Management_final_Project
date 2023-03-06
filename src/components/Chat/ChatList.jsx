@@ -1,26 +1,23 @@
-import { useContext } from "react";
 import useSWR from "swr";
-import { EventContext } from "../../context/Context.jsx";
 import { fetcher } from "../../library/api.jsx";
 
-function ChatList() {
-  const [data, setData] = useContext(EventContext);
+function ChatList({ selected }) {
+  console.log(selected);
   const {
-    data: messages,
+    data: conversations,
     error,
     isLoading,
-  } = useSWR("http://localhost:3000/api/users/" + data.id, fetcher, {
-    refreshInterval: 1,
+  } = useSWR("http://localhost:3000/api/conversation/" + selected, fetcher, {
+    refreshInterval: 1000,
   });
-
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
-  console.log(messages);
+  console.log(conversations);
   return (
     <div className="chatList">
-      {messages.chats.map((el) => (
+      {conversations?.chats?.map((el) => (
         <div className="message">
-          <img src={messages.data.picture} alt="avatar" />
+          <img src={el.writer.data.picture} />
           <p>{el.message}</p>
         </div>
       ))}

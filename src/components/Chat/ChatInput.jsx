@@ -1,14 +1,15 @@
 import React, { useContext, useState } from "react";
 import { EventContext } from "../../context/Context.jsx";
-function ChatInput() {
+import CustomButton from "../lib/CustomButton.jsx";
+function ChatInput({ conversationId, userId }) {
   const [message, setMessage] = useState("");
   const [data, setData] = useContext(EventContext);
   const saveNewMessage = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/api/chat", {
-      method: "POST",
+    await fetch("http://localhost:3000/api/conversation/" + conversationId, {
+      method: "PATCH",
       body: JSON.stringify({
-        writer: data.id,
+        writer: userId,
         message: message,
       }),
       headers: {
@@ -23,8 +24,9 @@ function ChatInput() {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        // disabled={!conversationId}
       />
-      <button>send</button>
+      <CustomButton submit={"send"} style={"customBtnDefault"} />
     </form>
   );
 }

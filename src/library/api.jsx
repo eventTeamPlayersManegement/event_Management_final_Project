@@ -1,4 +1,4 @@
-const baseUrl = "https://final-project-backend-lkvb.onrender.com/api";
+const baseUrl = "http://localhost:3000/api";
 
 export const getPath = async (path) => {
   try {

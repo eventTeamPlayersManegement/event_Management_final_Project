@@ -33,8 +33,9 @@ function Context({ children }) {
           },
           credentials: "include",
         });
+        console.log(user);
       }
-      setData({ user: res, id: user._id });
+      setData({ user: res, id: userId });
     });
   }, []);
   return (
