@@ -13,7 +13,7 @@ function ChatList({ selected }) {
   });
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
-  console.log(conversations);
+
   return (
     <div className="chatList">
       {conversations?.chats?.map((el) => (

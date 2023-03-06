@@ -12,14 +12,14 @@ function Conversations({ conversations, setSelected, createConversation }) {
 
   useEffect(() => {
     if (conversations.admin) {
-      fetch("/api/conversation")
+      fetch(`${config.baseURL}/api/conversation`)
         .then((res) => res.json())
         .then((json) => setConversationList(json));
     }
   }, []);
 
-  console.log(conversations.admin);
-  console.log(conversations);
+  // console.log(conversations.admin);
+  // console.log(conversations);
   return (
     <div className="conversations">
       <button onClick={createConversation}>create</button>

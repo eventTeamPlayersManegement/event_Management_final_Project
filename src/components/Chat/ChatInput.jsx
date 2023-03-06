@@ -26,7 +26,7 @@ function ChatInput({ conversationId, userId }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        // disabled={!conversationId}
+        disabled={!conversationId}
       />
       <CustomButton submit={"send"} style={"customBtnDefault"} />
     </form>
