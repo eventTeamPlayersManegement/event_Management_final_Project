@@ -48,4 +48,5 @@
   "rentauto": { "title": "Rent Autos" },
 
   "baseURL": "http://localhost:3000"
+  "baseURL": "https://final-project-backend-lkvb.onrender.com"
 }

@@ -19,6 +19,7 @@ import Photographer from "./views/Photographer.jsx";
 import Restaurant from "./views/Restaurant.jsx";
 import Entertainment from "./views/Entertainment.jsx";
 import Rentauto from "./views/Rentauto.jsx";
+
 function App() {
   return (
     <div className="App">
