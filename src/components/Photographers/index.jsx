@@ -1,36 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
+import "./style.scss";
+import text from "../../content/data.json";
 
-async function index({ photo }) {
-  const daten = await getPath("photographer");
-  // const [data, setData] = useState(daten)
+
+function Index() {
+    const [data, setData] = useState([])
+    async function getData () {
+        const daten = await getPath("photographer");
+        setData(daten);
+    };
+    useEffect(() => {
+        getData();
+    }, []);
   const Photograph = ({ photograph }) => {
     return (
       <>
-        <h2>{photograph.name}</h2>
-        {photograph.fotos.map((el, i) => (
-          <Images key={i} image={el} />
-        ))}
+        <div className="home-galerie__container">
+            {photograph.fotos.map((el, i) => (
+                <Images key={i} image={el} />
+                ))}
+
+        </div>
       </>
     );
   };
   const Images = ({ image }) => {
     return (
-      <div className="image">
-        <p>{image.title}</p>
-        <img src={image.url} alt="image" />
+      <div className="photo-card__container--polaroid">
+        <img className='photo-card--image__item' src={image.url} alt="image" />
+        <div className='photo-card--image__text'>
+            <p>{image.title}</p>
+        </div>
       </div>
     );
   };
 
   return (
     <>
-      <h1>Photographers</h1>
-      {daten.map((el, i) => (
+      <h1>{text.photographer.title}</h1>
+      {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
       ))}
     </>
   );
 }
 
-export default index;
+export default Index;
