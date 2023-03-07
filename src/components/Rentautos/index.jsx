@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 
 import { getPath } from "../../library/api";
@@ -7,6 +7,14 @@ const database = await getPath("rentauto");
 console.log("data", database);
 
 export default function index() {
+  const [database, setData] = useState([]);
+  async function getData() {
+    const daten = await getPath("rentauto");
+    setData(daten);
+  }
+  useEffect(() => {
+    getData();
+  }, []);
   const Rentauto = ({ rentauto }) => {
     return (
       <>
