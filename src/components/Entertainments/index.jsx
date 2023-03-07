@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { getPath } from "../../library/api";
-const database = await getPath("entertainment");
-console.log(database);
+// const database = await getPath("entertainment");
+// console.log(database);
 export default function index() {
+  const [database, setData] = useState([]);
+  async function getData() {
+    const daten = await getPath("entertainment");
+    setData(daten);
+  }
+  useEffect(() => {
+    getData();
+  }, []);
   const Entertainment = ({ entertainment }) => {
     return (
       <>
