@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
-const database = await getPath("restaurant");
-// console.log(database);
+
 export default function index() {
+  const [database, setData] = useState([])
+  async function getData () {
+    const daten = await getPath("restaurant");
+    setData(daten);
+  };
+  useEffect(() => {
+      getData();
+  }, []);
   const Restaurant = ({ restaurant }) => {
     return (
       <>
