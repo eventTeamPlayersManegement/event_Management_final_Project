@@ -48,5 +48,5 @@
   "restaurant": { "title": "Our Restaurants" },
 
   "rentauto": { "title": "Rent Autos" },
-  "baseURL": "https://final-project-backend-lkvb.onrender.com"
+  "baseURL": "http://localhost:3000"
 }
