@@ -36,8 +36,31 @@
         "h2": ["Your desire - Our pleasure", "Your wishes"],
 
         "paragraph": [
-            { "name": "Photographer", "price": "2000€" },
-            { "name": "Catering", "price": "3000€" }
+            {
+                "name": "Photographer",
+                "duration": "2:30 hours",
+                "price": "800€"
+            },
+            {
+                "name": "Clown",
+                "duration": "1 hour",
+                "price": "800€"
+            },
+            {
+                "name": "Band",
+                "duration": "4 hours",
+                "price": "1000€"
+            },
+            {
+                "name": "Catering",
+                "duration": "5:30 hours",
+                "price": "1500€"
+            },
+            {
+                "name": "Venue",
+                "duration": "6:30 hours",
+                "price": "1000€"
+            }
         ]
     },
 

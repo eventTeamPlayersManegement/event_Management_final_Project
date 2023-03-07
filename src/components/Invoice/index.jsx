@@ -6,7 +6,7 @@ export default function () {
     const { h2, paragraph } = data.invoice;
     let names = paragraph.map((el) => (
         <li key={el.name} className="list-item">
-            {el.name} {el.price}
+            {el.name} {el.price} {el.duration}
         </li>
     ));
 

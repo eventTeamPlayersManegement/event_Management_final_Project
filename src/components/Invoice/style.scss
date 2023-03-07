@@ -11,13 +11,13 @@ section {
     align-items: center;
 }
 .heading {
-    margin: 2em;
+    margin: $pad;
 }
 .article-invoice {
-    height: 20em;
+    height: fit-content;
     width: 80vw;
     flex-direction: column;
-    background-color: #9962d7;
+    background-color: $primary;
     border-radius: $pad + 3;
 
     & .list-item {
