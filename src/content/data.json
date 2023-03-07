@@ -44,6 +44,7 @@
     }
   },
   "suppliers": { "title": "Our Suppliers" },
-  "photographer": { "title": "Our photographers"},
+  "photographer": { "title": "Our photographers" },
+  "restaurant": { "title": "Our Restaurants" },
   "baseURL": "http://localhost:3000"
 }
