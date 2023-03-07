@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import config from "../../content/data.json";
 
-function Conversations({ conversations, setSelected, createConversation }) {
-  const [conversationList, setConversationList] = useState(conversations);
+function Conversations({ user, setSelected, createConversation }) {
+  const [conversationList, setConversationList] = useState(user);
 
   const setSelection = async (id) => {
     const res = await fetch(`${config.baseURL}/api/conversation/${id}`);
@@ -11,15 +11,19 @@ function Conversations({ conversations, setSelected, createConversation }) {
   };
 
   useEffect(() => {
-    if (conversations.admin) {
+    if (user.admin) {
       fetch(`${config.baseURL}/api/conversation`)
         .then((res) => res.json())
-        .then((json) => setConversationList(json));
+        .then((json) => {
+          setSelected(json[json.length - 1]);
+          setConversationList({ ...user, conversations: json });
+        });
+    } else {
+      setSelected(user.conversations[0]);
+      setConversationList(user);
     }
-  }, []);
+  }, [user.conversations.length]);
 
-  // console.log(conversations.admin);
-  // console.log(conversations);
   return (
     <div className="conversations">
       <button onClick={createConversation}>create</button>
@@ -30,7 +34,12 @@ function Conversations({ conversations, setSelected, createConversation }) {
           }}
           key={el._id}
         >
-          {new Date(el.createdAt).toLocaleString()}
+          {new Date(el.createdAt).toLocaleString("de", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          })}
+          {user.admin && <p>{el.chats[0]?.writer.data.name}</p>}
         </button>
       ))}
     </div>

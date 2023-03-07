@@ -1,8 +1,8 @@
 import React from "react";
 import { getPath } from "../../library/api";
 
-async function index({ photo }) {
-  const daten = await getPath("photographer");
+const daten = await getPath("photographer");
+function index({ photo }) {
   // const [data, setData] = useState(daten)
   const Photograph = ({ photograph }) => {
     return (
