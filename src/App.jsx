@@ -17,6 +17,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer/Index.jsx";
 import Photographer from "./views/Photographer.jsx";
 import Restaurant from "./views/Restaurant.jsx";
+import Entertainment from "./views/Entertainment.jsx";
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />
         <Route path="/restaurant" element={<Restaurant />} />
+        <Route path="/entertainement" element={<Entertainment />} />
 
         <Route path="/suppliers" element={<Suppliers />} />
         <Route path="*" element={<Page404 />} />
