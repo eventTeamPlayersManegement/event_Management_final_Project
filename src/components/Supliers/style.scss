@@ -4,3 +4,15 @@ $background: #eaeaea;
 $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
+.ourSuppliers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .caruselContainer {
+    flex: grid;
+  }
+  .mobile_grid_photos {
+    flex: 1;
+  }
+}

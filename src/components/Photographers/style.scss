@@ -1,0 +1,36 @@
+h1, h2 {
+    text-align: center;
+}
+.home-galerie__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  
+}
+@media screen and (max-width: 768px) { 
+  .home-galerie__container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.photo-card__container--polaroid{
+    width: min( 100%, 250px) ;
+    background: #fff;
+    padding: 0.25rem;
+    margin: 0.75rem;
+    box-shadow:  2px 2px 6px #000000,
+             4px 4px 6px #010101;
+}
+.photo-card--image__item{
+    max-width: 100%;
+    object-fit: cover; 
+
+}
+.photo-card--image__text{
+    color: var(--black);
+    text-align: center;
+}
