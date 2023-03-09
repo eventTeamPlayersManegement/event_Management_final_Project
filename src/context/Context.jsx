@@ -18,7 +18,7 @@ function Context({ children }) {
       const user = await userRes.json();
       console.log(user);
       if (!user) {
-        await fetch(`${config.baseURL}/api/users`, {
+        await fetch(`/api/users`, {
           method: "POST",
           body: JSON.stringify({
             sub: userId,

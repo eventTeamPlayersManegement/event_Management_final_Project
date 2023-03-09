@@ -6,17 +6,16 @@ import "./style.scss";
 const daten = await getPath("suppliers");
 const photo = await getPath("photographer");
 
-
 export default function Supliers() {
-  const [daten, setData] = useState([])
-  async function getData () {
-      const data = await getPath("suppliers");
-      setData(data);
-  };
+  const [daten, setData] = useState([]);
+  async function getData() {
+    const data = await getPath("suppliers");
+    setData(data);
+  }
   useEffect(() => {
-      getData();
+    getData();
   }, []);
-  
+
   const Images = ({ image }) => {
     return <img style={{ width: "200px" }} src={image.url} alt="image" />;
   };
@@ -24,7 +23,6 @@ export default function Supliers() {
     <div className="ourSuppliers">
       <h1>{suppliers.suppliers.title}</h1>
       <div className="caruselContainer">
-<<<
         <div className="restaurants"></div>
         <div className="entertainement"></div>
         <div className="rentcar"></div>

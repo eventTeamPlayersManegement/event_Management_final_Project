@@ -1,5 +1,3 @@
-import config from "../content/data.json";
-
 export const getPath = async (path) => {
   try {
     let urlGetAll = `/api/${path}`;
@@ -23,18 +21,18 @@ export const checkProfile = async () => {
     // },
     // credentials: "include",
   });
+
   const json = await res.json();
 
   return json;
 };
 
 export const getWriterOnSub = async (id) => {
-  const res = await fetch(`${config.baseURL}/api/users/sub/${id}`, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Content-type": "application/json; charset=UTF-8",
-    },
-    credentials: "include",
+  const res = await fetch(`/api/users/sub/${id}`, {
+    // headers: {
+    //   "Content-type": "application/json; charset=UTF-8",
+    // },
+    // credentials: "include",
   });
   return await res.json();
 };

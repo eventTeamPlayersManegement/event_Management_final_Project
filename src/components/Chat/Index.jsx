@@ -6,7 +6,6 @@ import { useContext, useEffect, useState } from "react";
 import useSWR from "swr";
 import { EventContext } from "../../context/Context.jsx";
 import { fetcher } from "../../library/api.jsx";
-import config from "../../content/data.json";
 
 export default function () {
   const [data, setData] = useContext(EventContext);
