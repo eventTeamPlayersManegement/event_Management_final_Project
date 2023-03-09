@@ -4,6 +4,9 @@ import "./style.scss";
 import text from "../../content/data.json";
 
 
+st [data, setData] = useState(daten)
+
+
 function Index() {
     const [data, setData] = useState([])
     async function getData () {
@@ -13,6 +16,7 @@ function Index() {
     useEffect(() => {
         getData();
     }, []);
+
   const Photograph = ({ photograph }) => {
     return (
       <>
