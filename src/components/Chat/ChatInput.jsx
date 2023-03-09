@@ -17,6 +17,7 @@ function ChatInput({ conversationId, userId }) {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
+      credentials: "include"
     });
     setMessage("");
   };
