@@ -45,16 +45,11 @@
   },
   "suppliers": { "title": "Our Suppliers" },
 
- 
   "restaurant": { "title": "Our Restaurants" },
 
-
-
-  "baseURL": "https://final-project-backend-lkvb.onrender.com",
+  "baseURL": "http://localhost:3000",
 
   "photographer": { "title": "Our photographers" },
-  
 
   "rentauto": { "title": "Rent Autos" }
-
 }
