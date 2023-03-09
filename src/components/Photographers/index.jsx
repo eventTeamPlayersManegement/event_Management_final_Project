@@ -29,7 +29,8 @@ function Index() {
   const Profilepicture = ({ photograph }) => {
     return (
       <>
-        <div className="profile-picture__container">
+        <div className="profile-picture__image--container">
+
             <img className='profile-picture--image__item' src={photograph.profilepicture} alt="photograph" />
 
         </div>
@@ -50,9 +51,11 @@ function Index() {
   return (
     <>
       <h1>{text.photographer.title}</h1>
+      <div className="home-galerie__container">
       {data.map((el, i) => (
         <Profilepicture key={i} photograph={el} />
       ))}
+      </div>
       {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
       ))}
