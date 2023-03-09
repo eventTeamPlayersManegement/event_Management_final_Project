@@ -14,14 +14,14 @@ export default function () {
     data: user,
     error,
     isLoading,
-  } = useSWR(`${config.baseURL}/api/users/sub/${data.id}`, fetcher, {
+  } = useSWR(`/api/users/sub/${data.id}`, fetcher, {
     refreshInterval: 1000,
   });
 
   const [selected, setSelected] = useState({});
 
   const createConversation = () => {
-    fetch(`${config.baseURL}/api/conversation`, {
+    fetch(`/api/conversation`, {
       method: "POST",
       body: JSON.stringify({
         id: data.id,

@@ -8,7 +8,7 @@ function ChatInput({ conversationId, userId }) {
   const [data, setData] = useContext(EventContext);
   const saveNewMessage = async (e) => {
     e.preventDefault();
-    await fetch(`${config.baseURL}/api/conversation/${conversationId}`, {
+    await fetch(`/api/conversation/${conversationId}`, {
       method: "PATCH",
       body: JSON.stringify({
         writer: userId,
@@ -28,7 +28,7 @@ function ChatInput({ conversationId, userId }) {
         onChange={(e) => setMessage(e.target.value)}
         disabled={!conversationId}
       />
-      <CustomButton submit={"send"} style={"customBtnDefault"} />
+      <CustomButton submit={"Send"} style={"customBtnDefault"} />
     </form>
   );
 }

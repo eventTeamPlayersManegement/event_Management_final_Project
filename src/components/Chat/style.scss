@@ -6,13 +6,13 @@ $size: 1rem;
 $pad: 2rem;
 .chat {
   position: absolute;
-  inset: 100px 16px 16px 16px;
+  inset: 90px 16px 100px 16px;
   z-index: 9999;
   background-color: $background;
   display: flex;
   flex-direction: column;
   @media (min-width: 640px) {
-    inset: 100px 16px 16px 50%;
+    inset: 90px 16px 150px 70%;
   }
   .top {
     flex: 1;
@@ -24,14 +24,39 @@ $pad: 2rem;
       display: flex;
       flex-direction: column;
       overflow-y: auto;
+      button {
+        border-radius: 0;
+      }
+      .usersChatsList {
+        border: none;
+        border-bottom: 1px solid $secondary;
+        p {
+          font-weight: 600;
+        }
+      }
     }
     .chatList {
       flex: 1;
       .message {
         display: flex;
+        flex-direction: column;
+        .userBlock {
+          display: flex;
+          align-items: center;
 
-        img {
-          width: 32px;
+          img {
+            width: 32px;
+            border-radius: 50%;
+          }
+          p {
+            font-size: calc($size / 1.2);
+            font-weight: 600;
+            color: $primary;
+          }
+        }
+        .messages {
+          color: $secondary;
+          font-size: calc($size / 1.1);
         }
       }
     }

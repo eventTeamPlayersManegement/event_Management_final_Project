@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import config from "../../content/data.json";
+import CustomButton from "../lib/CustomButton.jsx";
 
 function Conversations({ user, setSelected, createConversation }) {
   const [conversationList, setConversationList] = useState(user);
 
   const setSelection = async (id) => {
-    const res = await fetch(`${config.baseURL}/api/conversation/${id}`);
+    const res = await fetch(`/api/conversation/${id}`);
     const data = await res.json();
     setSelected(data);
   };
 
   useEffect(() => {
     if (user.admin) {
-      fetch(`${config.baseURL}/api/conversation`)
+      fetch(`/api/conversation`)
         .then((res) => res.json())
         .then((json) => {
           setSelected(json[json.length - 1]);
@@ -26,9 +27,14 @@ function Conversations({ user, setSelected, createConversation }) {
 
   return (
     <div className="conversations">
-      <button onClick={createConversation}>create</button>
+      <CustomButton
+        dispach={createConversation}
+        style={"customBtnDefault"}
+        submit={"Create"}
+      />
       {conversationList?.conversations?.map((el) => (
         <button
+          className="usersChatsList"
           onClick={() => {
             setSelection(el._id);
           }}
