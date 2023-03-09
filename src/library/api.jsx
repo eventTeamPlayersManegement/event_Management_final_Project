@@ -29,7 +29,7 @@ export const checkProfile = async () => {
 };
 
 export const getWriterOnSub = async (id) => {
-  const res = await fetch(`${config.baseURL}/api/users/sub/${id}`, {
+  const res = await fetch(`/api/users/sub/${id}`, {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-type": "application/json; charset=UTF-8",
