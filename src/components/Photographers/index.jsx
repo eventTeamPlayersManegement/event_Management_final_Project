@@ -34,6 +34,11 @@ function Index() {
             <img className='profile-picture--image__item' src={photograph.profilepicture} alt="photograph" />
 
         </div>
+        <div className="profile-picture__image--container">
+
+            <img className='profile-picture--image__item' src={photograph.equipment} alt="photograph" />
+
+        </div>
       </>
     );
   };
