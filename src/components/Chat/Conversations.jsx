@@ -12,10 +12,8 @@ function Conversations({ user, setSelected, createConversation }) {
   };
 
   useEffect(() => {
-
     if (user.admin) {
       fetch(`/api/conversation`)
-
         .then((res) => res.json())
         .then((json) => {
           setSelected(json[json.length - 1]);
@@ -47,7 +45,7 @@ function Conversations({ user, setSelected, createConversation }) {
             month: "2-digit",
             year: "numeric",
           })}
-          {user.admin && <p>{el.chats[0]?.writer.data.name}</p>}
+          {/* {user.admin && <p>{el.chats[0]?.writer.data.name}</p>} */}
         </button>
       ))}
     </div>

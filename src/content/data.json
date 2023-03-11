@@ -12,44 +12,11 @@
         "h1": "Payment",
         "h2": "Payment Methods",
 
-        "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
-    },
+  "restaurant": { "title": "Our Restaurants" },
 
-    "aboutUs": [
-        {
-            "title": "About Us",
-            "description": "Event Lite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced and energetic event planners, suppliers, venues and more. With the number of events we organise, Event  Lite Planner does not need to add exorbitant fees and mark-ups to make its profit margins. This ensures that our clients list make regular use of our services. ",
-            "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-            "url1": "https://images.unsplash.com/photo-1553710120-23dd1551da41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1130&q=80",
-            "url2": "https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+  "baseURL": "http://localhost:3000",
 
-            "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
-        }
-    ],
-    "contactUs": ["Contact Us"],
-    "Services": {
-        "submit": "Submit",
-        "title": "Your Event, your Way",
-        "select": {
-            "select1": "Select Type Event",
-            "select2": "Select Location",
-            "select3": "Select Date",
-            "select4": "Select Space Preference",
-            "select5": "Select Deckor",
-            "select6": "Select Entertainment"
-        },
-        "options": {
-            "option1": "Birthday",
-            "option2": "Wedding"
-        }
-    },
-    "suppliers": { "title": "Our Suppliers" },
+  "photographer": { "title": "Our photographers" },
 
-    "restaurant": { "title": "Our Restaurants" },
-
-    "baseURL": "http://localhost:3000",
-
-    "photographer": { "title": "Our photographers" },
-
-    "rentauto": { "title": "Rent Autos" }
+  "rentauto": { "title": "Rent Autos" }
 }
