@@ -12,18 +12,16 @@ function Conversations({ user, setSelected, createConversation }) {
   };
 
   useEffect(() => {
-
     if (user.admin) {
       fetch(`/api/conversation`)
-
         .then((res) => res.json())
         .then((json) => {
           setSelected(json[json.length - 1]);
           setConversationList({ ...user, conversations: json });
         });
     } else {
-      setSelected(user.conversations[0]);
       setConversationList(user);
+      setSelected(user.conversations[0]);
     }
   }, [user.conversations.length]);
 

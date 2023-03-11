@@ -29,10 +29,11 @@ export const checkProfile = async () => {
 
 export const getWriterOnSub = async (id) => {
   const res = await fetch(`/api/users/sub/${id}`, {
-    // headers: {
-    //   "Content-type": "application/json; charset=UTF-8",
-    // },
-    // credentials: "include",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    credentials: "include",
   });
   return await res.json();
 };
