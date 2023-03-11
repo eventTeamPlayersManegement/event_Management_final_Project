@@ -1,16 +1,17 @@
 {
-    "navItems": ["about", "services", "suppliers", "contact"],
+  "navItems": ["about", "services", "suppliers", "contact"],
 
-    "landingText": {
-        "wish": "Your Event, Your Wish",
-        "our": "Our Pleasure"
-    },
-    "footer": {
-        "copyright": "Copyright @ 2023 Event Elite Planners "
-    },
-    "payment": {
-        "h1": "Payment",
-        "h2": "Payment Methods",
+  "landingText": {
+    "wish": "Your Event, Your Wish",
+    "our": "Our Pleasure"
+  },
+  "footer": {
+    "copyright": "Copyright @ 2023 Event Elite Planners "
+  },
+  "payment": {
+    "h1": "Payment",
+    "h2": "Payment Methods"
+  },
 
   "restaurant": { "title": "Our Restaurants" },
 

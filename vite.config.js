@@ -4,30 +4,28 @@ import data from "./src/content/data.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
-    server: {
-        proxy: {
-            "/login": {
-                target: data.baseURL,
-                changeOrigin: true,
-            },
-            "/logout": {
-                target: data.baseURL,
-                changeOrigin: true,
-            },
-            "/profile": {
-                target: data.baseURL,
-                changeOrigin: true,
-            },
-            "/api": {
-                target: data.baseURL,
-                changeOrigin: true,
-            },
-        },
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/login": {
+        target: data.baseURL,
+        changeOrigin: true,
+      },
+      "/logout": {
+        target: data.baseURL,
+        changeOrigin: true,
+      },
+      "/profile": {
+        target: data.baseURL,
+        changeOrigin: true,
+      },
+      "/api": {
+        target: data.baseURL,
+        changeOrigin: true,
+      },
     },
   },
   build: {
     chunkSizeWarningLimit: 20000,
   },
-
 });
