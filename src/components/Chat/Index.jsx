@@ -6,7 +6,6 @@ import { useContext, useEffect, useState } from "react";
 import useSWR from "swr";
 import { EventContext } from "../../context/Context.jsx";
 import { fetcher } from "../../library/api.jsx";
-import config from "../../content/data.json";
 
 export default function () {
   const [data, setData] = useContext(EventContext);
@@ -14,11 +13,11 @@ export default function () {
     data: user,
     error,
     isLoading,
-  } = useSWR(`/api/users/sub/${data.id}`, fetcher, {
+  } = useSWR(`/api/users/${data.id}`, fetcher, {
     refreshInterval: 1000,
   });
 
-  const [selected, setSelected] = useState({});
+  const [selected, setSelected] = useState("");
 
   const createConversation = () => {
     fetch(`/api/conversation`, {
@@ -41,15 +40,17 @@ export default function () {
 
   return (
     <div className="chat">
-      <div className="top">
-        {selected._id && <ChatList selected={selected._id} />}
+      <div className={` top ${!selected && "notSelected"}`}>
+        {selected && <ChatList selected={selected._id} />}
         <Conversations
           user={user}
           setSelected={setSelected}
           createConversation={createConversation}
         />
       </div>
-      <ChatInput conversationId={selected._id} userId={user._id} />
+      {selected && (
+        <ChatInput conversationId={selected._id} userId={user._id} />
+      )}
     </div>
   );
 }

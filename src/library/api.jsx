@@ -1,5 +1,3 @@
-import config from "../content/data.json";
-
 export const getPath = async (path) => {
   try {
     let urlGetAll = `/api/${path}`;
@@ -23,6 +21,7 @@ export const checkProfile = async () => {
     // },
     // credentials: "include",
   });
+
   const json = await res.json();
 
   return json;

@@ -3,11 +3,8 @@ import suppliers from "../../content/data.json";
 import { getPath } from "../../library/api";
 import "./style.scss";
 
-const daten = await getPath("suppliers");
-const photo = await getPath("photographer");
-
 export default function Supliers() {
-  const [daten, setData] = useState([]);
+  const [data, setData] = useState([]);
   async function getData() {
     const data = await getPath("suppliers");
     setData(data);
@@ -28,7 +25,7 @@ export default function Supliers() {
         <div className="rentcar"></div>
       </div>
       <div className="mobile_grid_photos">
-        {daten.map((el, id) => (
+        {data.map((el, id) => (
           <Images key={id} image={el} />
         ))}
       </div>

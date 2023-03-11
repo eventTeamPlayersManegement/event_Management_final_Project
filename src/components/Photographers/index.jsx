@@ -3,8 +3,6 @@ import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
 
-// const [data, setData] = useState(daten);
-
 function Index() {
   const [data, setData] = useState([]);
   async function getData() {

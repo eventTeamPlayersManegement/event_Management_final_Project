@@ -6,18 +6,18 @@ $size: 1rem;
 $pad: 2rem;
 .chat {
   position: absolute;
-  inset: 90px 16px 100px 16px;
+  inset: 70px 16px 50px 16px;
   z-index: 9999;
   background-color: $background;
   display: flex;
   flex-direction: column;
   @media (min-width: 640px) {
-    inset: 90px 16px 150px 70%;
+    inset: 70px 16px 150px 70%;
   }
   .top {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr 80px;
     overflow-y: auto;
     .conversations {
       background-color: #555;
@@ -26,6 +26,8 @@ $pad: 2rem;
       overflow-y: auto;
       button {
         border-radius: 0;
+        font-size: calc($size/1.3);
+        padding: 0.5rem 1rem;
       }
       .usersChatsList {
         border: none;
@@ -36,10 +38,14 @@ $pad: 2rem;
       }
     }
     .chatList {
+      padding: calc($size / 2);
       flex: 1;
       .message {
         display: flex;
         flex-direction: column;
+        &.writer {
+          align-items: flex-end;
+        }
         .userBlock {
           display: flex;
           align-items: center;
@@ -75,8 +81,9 @@ $pad: 2rem;
     }
     button {
       border-radius: 0;
-      width: 100px;
-      font-weight: 900;
+      font-size: calc($size/1.3);
+      padding: 0.5rem 1rem;
+      width: 80px;
     }
   }
 }
