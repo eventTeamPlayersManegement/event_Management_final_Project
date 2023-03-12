@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
 export default function Service() {
     const inicialValues = {
-        event: "",
+        venue: "",
         city: "",
     };
 
@@ -26,17 +26,20 @@ export default function Service() {
     }
 
     const onSubmitHandler = (event) => {
-        // event.preventDefault();
-        // console.log("submited");
+        event.preventDefault();
+        console.log("submited");
         setValues(inicialValues);
         setSelectedDate(new Date());
-        const fd = new FormData(form);
 
-        for (item of fd) {
-            console.log(item);
-        }
+        const fd = new FormData(form);
+        const obj = Object.fromEntries(fd);
+        console.log(obj);
+        const json = JSON.stringify(obj);
+        localStorage.setItem("onSubmitHandler", json);
+
+        window.location.href = "confirm.html";
     };
-    console.log("Event type: " + values.event);
+    console.log("Venue type: " + values.venue);
     console.log("City name: " + values.city);
 
     return (
@@ -44,9 +47,9 @@ export default function Service() {
             <h1 className="title">chose data</h1>
             <form onSubmit={onSubmitHandler}>
                 <div>
-                    <label htmlFor="event">Event</label>
+                    <label htmlFor="venue">Event</label>
                     <br />
-                    <select name="event" onChange={handleOptionChange}>
+                    <select name="venue" onChange={handleOptionChange}>
                         <option value="" selected disabled hidden></option>
                         <option>wedding</option>
                         <option>birthday</option>
