@@ -7,40 +7,72 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
 export default function Service() {
-  const inicialValues = {
-    select1: "",
-    select2: "",
-    select4: "",
-    select5: "",
-    select6: "",
-    select7: "",
-  };
+    // const inicialValues = {
+    //     select1: "",
+    //     select2: "",
+    //     select4: "",
+    //     select5: "",
+    //     select6: "",
+    //     select7: "",
+    // };
 
-  const [values, setValues] = useState(inicialValues);
-  const [selectedDate, setSelectedDate] = useState(new Date());
+    // const [values, setValues] = useState(inicialValues);
+    // const [selectedDate, setSelectedDate] = useState(new Date());
 
-  const cityOptions = city.map((city, i) => (
-    <option key={i} value={city.name}>
-      {city.name}
-    </option>
-  ));
+    // const cityOptions = city.map((city, i) => (
+    //     <option key={i} value={city.name}>
+    //         {city.name}
+    //     </option>
+    // ));
 
-  function handleOptionChange(event) {
-    setValues({ ...values, [event.target.name]: event.target.value });
-  }
+    // function handleOptionChange(event) {
+    //     setValues({ ...values, [event.target.name]: event.target.value });
+    // }
 
-  const onSubmitHandler = (event) => {
-    event.preventDefault();
-    console.log("submited");
-    setValues(inicialValues);
-    setSelectedDate(new Date());
-  };
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+        console.log("submited");
+        setValues(inicialValues);
+        setSelectedDate(new Date());
+    };
+    const form = document.querySelector("form");
 
-  return (
-    <>
-      <h1 className="title">{ServiceData.Services.title}</h1>
+    // form.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     const fd = new FormData(form);
+    //     console.log(fd);
+    // });
+    return (
+        <>
+            <h1 className="title">chose data</h1>
+            <form onSubmit={onSubmitHandler}>
+                <div>
+                    <label htmlFor="event">Event</label>
+                    <br />
+                    <select name="event">
+                        <option>wedding</option>
+                        <option>birthday</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="city">City</label>
+                    <br />
+                    <select name="city">
+                        <option>Berlin</option>
+                        <option>Munich</option>
+                        <option>Hamburg</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>{" "}
+        </>
+    );
+}
 
-      <form onSubmit={onSubmitHandler}>
+{
+    /* <form onSubmit={onSubmitHandler}>
         <div className="input-select-container">
           <label htmlFor="option1"></label>
           <select
@@ -114,7 +146,5 @@ export default function Service() {
             style={"customBtnDefault"}
           />
         </div>
-      </form>
-    </>
-  );
+      </form> */
 }
