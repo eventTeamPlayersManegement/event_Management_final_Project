@@ -7,9 +7,26 @@
         <title>Document</title>
     </head>
     <body>
-        <script>
+        <main>
+            <h1>Lets check if your data is showing</h1>
+            <div id="data"></div>
+            <div>
+                <button id="btn">Confirm</button>
+            </div>
+        </main>
 
-            const json = localStorage.getItem("onSubmitHandler")
+        <script>
+            const json = localStorage.getItem("onSubmitHandler");
+            const obj = JSON.parse(json);
+
+            for (key in obj) {
+                const markup = `
+                <div>
+                    <span>${key}: ${obj[key]}</span>
+                </div>
+                `;
+                document.getElementById("data").innerHTML += markup;
+            }
         </script>
     </body>
 </html>
