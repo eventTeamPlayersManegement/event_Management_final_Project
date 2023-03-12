@@ -7,17 +7,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
 export default function Service() {
-    // const inicialValues = {
-    //     select1: "",
-    //     select2: "",
-    //     select4: "",
-    //     select5: "",
-    //     select6: "",
-    //     select7: "",
-    // };
+    const inicialValues = {
+        event: "",
+        city: "",
+    };
 
-    // const [values, setValues] = useState(inicialValues);
-    // const [selectedDate, setSelectedDate] = useState(new Date());
+    const [values, setValues] = useState(inicialValues);
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
     // const cityOptions = city.map((city, i) => (
     //     <option key={i} value={city.name}>
@@ -25,9 +21,9 @@ export default function Service() {
     //     </option>
     // ));
 
-    // function handleOptionChange(event) {
-    //     setValues({ ...values, [event.target.name]: event.target.value });
-    // }
+    function handleOptionChange(event) {
+        setValues({ ...values, [event.target.name]: event.target.value });
+    }
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
@@ -35,13 +31,9 @@ export default function Service() {
         setValues(inicialValues);
         setSelectedDate(new Date());
     };
-    const form = document.querySelector("form");
+    console.log("Event type: " + values.event);
+    console.log("City name: " + values.city);
 
-    // form.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     const fd = new FormData(form);
-    //     console.log(fd);
-    // });
     return (
         <>
             <h1 className="title">chose data</h1>
@@ -49,7 +41,7 @@ export default function Service() {
                 <div>
                     <label htmlFor="event">Event</label>
                     <br />
-                    <select name="event">
+                    <select name="event" onChange={handleOptionChange}>
                         <option>wedding</option>
                         <option>birthday</option>
                     </select>
@@ -57,7 +49,7 @@ export default function Service() {
                 <div>
                     <label htmlFor="city">City</label>
                     <br />
-                    <select name="city">
+                    <select name="city" onChange={handleOptionChange}>
                         <option>Berlin</option>
                         <option>Munich</option>
                         <option>Hamburg</option>
