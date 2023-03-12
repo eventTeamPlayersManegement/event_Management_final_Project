@@ -26,10 +26,15 @@ export default function Service() {
     }
 
     const onSubmitHandler = (event) => {
-        event.preventDefault();
-        console.log("submited");
+        // event.preventDefault();
+        // console.log("submited");
         setValues(inicialValues);
         setSelectedDate(new Date());
+        const fd = new FormData(form);
+
+        for (item of fd) {
+            console.log(item);
+        }
     };
     console.log("Event type: " + values.event);
     console.log("City name: " + values.city);
@@ -42,6 +47,7 @@ export default function Service() {
                     <label htmlFor="event">Event</label>
                     <br />
                     <select name="event" onChange={handleOptionChange}>
+                        <option value="" selected disabled hidden></option>
                         <option>wedding</option>
                         <option>birthday</option>
                     </select>
@@ -50,6 +56,7 @@ export default function Service() {
                     <label htmlFor="city">City</label>
                     <br />
                     <select name="city" onChange={handleOptionChange}>
+                        <option value="" selected disabled hidden></option>
                         <option>Berlin</option>
                         <option>Munich</option>
                         <option>Hamburg</option>
