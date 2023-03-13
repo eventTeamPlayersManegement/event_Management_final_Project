@@ -1,20 +1,29 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import "./style.scss";
 import navitems from "../../content/data.json";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Footer from "../Footer/Index.jsx";
+import { EventContext } from "../../context/Context.jsx";
+import { toast } from "react-hot-toast";
+import Index from "../Chat/Index.jsx";
+// update
 export default function Header() {
   const [toggle, setToggle] = useState(false);
+  const [toggleChat, setToggleChat] = useState(false);
+
   const navigate = useNavigate();
+  const [data, setData] = useContext(EventContext);
+
   return (
     <header className="header">
+      {toggleChat && <Index />}
       <nav className="nav container">
         <img
           src={Logo}
           className="nav__logo"
           alt="logo"
-          onClick={() => navigate("/about")}
+          onClick={() => navigate("/")}
         />
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
@@ -31,6 +40,7 @@ export default function Header() {
               </li>
             );
           })}
+
           <img className="logo" src={Logo} alt="logo" />
           <i
             className="uil uil-times-circle nav__close"
@@ -40,17 +50,35 @@ export default function Header() {
         </ul>
 
         <div className="nav__icons">
-          <i
-            className="uil uil-signin"
-            onClick={() => {
-              navigate("/signin");
-            }}
-          ></i>
+          {data.user && (
+            <div className="userData">
+              <img
+                src={data?.user?.user?.picture}
+                alt="avatar"
+                className="avatar"
+              />
+              <p className="nickName">{data?.user?.user?.nickname}</p>
+            </div>
+          )}
+          {data.user ? (
+            <i
+              className="uil uil-signin"
+              onClick={() => {
+                navigate("/signin");
+              }}
+            ></i>
+          ) : (
+            <i
+              className="uil uil-signout"
+              onClick={() => {
+                navigate("/signin");
+              }}
+            ></i>
+          )}
           <i
             className="uil uil-comment-message"
-            onClick={() => navigate("/chat")}
+            onClick={() => setToggleChat(!toggleChat)}
           ></i>
-
           <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
             <i className="uil uil-bars nav__icon"></i>
           </div>

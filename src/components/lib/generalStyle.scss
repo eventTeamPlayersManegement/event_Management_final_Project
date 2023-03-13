@@ -11,15 +11,16 @@ $pad: 2rem;
   border-radius: 10px;
   font-size: calc($size);
   font-weight: 900;
-  &:focus,
-  &:active {
-    background-color: inherit;
-  }
+  transition: all;
+  transition-duration: 500;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(102, 102, 102, 0);
+  box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(102, 102, 102, 0);
 
   &:hover {
-    transition: all;
     transform: scale(0.98);
-    font-size: calc($size * 1.2);
+    font-size: calc($size * 1.1);
     cursor: pointer;
   }
 }
