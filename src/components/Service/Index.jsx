@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
@@ -11,6 +12,8 @@ export default function Service() {
         venue: "",
         city: "",
     };
+
+    const navigate = useNavigate();
 
     const [values, setValues] = useState(inicialValues);
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -41,13 +44,15 @@ export default function Service() {
         setValues(inicialValues);
         setSelectedDate(new Date());
 
-        window.location.href = "confirm.html"; //redirect navigate
+        navigate("/Invoice/Index.jsx", { replace: true });
+        // window.location.href = "confirm.html"; //redirect navigate
     };
     console.log("Venue type: " + values.venue);
     console.log("City name: " + values.city);
 
     return (
         <>
+            {/* <Navigate to="../Invoice/Index.jsx" replace={true} /> */}
             <h1 className="title">chose data</h1>
             <form onSubmit={onSubmitHandler}>
                 <div>
