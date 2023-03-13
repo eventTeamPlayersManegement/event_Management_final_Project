@@ -5,10 +5,15 @@ import { useState } from "react";
 
 export default function Contact() {
   const initial = {
+    name: "",
+    email: "",
     title: "",
     message: "",
   };
   const [values, setValues] = useState(initial);
+
+  const [isSuccess, setIsSuccess] = useState(false);
+
   const handlerInput = (event) => {
     setValues({
       ...values,
@@ -18,13 +23,48 @@ export default function Contact() {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(values);
-    setValues(initial);
+
+    fetch("/api/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setValues(initial);
+        setInterval(() => {
+          setIsSuccess(true);
+          setTimeout(() => setIsSuccess(false), 3000);
+        }, 1000);
+        console.log(values);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
+
   return (
     <div className="form-container">
       <h1>{contact.contactUs[0]}</h1>
+
       <form onSubmit={onSubmitHandler}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          onChange={handlerInput}
+          value={values.name}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={handlerInput}
+          value={values.email}
+        />
         <input
           type="text"
           name="title"
@@ -43,6 +83,9 @@ export default function Contact() {
         ></textarea>
 
         <button type="submit">Send</button>
+        {isSuccess && (
+          <div className="success-message">Message sent successfully!!!!</div>
+        )}
       </form>
     </div>
   );
