@@ -1,6 +1,19 @@
 h1, h2 {
     text-align: center;
 }
+.profile-picture__image--container{
+    width: min( 100%, 250px);
+    height: auto;
+    margin-inline: 1rem;
+    .profile-picture--image__item{
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover; 
+        aspect-ratio: 1/1;
+    }
+
+}
 .home-galerie__container{
     width: 100%;
     display: flex;
@@ -18,15 +31,17 @@ h1, h2 {
   }
 }
 .photo-card__container--polaroid{
-    width: min( 100%, 250px) ;
+    width: min( 100%, 480px);
+    height: auto;
     background: #fff;
     padding: 0.25rem;
     margin: 0.75rem;
     box-shadow:  2px 2px 6px #000000,
-             4px 4px 6px #010101;
+    4px 4px 6px #010101;
 }
 .photo-card--image__item{
     max-width: 100%;
+    height: auto;
     object-fit: cover; 
 
 }

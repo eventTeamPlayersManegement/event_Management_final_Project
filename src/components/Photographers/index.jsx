@@ -4,6 +4,7 @@ import "./style.scss";
 import text from "../../content/data.json";
 
 function Index() {
+
   const [data, setData] = useState([]);
   async function getData() {
     const daten = await getPath("photographer");
@@ -24,6 +25,22 @@ function Index() {
       </>
     );
   };
+  const Profilepicture = ({ photograph }) => {
+    return (
+      <>
+        <div className="profile-picture__image--container">
+
+            <img className='profile-picture--image__item' src={photograph.profilepicture} alt="photograph" />
+
+        </div>
+        <div className="profile-picture__image--container">
+
+            <img className='profile-picture--image__item' src={photograph.equipment} alt="photograph" />
+
+        </div>
+      </>
+    );
+  };
   const Images = ({ image }) => {
     return (
       <div className="photo-card__container--polaroid">
@@ -38,6 +55,11 @@ function Index() {
   return (
     <>
       <h1>{text.photographer.title}</h1>
+      <div className="home-galerie__container">
+      {data.map((el, i) => (
+        <Profilepicture key={i} photograph={el} />
+      ))}
+      </div>
       {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
       ))}
