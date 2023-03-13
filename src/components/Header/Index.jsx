@@ -7,7 +7,7 @@ import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
 import { toast } from "react-hot-toast";
 import Index from "../Chat/Index.jsx";
-
+// update
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [toggleChat, setToggleChat] = useState(false);

@@ -5,8 +5,7 @@ import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { City } from "country-state-city";
-
+import city from "../../content/city.json";
 export default function Service() {
   const inicialValues = {
     select1: "",
@@ -19,9 +18,8 @@ export default function Service() {
 
   const [values, setValues] = useState(inicialValues);
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const germanyCities = City.getCitiesOfCountry("DE");
 
-  const cityOptions = germanyCities.map((city, i) => (
+  const cityOptions = city.map((city, i) => (
     <option key={i} value={city.name}>
       {city.name}
     </option>

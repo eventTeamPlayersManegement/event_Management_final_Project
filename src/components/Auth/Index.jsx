@@ -12,9 +12,9 @@ export default function Index() {
       <div className="center">
         <h1>With One Click</h1>
         {!data.user ? (
-          <Link to={`${config.baseURL}/login`}>Login</Link>
+          <a href={`/login`}>Login</a>
         ) : (
-          <Link to={`${config.baseURL}/logout`}>Logout</Link>
+          <a href={`/logout`}>Logout</a>
         )}
 
         <img className="img" src={logo} alt="logo" />

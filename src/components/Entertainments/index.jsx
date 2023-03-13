@@ -1,32 +1,31 @@
 import React, { useState, useEffect } from "react";
-import "./style.scss";
 import { getPath } from "../../library/api";
-import text from "../../content/data.json";
-
+import "./style.scss";
+// const database = await getPath("entertainment");
+// console.log(database);
 export default function index() {
   const [database, setData] = useState([]);
   async function getData() {
-    const daten = await getPath("restaurant");
+    const daten = await getPath("entertainment");
     setData(daten);
   }
   useEffect(() => {
     getData();
   }, []);
-  const Restaurant = ({ restaurant }) => {
+  const Entertainment = ({ entertainment }) => {
     return (
       <div className="home-galerie__container">
-        {/* <h1> {restaurant.name}</h1> */}
+        {/* <h1> {entertainment.name} </h1> */}
         <>
-          {restaurant.fotos.map((el) => (
-            <div className="photo-card__container--polaroid" key={el._id}>
+          {entertainment.fotos.map((fotos) => (
+            <div className="photo-card__container--polaroid" key={fotos._id}>
               <img
                 className="photo-card--image__item"
-                src={el.url}
-                alt="restaurant"
+                src={fotos.url}
+                alt="entertainment"
               />
-
               <div className="photo-card--image__text">
-                <p>{el.title}</p>
+                <p>{fotos.title}</p>
               </div>
             </div>
           ))}
@@ -35,11 +34,10 @@ export default function index() {
     );
   };
   return (
-    <>
-      <h1>{text.restaurant.title} </h1>
+    <div>
       {database.map((el) => (
-        <Restaurant key={el._id} restaurant={el} />
+        <Entertainment key={el._id} entertainment={el} />
       ))}
-    </>
+    </div>
   );
 }
