@@ -15,8 +15,12 @@ $pad: 2rem;
   h1 {
     text-align: center;
   }
-
-  input[type="text"],
+  .success-message {
+    color: red;
+    font-size: $size;
+    text-align: center;
+  }
+  input,
   textarea,
   button {
     width: 100%;
