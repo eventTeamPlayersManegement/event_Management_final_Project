@@ -46,6 +46,7 @@ function Index({ path }) {
       greeting: "",
     },
   }[path];
+
   return (
     <div>
       <Form data={data} path={path} />

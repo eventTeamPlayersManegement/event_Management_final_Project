@@ -9,7 +9,7 @@ const getInitial = (arr) => {
 };
 
 const Form = ({ data, path }) => {
-  const { fields, greeting, state } = data;
+  const { fields, greeting } = data;
   const [formData, setFormData] = useState(getInitial(fields));
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ const Form = ({ data, path }) => {
 
     await fetch(`/api/${path}`, {
       method: "POST",
-      body: JSON.stringify(state),
+      body: JSON.stringify(formData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },

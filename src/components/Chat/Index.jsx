@@ -21,10 +21,16 @@ export default function () {
 
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
-
+  const customStyles = {
+    alone: { gridTemplateColumns: "1fr" },
+    multiple: { gridTemplateColumns: "1fr 80px" },
+  };
   return (
     <div className="chat">
-      <div className={` top ${!selected && "notSelected"}`}>
+      <div
+        className={` top ${!selected && "notSelected"}`}
+        style={!selected ? customStyles.alone : customStyles.multiple}
+      >
         {selected && <ChatList selected={selected._id} />}
         <Conversations
           user={user}

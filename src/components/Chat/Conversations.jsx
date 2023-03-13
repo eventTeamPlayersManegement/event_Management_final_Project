@@ -16,14 +16,13 @@ function Conversations({ user, setSelected }) {
     fetch(`/api/conversation`, {
       method: "POST",
       body: JSON.stringify({
-        id: data.id,
+        conversationsWriter: data.id,
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
   };
-
   useEffect(() => {
     if (user.admin) {
       fetch(`/api/conversation`)
@@ -36,13 +35,23 @@ function Conversations({ user, setSelected }) {
       setConversationList(user);
       setSelected(user.conversations[0]);
     }
-    if (!user?.conversations.length && !user.admin) {
-      createConversation();
-    }
   }, [user.conversations.length]);
-
+  const customStyles = {
+    alone: {
+      display: "grid",
+      placeContent: "center",
+    },
+    multiple: {},
+  };
   return (
-    <div className="conversations">
+    <div
+      className="conversations"
+      style={
+        user.conversations.length === 0
+          ? customStyles.alone
+          : customStyles.multiple
+      }
+    >
       <CustomButton
         dispach={createConversation}
         style={"customBtnDefault"}
@@ -61,7 +70,7 @@ function Conversations({ user, setSelected }) {
             month: "2-digit",
             year: "numeric",
           })}
-          {/* {user.admin && <p>{el.chats[0]?.writer.data.name}</p>} */}
+          {user.admin && <p>{el?.conversationsWriter?.data?.name}</p>}
         </button>
       ))}
     </div>
