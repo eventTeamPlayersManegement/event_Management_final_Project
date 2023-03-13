@@ -19,24 +19,8 @@ export default function () {
 
   const [selected, setSelected] = useState("");
 
-  const createConversation = () => {
-    fetch(`/api/conversation`, {
-      method: "POST",
-      body: JSON.stringify({
-        id: data.id,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
-  };
-
   if (error) return <div className="chatList">failed to load</div>;
   if (isLoading) return <div className="chatList">loading...</div>;
-
-  if (!user?.conversations.length && !user?.admin) {
-    createConversation();
-  }
 
   return (
     <div className="chat">
@@ -45,7 +29,7 @@ export default function () {
         <Conversations
           user={user}
           setSelected={setSelected}
-          createConversation={createConversation}
+          // createConversation={createConversation}
         />
       </div>
       {selected && (

@@ -19,6 +19,7 @@ import Photographer from "./views/Photographer.jsx";
 import Restaurant from "./views/Restaurant.jsx";
 import Entertainment from "./views/Entertainment.jsx";
 import Rentauto from "./views/Rentauto.jsx";
+import AddSuppliersOnPath from "./views/AddSuppliersOnPath.jsx";
 
 function App() {
   return (
@@ -33,7 +34,10 @@ function App() {
         <Route path={navItems.navItems[3]} element={<Contact />} />
         <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/dashboard" element={<Dashbord />} />
+        <Route path="/dashboard">
+          <Route index element={<Dashbord />} />
+          <Route path=":path" element={<AddSuppliersOnPath />} />
+        </Route>
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />

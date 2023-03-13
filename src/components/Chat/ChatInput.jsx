@@ -17,7 +17,7 @@ function ChatInput({ conversationId, userId }) {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-      credentials: "include"
+      credentials: "include",
     });
     setMessage("");
   };
@@ -28,8 +28,11 @@ function ChatInput({ conversationId, userId }) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         disabled={!conversationId}
+        placeholder={"Type your text..."}
       />
-      <CustomButton submit={"Send"} style={"customBtnDefault"} />
+      {message.length > 0 && (
+        <CustomButton submit={"Send"} style={"customBtnDefault"} />
+      )}
     </form>
   );
 }

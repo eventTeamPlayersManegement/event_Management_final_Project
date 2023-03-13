@@ -12,9 +12,9 @@ export default function Index() {
       <div className="center">
         <h1>With One Click</h1>
         {!data.user ? (
-          <a href={`/login`}>Login</a>
+          <a href={`/login`}>Sign In</a>
         ) : (
-          <a href={`/logout`}>Logout</a>
+          <a href={`/logout`}>Sign Out</a>
         )}
 
         <img className="img" src={logo} alt="logo" />
