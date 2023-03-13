@@ -10,10 +10,10 @@
   },
   "payment": {
     "h1": "Payment",
-    "h2": "Payment Methods",
-
-    "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
+    "h2": "Payment Methods"
   },
+
+  "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"],
 
   "aboutUs": [
     {
@@ -45,16 +45,11 @@
   },
   "suppliers": { "title": "Our Suppliers" },
 
- 
   "restaurant": { "title": "Our Restaurants" },
-
-
 
   "baseURL": "http://localhost:3000",
 
   "photographer": { "title": "Our photographers" },
-  
 
   "rentauto": { "title": "Rent Autos" }
-
 }

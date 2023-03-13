@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import useSWR from "swr";
+import { EventContext } from "../../context/Context.jsx";
 import { fetcher } from "../../library/api.jsx";
 
 function ChatList({ selected }) {
+  const [data, setData] = useContext(EventContext);
+
   const {
     data: conversations,
     error,
@@ -14,7 +18,10 @@ function ChatList({ selected }) {
   return (
     <div className="chatList">
       {conversations?.chats?.map((el) => (
-        <div className="message" key={el._id}>
+        <div
+          className={`message ${el.writer._id === data.id ? "writer" : ""}`}
+          key={el._id}
+        >
           <div className="userBlock">
             <img src={el.writer.data.picture} />
             <p>{el.writer.data.name}:</p>
