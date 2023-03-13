@@ -28,14 +28,18 @@ export default function Service() {
     const onSubmitHandler = (event) => {
         event.preventDefault();
         console.log("submited");
+
+        // const fd = new FormData();
+        // fd.append("venue", values.venue);
+        // fd.append("city", values.city);
+
+        // const obj = Object.fromEntries(fd);
+        // console.log(obj, values, fd);
+        const json = JSON.stringify(values);
+        localStorage.setItem("onSubmitHandler", json);
+
         setValues(inicialValues);
         setSelectedDate(new Date());
-
-        const fd = new FormData(form);
-        const obj = Object.fromEntries(fd);
-        console.log(obj);
-        const json = JSON.stringify(obj);
-        localStorage.setItem("onSubmitHandler", json);
 
         window.location.href = "confirm.html";
     };
@@ -49,20 +53,28 @@ export default function Service() {
                 <div>
                     <label htmlFor="venue">Event</label>
                     <br />
-                    <select name="venue" onChange={handleOptionChange}>
+                    <select
+                        name="venue"
+                        value={values.venue}
+                        onChange={handleOptionChange}
+                    >
                         <option value="" selected disabled hidden></option>
-                        <option>wedding</option>
-                        <option>birthday</option>
+                        <option value="wedding">wedding</option>
+                        <option value="birthday">birthday</option>
                     </select>
                 </div>
                 <div>
                     <label htmlFor="city">City</label>
                     <br />
-                    <select name="city" onChange={handleOptionChange}>
+                    <select
+                        name="city"
+                        value={values.city}
+                        onChange={handleOptionChange}
+                    >
                         <option value="" selected disabled hidden></option>
-                        <option>Berlin</option>
-                        <option>Munich</option>
-                        <option>Hamburg</option>
+                        <option value="berlin">Berlin</option>
+                        <option value="munich">Munich</option>
+                        <option value="hamburg">Hamburg</option>
                     </select>
                 </div>
                 <div>
