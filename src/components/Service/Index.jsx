@@ -41,7 +41,7 @@ export default function Service() {
         setValues(inicialValues);
         setSelectedDate(new Date());
 
-        window.location.href = "confirm.html";
+        window.location.href = "confirm.html"; //redirect navigate
     };
     console.log("Venue type: " + values.venue);
     console.log("City name: " + values.city);
