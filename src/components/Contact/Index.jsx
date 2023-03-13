@@ -39,6 +39,7 @@ export default function Contact() {
           onChange={handlerInput}
           value={values.message}
           placeholder="Send as your message:"
+          rows={25}
         ></textarea>
 
         <button type="submit">Send</button>
