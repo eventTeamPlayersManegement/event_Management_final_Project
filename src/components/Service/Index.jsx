@@ -9,10 +9,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
 export default function Service() {
     const inicialValues = {
-        venue: "",
-        city: "",
+        category: "",
+        location: "",
+        date: "",
+        guestNumber: "",
+        outIndoor: "",
+        entertainment: "",
     };
-
+    //entertainment sub: dj, band,
     const navigate = useNavigate();
 
     const [values, setValues] = useState(inicialValues);
@@ -44,8 +48,8 @@ export default function Service() {
         setValues(inicialValues);
         setSelectedDate(new Date());
 
-        navigate("/Invoice/Index.jsx", { replace: true });
-        // window.location.href = "confirm.html"; //redirect navigate
+        // navigate("/Invoice/Index.jsx", { replace: true });
+        window.location.href = "confirm.html"; //redirect navigate
     };
     console.log("Venue type: " + values.venue);
     console.log("City name: " + values.city);
