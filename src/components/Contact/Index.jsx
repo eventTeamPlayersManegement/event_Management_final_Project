@@ -39,7 +39,6 @@ export default function Contact() {
           setIsSuccess(true);
           setTimeout(() => setIsSuccess(false), 3000);
         }, 1000);
-        console.log(values);
       })
       .catch((error) => {
         console.error("Error:", error);
