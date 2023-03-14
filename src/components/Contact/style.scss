@@ -16,9 +16,12 @@ $pad: 2rem;
     text-align: center;
   }
   .success-message {
-    color: red;
+    color: white;
+    font-weight: 700;
     font-size: $size;
     text-align: center;
+    background-color: rgb(8, 199, 8);
+    padding: 1rem 2rem;
   }
   input,
   textarea,

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.0.1",
+    "@sendgrid/mail": "^7.7.0",
     "country-state-city": "^3.1.2",
     "dotenv": "^16.0.3",
     "firebase": "^9.17.2",
