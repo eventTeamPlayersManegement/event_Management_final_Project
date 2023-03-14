@@ -12,7 +12,7 @@ export default function Service() {
         category: "",
         location: "",
         date: "",
-        guestNumber: "",
+        guestNumber: 10,
         outIndoor: "",
         entertainment: "",
     };
@@ -20,7 +20,7 @@ export default function Service() {
     const navigate = useNavigate();
 
     const [values, setValues] = useState(inicialValues);
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    // const [selectedDate, setSelectedDate] = useState(new Date());
 
     // const cityOptions = city.map((city, i) => (
     //     <option key={i} value={city.name}>
@@ -46,19 +46,88 @@ export default function Service() {
         localStorage.setItem("onSubmitHandler", json);
 
         setValues(inicialValues);
-        setSelectedDate(new Date());
+        // setSelectedDate(new Date());
 
         // navigate("/Invoice/Index.jsx", { replace: true });
-        window.location.href = "confirm.html"; //redirect navigate
+        // window.location.href = "confirm.html"; //redirect navigate
+        // const parse = JSON.parse(values);
+        // let newdata = localStorage.getItem("onSubmitHandler", parse);
     };
-    console.log("Venue type: " + values.venue);
-    console.log("City name: " + values.city);
+    // console.log("Venue type: " + values.venue);
+    // console.log("City name: " + values.city);
 
     return (
         <>
             {/* <Navigate to="../Invoice/Index.jsx" replace={true} /> */}
             <h1 className="title">chose data</h1>
             <form onSubmit={onSubmitHandler}>
+                <div>
+                    <label htmlFor="category">Category</label>
+                    <br />
+                    <select
+                        name="category"
+                        value={values.category}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="" selected disabled hidden></option>
+                        <option value="wedding">wedding</option>
+                        <option value="birthday">birthday</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="location">Location</label>
+                    <br />
+                    <select
+                        name="location"
+                        value={values.location}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="" selected disabled hidden></option>
+                        <option value="berlin">Berlin</option>
+                        <option value="munich">Munich</option>
+                        <option value="hamburg">Hamburg</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="date">Date</label>
+
+                    <input
+                        type="date"
+                        id="start"
+                        name="date"
+                        onChange={handleOptionChange}
+                        // value="2018-07-22"
+                        value={values.date}
+                        min="2023-01-01"
+                        max="2025-01-01"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="guestNumber">Guest Number</label>
+                    <br />
+                    <input
+                        type="number"
+                        id="guestNumber"
+                        name="guestNumber"
+                        onChange={handleOptionChange}
+                        value={values.guestNumber}
+                        min="10"
+                        max="100"
+                    ></input>
+                </div>
+                <div>
+                    <label htmlFor="outIndoor">outIndoor</label>
+                    <br />
+                    <select
+                        name="outIndoor"
+                        value={values.outIndoor}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="" selected disabled hidden></option>
+                        <option value="wedding">wedding</option>
+                        <option value="birthday">birthday</option>
+                    </select>
+                </div>
                 <div>
                     <label htmlFor="venue">Event</label>
                     <br />
@@ -73,17 +142,16 @@ export default function Service() {
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="city">City</label>
+                    <label htmlFor="venue">Event</label>
                     <br />
                     <select
-                        name="city"
-                        value={values.city}
+                        name="venue"
+                        value={values.venue}
                         onChange={handleOptionChange}
                     >
                         <option value="" selected disabled hidden></option>
-                        <option value="berlin">Berlin</option>
-                        <option value="munich">Munich</option>
-                        <option value="hamburg">Hamburg</option>
+                        <option value="wedding">wedding</option>
+                        <option value="birthday">birthday</option>
                     </select>
                 </div>
                 <div>
