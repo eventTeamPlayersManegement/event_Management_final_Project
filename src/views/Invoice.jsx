@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Invoice from "../components/Invoice/Index.jsx";
 
-function Invoice() {
-  return (
-    <div>Invoice</div>
-  )
+export default function () {
+    return (
+        <div>
+            <Invoice />
+        </div>
+    );
 }
-
-export default Invoice
