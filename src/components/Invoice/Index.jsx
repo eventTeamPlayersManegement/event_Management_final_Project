@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function Invoice() {
-    const [survay, setSurvay] = useState(
-        JSON.parse(localStorage.getItem("onSubmitHandler"))
+    const [survey, setSurvey] = useState(
+        JSON.parse(localStorage.getItem("onSubmitHandler") || {})
     );
-    useEffect(() => {
-        let newdata = JSON.parse(localStorage.getItem("onSubmitHandler"));
-        console.log(newdata);
-    }, []);
+    // useEffect(() => {
+    //     let newdata = JSON.parse(localStorage.getItem("onSubmitHandler"));
+    //     console.log(newdata);
+    // }, []);
 
-    return <div>{survay.category}</div>;
+    return (
+        <div>
+            <p>{survey?.category}</p>
+            <p>{survey?.location}</p>
+            <p>{survey?.date}</p>
+            <p>{survey?.guestNumber}</p>
+            <p>{survey?.outIndoor}</p>
+            <p>{survey?.entertainment}</p>
+        </div>
+    );
 }
-Invoice();

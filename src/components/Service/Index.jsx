@@ -46,6 +46,7 @@ export default function Service() {
         localStorage.setItem("onSubmitHandler", json);
 
         setValues(inicialValues);
+        navigate("/invoice");
         // setSelectedDate(new Date());
 
         // navigate("/Invoice/Index.jsx", { replace: true });
