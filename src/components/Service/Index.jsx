@@ -16,9 +16,9 @@ export default function Service() {
         select6: "",
         guestNumber: 10,
         budget: 100,
-        // catering: "",
-        // rentCar: true,
-        // photographer: true,
+        catering: "",
+        rentCar: true,
+        photographer: true,
     };
     const navigate = useNavigate();
     const [values, setValues] = useState(inicialValues);
@@ -164,6 +164,57 @@ export default function Service() {
                         max="1000000"
                     ></input>
 
+                    <label htmlFor="catering"></label>
+                    <select
+                        id="catering"
+                        name="catering"
+                        value={values.catering}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="">
+                            {ServiceData.Services.select.catering}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.catering.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.catering.option2}
+                        </option>
+                    </select>
+                    <label htmlFor="rentCar"></label>
+                    <select
+                        id="rentCar"
+                        name="rentCar"
+                        value={values.rentCar}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="">
+                            {ServiceData.Services.select.rentCar}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.rentCar.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.rentCar.option2}
+                        </option>
+                    </select>
+                    <label htmlFor="photographer"></label>
+                    <select
+                        id="photographer"
+                        name="photographer"
+                        value={values.photographer}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="">
+                            {ServiceData.Services.select.photographer}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.photographer.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.photographer.option2}
+                        </option>
+                    </select>
                     <CustomButton
                         type="submit"
                         submit={ServiceData.Services.submit}
