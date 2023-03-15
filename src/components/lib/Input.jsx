@@ -1,5 +1,6 @@
 import React from "react";
 import storePicture from "../../library/storePicture.js";
+import { capitalize } from "../lib/ultilitis.js";
 
 function Input({ data, handleChange }) {
   const { name, type, placeholder, multiple = false } = data;
@@ -33,13 +34,16 @@ function Input({ data, handleChange }) {
     }
   };
   return (
-    <input
-      name={name}
-      type={type}
-      onChange={type === "file" ? handleFile : handleData}
-      placeholder={placeholder}
-      multiple={multiple}
-    />
+    <label>
+      {capitalize(name)}
+      <input
+        name={name}
+        type={type}
+        onChange={type === "file" ? handleFile : handleData}
+        placeholder={placeholder}
+        multiple={multiple}
+      />
+    </label>
   );
 }
 

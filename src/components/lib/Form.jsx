@@ -26,7 +26,7 @@ const Form = ({ data, path }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>{`${greeting}:${path}`}</h1>
+      <h1>{`${greeting}${path}`}</h1>
       {fields.map((field) => (
         <Input data={field} handleChange={setFormData} />
       ))}

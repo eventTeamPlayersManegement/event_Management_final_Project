@@ -51,5 +51,15 @@
 
   "photographer": { "title": "Our photographers" },
 
-  "rentauto": { "title": "Rent Autos" }
+  "rentauto": { "title": "Rent Autos" },
+  "dashboard": {
+    "paths": [
+      "photographer",
+      "restaurants",
+      "rentauto",
+      "entertainment",
+      "messages"
+    ],
+    "title": "Admins Dashboard"
+  }
 }
