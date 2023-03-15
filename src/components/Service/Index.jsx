@@ -15,6 +15,11 @@ export default function Service() {
         guestNumber: 10,
         outIndoor: "",
         entertainment: "",
+        budget: 1000,
+        decor: "",
+        catering: true,
+        rentauto: true,
+        photographer: true,
     };
     //entertainment sub: dj, band,
     const navigate = useNavigate();
@@ -104,7 +109,7 @@ export default function Service() {
                     />
                 </div>
                 <div>
-                    <label htmlFor="guestNumber">Guest Number</label>
+                    <label htmlFor="guestNumber">Guest number</label>
                     <br />
                     <input
                         type="number"
@@ -117,7 +122,7 @@ export default function Service() {
                     ></input>
                 </div>
                 <div>
-                    <label htmlFor="outIndoor">outIndoor</label>
+                    <label htmlFor="outIndoor">out or indoor</label>
                     <br />
                     <select
                         name="outIndoor"
@@ -125,38 +130,52 @@ export default function Service() {
                         onChange={handleOptionChange}
                     >
                         <option value="" selected disabled hidden></option>
-                        <option value="wedding">wedding</option>
-                        <option value="birthday">birthday</option>
+                        <option value="wedding">outdoor</option>
+                        <option value="birthday">indoor</option>
                     </select>
                 </div>
                 <div>
                     <label htmlFor="venue">Event</label>
                     <br />
                     <select
-                        name="venue"
-                        value={values.venue}
+                        name="entertainment"
+                        value={values.entertainment}
                         onChange={handleOptionChange}
                     >
                         <option value="" selected disabled hidden></option>
-                        <option value="wedding">wedding</option>
-                        <option value="birthday">birthday</option>
+                        <option value="wedding">DJ</option>
+                        <option value="birthday">Band</option>
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="venue">Event</label>
+                    <label htmlFor="budget">Budget</label>
                     <br />
-                    <select
-                        name="venue"
-                        value={values.venue}
+                    <input
+                        type="number"
+                        id="budget"
+                        name="buget"
                         onChange={handleOptionChange}
-                    >
-                        <option value="" selected disabled hidden></option>
-                        <option value="wedding">wedding</option>
-                        <option value="birthday">birthday</option>
-                    </select>
+                        value={values.budget}
+                        min="1000"
+                        max="1000000"
+                    ></input>
                 </div>
                 <div>
                     <button type="submit">Submit</button>
+                </div>
+                <div>
+                    <label htmlFor="decor">Decor</label>
+                    <br />
+                    <select
+                        name="location"
+                        value={values.decor}
+                        onChange={handleOptionChange}
+                    >
+                        <option value="" selected disabled hidden></option>
+                        <option value="berlin">Berlin</option>
+                        <option value="munich">Munich</option>
+                        <option value="hamburg">Hamburg</option>
+                    </select>
                 </div>
             </form>{" "}
         </>
