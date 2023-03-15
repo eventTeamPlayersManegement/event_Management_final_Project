@@ -60,11 +60,11 @@ export default function Service() {
                         <option value="">
                             {ServiceData.Services.select.select1}
                         </option>
-                        <option value="birthday">
-                            {ServiceData.Services.options.option1}
+                        <option value="">
+                            {ServiceData.Services.options.event.option1}
                         </option>
-                        <option value="wedding">
-                            {ServiceData.Services.options.option2}
+                        <option value="">
+                            {ServiceData.Services.options.event.option2}
                         </option>
                     </select>
 
@@ -95,8 +95,13 @@ export default function Service() {
                         <option value="select4">
                             {ServiceData.Services.select.select4}
                         </option>
-                        <option value="option1">Indoor</option>
-                        <option value="option2">Outdoor</option>
+                        <option value="">
+                            {" "}
+                            {ServiceData.Services.options.inOutdoor.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.inOutdoor.option2}
+                        </option>
                     </select>
 
                     <label htmlFor="option5"></label>
@@ -109,7 +114,12 @@ export default function Service() {
                         <option value="">
                             {ServiceData.Services.select.select5}
                         </option>
-                        <option value="option1">Deckor</option>
+                        <option value="">
+                            {ServiceData.Services.options.decor.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.decor.option2}
+                        </option>
                     </select>
                     <label htmlFor="option6"></label>
                     <select
@@ -121,7 +131,12 @@ export default function Service() {
                         <option value="">
                             {ServiceData.Services.select.select6}
                         </option>
-                        <option value="option1">Deckor</option>
+                        <option value="">
+                            {ServiceData.Services.options.entertainment.option1}
+                        </option>
+                        <option value="">
+                            {ServiceData.Services.options.entertainment.option2}
+                        </option>
                     </select>
 
                     <label htmlFor="guestNumber">

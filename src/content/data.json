@@ -44,8 +44,41 @@
             "photographer": "Photographer"
         },
         "options": {
-            "option1": "Birthday",
-            "option2": "Wedding"
+            "event": {
+                "option1": "Birthday",
+                "option2": "Wedding"
+            },
+            "location": {
+                "option1": "Munich",
+                "option2": "Berlin"
+            },
+            "date": "",
+            "inOutdoor": {
+                "option1": "Indoor",
+                "option2": "Outdoor"
+            },
+            "decor": {
+                "option1": "Flowers",
+                "option2": "Paintings"
+            },
+            "entertainment": {
+                "option1": "DJ",
+                "option2": "Music Band"
+            },
+            "guestNumber": 0,
+            "budget": 0,
+            "catering": {
+                "option1": "Fine dinning",
+                "option2": "Finger food"
+            },
+            "rentCar": {
+                "option1": "Limousine",
+                "option2": "Party bus"
+            },
+            "photographer": {
+                "option1": "Max Gar",
+                "option2": "Maya Trune"
+            }
         }
     },
     "suppliers": { "title": "Our Suppliers" },
