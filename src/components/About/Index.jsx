@@ -35,6 +35,7 @@ import img31 from "../../assets/bilderEvent/img31.jpg";
 import img32 from "../../assets/bilderEvent/img32.jpg";
 import img33 from "../../assets/bilderEvent/img33.jpg";
 import img34 from "../../assets/bilderEvent/img34.webp";
+import { useState } from "react";
 
 export default function About() {
   const images = [
@@ -73,6 +74,26 @@ export default function About() {
     img33,
     img34,
   ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    const index = (currentIndex - 1 + images.length) % images.length;
+    setCurrentIndex(index);
+  };
+
+  const goToNext = () => {
+    const index = (currentIndex + 1) % images.length;
+    setCurrentIndex(index);
+  };
+
+  const getVisibleImages = () => {
+    const lastIndex = (currentIndex + 2) % images.length;
+    const visibleImages = [];
+    for (let i = currentIndex; i <= lastIndex; i++) {
+      visibleImages.push(images[i % images.length]);
+    }
+    return visibleImages;
+  };
   return (
     <div className="about">
       <h1 className="about__title">{about.aboutUs[0].title}</h1>
@@ -85,8 +106,8 @@ export default function About() {
           alt="married"
         />
         <p className="about__text">{about.aboutUs[0].text}</p>
-        <div className="about__images">
-          {/* <img src={about.aboutUs[0].url1} alt="" />
+
+        {/* <img src={about.aboutUs[0].url1} alt="" />
           <img src={about.aboutUs[0].url2} alt="" />
           <img src={about.aboutUs[0].image} alt="" />
 
@@ -94,13 +115,18 @@ export default function About() {
             src="https://genethlia.com/wp-content/uploads/2020/08/slider2.jpg"
             alt="birthday"
           /> */}
-          <div>
-            {images.map((el, i) => (
-              <img key={i} src={el} alt="" />
-            ))}
-          </div>
-        </div>
       </section>
+      <div className="carousel">
+        <div className="carousel-inner">
+          {getVisibleImages().map((el, i) => (
+            <img key={i} src={el} alt="" />
+          ))}
+        </div>
+        <div className="carousel-controls">
+          <button onClick={goToPrevious}>{"<"}</button>
+          <button onClick={goToNext}>{">"}</button>
+        </div>
+      </div>
     </div>
   );
 }
