@@ -37,7 +37,7 @@
       "select4": "Select Space Preference",
       "select5": "Select Deckor",
 
-      "entertainment": "Select Entertainment"
+      "entertainment": "Select Entertainment",
 
       "select6": "Select Entertainment",
       "guestNumber": "Guest number",
@@ -45,7 +45,6 @@
       "catering": "Catering",
       "rentCar": "Rent car",
       "photographer": "Photographer"
-
     },
     "options": {
       "option1": "Birthday",
