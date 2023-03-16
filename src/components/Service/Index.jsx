@@ -9,16 +9,17 @@ import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
 export default function Service() {
     const inicialValues = {
-        select1: "",
-        select2: "",
-        select4: "",
-        select5: "",
-        select6: "",
+        event: "",
+        location: "",
+        date: "",
+        inOutdoor: "",
+        // decor: "",
+        entertainment: "",
         guestNumber: 10,
         budget: 100,
-        catering: "",
-        rentCar: true,
-        photographer: true,
+        // catering: "",
+        rentAuto: false,
+        photographer: false,
     };
     const navigate = useNavigate();
     const [values, setValues] = useState(inicialValues);
@@ -50,32 +51,30 @@ export default function Service() {
 
             <form onSubmit={onSubmitHandler}>
                 <div className="input-select-container">
-                    <label htmlFor="option1"></label>
+                    <label htmlFor="event"></label>
                     <select
-                        id="option1"
-                        name="select1"
-                        value={values.select1}
+                        id="event"
+                        name="event"
+                        value={values.event}
                         onChange={handleOptionChange}
                     >
-                        <option value="">
-                            {ServiceData.Services.select.select1}
-                        </option>
-                        <option value="">
+                        <option>{ServiceData.Services.select.event}</option>
+                        <option value="Birthday">
                             {ServiceData.Services.options.event.option1}
                         </option>
-                        <option value="">
+                        <option value="Wedding">
                             {ServiceData.Services.options.event.option2}
                         </option>
                     </select>
 
-                    <label htmlFor="city"></label>
+                    <label htmlFor="location"></label>
                     <select
-                        id="city"
-                        name="select2"
-                        value={values.select2}
+                        id="location"
+                        name="location"
+                        value={values.location}
                         onChange={handleOptionChange}
                     >
-                        <option>{ServiceData.Services.select.select2}</option>
+                        <option>{ServiceData.Services.select.location}</option>
                         {cityOptions}
                     </select>
                     <div>
@@ -85,56 +84,56 @@ export default function Service() {
                             onChange={(date) => setSelectedDate(date)}
                         />
                     </div>
-                    <label htmlFor="option4"></label>
+                    <label htmlFor="inOutdoor"></label>
                     <select
-                        id="option4"
-                        value={values.select4}
-                        name="select4"
+                        id="inOutdoor"
+                        value={values.inOutdoor}
+                        name="inOutdoor"
                         onChange={handleOptionChange}
                     >
-                        <option value="select4">
-                            {ServiceData.Services.select.select4}
-                        </option>
                         <option value="">
+                            {ServiceData.Services.select.inOutdoor}
+                        </option>
+                        <option value="Indoor">
                             {" "}
                             {ServiceData.Services.options.inOutdoor.option1}
                         </option>
-                        <option value="">
+                        <option value="Outdoor">
                             {ServiceData.Services.options.inOutdoor.option2}
                         </option>
                     </select>
 
-                    <label htmlFor="option5"></label>
+                    {/* <label htmlFor="decor"></label>
                     <select
-                        id="option5"
-                        value={values.select5}
-                        name="select5"
+                        id="decor"
+                        value={values.decor}
+                        name="decor"
                         onChange={handleOptionChange}
                     >
                         <option value="">
-                            {ServiceData.Services.select.select5}
+                            {ServiceData.Services.select.decor}
                         </option>
-                        <option value="">
+                        <option value="Flowers">
                             {ServiceData.Services.options.decor.option1}
                         </option>
-                        <option value="">
+                        <option value="Paintings">
                             {ServiceData.Services.options.decor.option2}
                         </option>
-                    </select>
-                    <label htmlFor="option6"></label>
+                    </select> */}
+                    <label htmlFor="entertainment"></label>
                     <select
-                        id="option6"
-                        value={values.select6}
-                        name="select6"
+                        id="entertainment"
+                        value={values.entertainment}
+                        name="entertainment"
                         onChange={handleOptionChange}
                     >
                         <option value="">
-                            {ServiceData.Services.select.select6}
+                            {ServiceData.Services.select.entertainment}
                         </option>
-                        <option value="">
+                        <option value="DJ">
                             {ServiceData.Services.options.entertainment.option1}
                         </option>
-                        <option value="">
+                        <option value="Music Band">
                             {ServiceData.Services.options.entertainment.option2}
                         </option>
                     </select>
@@ -151,20 +150,28 @@ export default function Service() {
                         min="10"
                         max="1000"
                     ></input>
-                    <label htmlFor="budget">
-                        {ServiceData.Services.select.budget}
-                    </label>
-                    <input
-                        type="number"
+                    <label htmlFor="budget"></label>
+                    <select
                         id="budget"
+                        value={values.budget}
                         name="budget"
                         onChange={handleOptionChange}
-                        value={values.budget}
-                        min="100"
-                        max="1000000"
-                    ></input>
+                    >
+                        <option value="">
+                            {ServiceData.Services.select.budget}
+                        </option>
+                        <option value="€">
+                            {ServiceData.Services.options.budget.option1}
+                        </option>
+                        <option value="€€">
+                            {ServiceData.Services.options.budget.option2}
+                        </option>
+                        <option value="€€€">
+                            {ServiceData.Services.options.budget.option3}
+                        </option>
+                    </select>
 
-                    <label htmlFor="catering"></label>
+                    {/* <label htmlFor="catering"></label>
                     <select
                         id="catering"
                         name="catering"
@@ -174,28 +181,28 @@ export default function Service() {
                         <option value="">
                             {ServiceData.Services.select.catering}
                         </option>
-                        <option value="">
+                        <option value="Fine dinning">
                             {ServiceData.Services.options.catering.option1}
                         </option>
-                        <option value="">
+                        <option value="Finger food">
                             {ServiceData.Services.options.catering.option2}
                         </option>
-                    </select>
-                    <label htmlFor="rentCar"></label>
+                    </select> */}
+                    <label htmlFor="rentAuto"></label>
                     <select
-                        id="rentCar"
-                        name="rentCar"
-                        value={values.rentCar}
+                        id="rentAuto"
+                        name="rentAuto"
+                        value={values.rentAuto}
                         onChange={handleOptionChange}
                     >
                         <option value="">
-                            {ServiceData.Services.select.rentCar}
+                            {ServiceData.Services.select.rentAuto}
                         </option>
-                        <option value="">
-                            {ServiceData.Services.options.rentCar.option1}
+                        <option value="Limousine">
+                            {ServiceData.Services.options.rentAuto.option1}
                         </option>
-                        <option value="">
-                            {ServiceData.Services.options.rentCar.option2}
+                        <option value="Party bus">
+                            {ServiceData.Services.options.rentAuto.option2}
                         </option>
                     </select>
                     <label htmlFor="photographer"></label>
@@ -208,10 +215,10 @@ export default function Service() {
                         <option value="">
                             {ServiceData.Services.select.photographer}
                         </option>
-                        <option value="">
+                        <option value="Max Gar">
                             {ServiceData.Services.options.photographer.option1}
                         </option>
-                        <option value="">
+                        <option value="Maya Trune">
                             {ServiceData.Services.options.photographer.option2}
                         </option>
                     </select>

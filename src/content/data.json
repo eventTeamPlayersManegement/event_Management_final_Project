@@ -31,16 +31,16 @@
         "submit": "Submit",
         "title": "Your Event, your Way",
         "select": {
-            "select1": "Select Type Event",
-            "select2": "Select Location",
-            "select3": "Select Date",
-            "select4": "Select Space Preference",
-            "select5": "Select Deckor",
-            "select6": "Select Entertainment",
+            "event": "Select Type Event",
+            "location": "Select Location",
+            "date": "Select Date",
+            "inOutdoor": "Select Space Preference",
+            "decor": "Select Deckor",
+            "entertainment": "Select Entertainment",
             "guestNumber": "Guest number",
             "budget": "Budget",
             "catering": "Catering",
-            "rentCar": "Rent car",
+            "rentAuto": "Rent car",
             "photographer": "Photographer"
         },
         "options": {
@@ -66,12 +66,16 @@
                 "option2": "Music Band"
             },
             "guestNumber": 0,
-            "budget": 0,
+            "budget": {
+                "option1": "€",
+                "option2": "€€", 
+                "option3": "€€€"
+                },
             "catering": {
                 "option1": "Fine dinning",
                 "option2": "Finger food"
             },
-            "rentCar": {
+            "rentAuto": {
                 "option1": "Limousine",
                 "option2": "Party bus"
             },

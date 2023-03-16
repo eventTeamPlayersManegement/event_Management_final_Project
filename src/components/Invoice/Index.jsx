@@ -11,12 +11,16 @@ export default function Invoice() {
 
     return (
         <div>
-            <p>{survey?.category}</p>
-            <p>{survey?.location}</p>
-            <p>{survey?.date}</p>
+            <p>{survey?.select1}</p>
+            <p>{survey?.select2}</p>
+            <p>{survey?.select4}</p>
+            <p>{survey?.select5}</p>
+            <p>{survey?.select6}</p>
             <p>{survey?.guestNumber}</p>
-            <p>{survey?.outIndoor}</p>
-            <p>{survey?.entertainment}</p>
+            <p>{survey?.budget}</p>
+            <p>{survey?.catering}</p>
+            <p>{survey?.rentCar}</p>
+            <p>{survey?.photographer}</p>
         </div>
     );
 }
