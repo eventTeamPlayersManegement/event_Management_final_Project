@@ -17,11 +17,12 @@ const Form = ({ data, path }) => {
 
     await fetch(`/api/${path}`, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData).toLowerCase(),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
+    fields("");
   };
 
   return (
@@ -30,7 +31,7 @@ const Form = ({ data, path }) => {
       {fields.map((field) => (
         <Input data={field} handleChange={setFormData} />
       ))}
-      <button>save</button>
+      <button>Save Data</button>
     </form>
   );
 };

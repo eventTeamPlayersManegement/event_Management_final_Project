@@ -2,23 +2,16 @@ openapi: 3.0.0
 info:
   title: Event Management E-Comerce Platform
   description: |
-    This API is used to display Data for an ebent maneger platform e-comerce.
+    This API is used to display Data for an event manager platform e-comerce.
   version: 1.0.0
 servers:
-- url: https://virtserver.swaggerhub.com/leovolwahsen/final-project/1.0.0
-  description: API for Data used in Event Management
-- url: https://final-project-backend-lkvb.onrender.com/api
-tags:
-- name: api
-  description: Event Management E-Comerce
-  externalDocs:
-    description: Find out more
-    url: https://final-project-backend-lkvb.onrender.com/api
+  - url: http://localhost:3000/api
+    description: API for Data used in Event Management
 paths:
   /event:
     get:
       tags:
-      - event
+        - event
       summary: receive all data
       operationId: eventGET
       responses:
@@ -27,7 +20,7 @@ paths:
       x-swagger-router-controller: Event
     post:
       tags:
-      - event
+        - event
       summary: create new data
       operationId: eventPOST
       responses:
@@ -37,7 +30,7 @@ paths:
   /photographer:
     get:
       tags:
-      - photographer
+        - photographer
       summary: get all data
       operationId: photographerGET
       responses:
@@ -46,7 +39,7 @@ paths:
       x-swagger-router-controller: Photographer
     post:
       tags:
-      - photographer
+        - photographer
       summary: create new data
       operationId: photographerPOST
       responses:
@@ -56,7 +49,7 @@ paths:
   /restaurant:
     get:
       tags:
-      - restaurant
+        - restaurant
       summary: get all data
       operationId: restaurantGET
       responses:
@@ -65,7 +58,7 @@ paths:
       x-swagger-router-controller: Restaurant
     post:
       tags:
-      - restaurant
+        - restaurant
       summary: create new data
       operationId: restaurantPOST
       responses:
@@ -75,7 +68,7 @@ paths:
   /entertainment:
     get:
       tags:
-      - entertainment
+        - entertainment
       summary: get all data
       operationId: entertainmentGET
       responses:
@@ -84,7 +77,7 @@ paths:
       x-swagger-router-controller: Entertainment
     post:
       tags:
-      - entertainment
+        - entertainment
       summary: create new data
       operationId: entertainmentPOST
       responses:
@@ -94,7 +87,7 @@ paths:
   /rentauto:
     get:
       tags:
-      - rentauto
+        - rentauto
       summary: get all data
       operationId: rentautoGET
       responses:
@@ -103,7 +96,7 @@ paths:
       x-swagger-router-controller: Rentauto
     post:
       tags:
-      - rentauto
+        - rentauto
       summary: create new data
       operationId: rentautoPOST
       responses:
@@ -113,7 +106,7 @@ paths:
   /suppliers:
     get:
       tags:
-      - suppliers
+        - suppliers
       summary: get all data
       operationId: suppliersGET
       responses:
@@ -122,7 +115,7 @@ paths:
       x-swagger-router-controller: Suppliers
     post:
       tags:
-      - suppliers
+        - suppliers
       summary: create new data
       operationId: suppliersPOST
       responses:
@@ -177,7 +170,7 @@ components:
           type: integer
           format: int32
         adress:
-          $ref: '#/components/schemas/restaurant_adress'
+          $ref: "#/components/schemas/restaurant_adress"
         photos:
           type: array
           items:
@@ -201,7 +194,7 @@ components:
         description:
           type: string
         adress:
-          $ref: '#/components/schemas/restaurant_adress'
+          $ref: "#/components/schemas/restaurant_adress"
         photos:
           type: array
           items:
@@ -231,7 +224,7 @@ components:
           type: integer
           format: int32
         adress:
-          $ref: '#/components/schemas/restaurant_adress'
+          $ref: "#/components/schemas/restaurant_adress"
         photos:
           type: array
           items:
@@ -261,7 +254,7 @@ components:
           type: integer
           format: int32
         adress:
-          $ref: '#/components/schemas/restaurant_adress'
+          $ref: "#/components/schemas/restaurant_adress"
         photos:
           type: array
           items:

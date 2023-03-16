@@ -1,8 +1,15 @@
 import dash from "../../content/data.json";
-
+// import img1 from "../../assets/4.jpeg";
+// import img2 from "../../assets/clown2.jpg";
+// import img3 from "../../assets/torte.jpg";
+// import img4 from "../../assets/text.jpg";
+// import img5 from "../../assets/rentauto.jpg";
+import { capitalize } from "../lib/ultilitis.js";
 import FlipImg from "./FlipImg.jsx";
+import "../Dashboard/style.scss";
 
 export default function Dashboard() {
+  // const imgs = [img1, img2, img3, img4, img5];
   return (
     <div className="dashboardCont">
       <h1>{dash.dashboard.title}</h1>
@@ -12,31 +19,3 @@ export default function Dashboard() {
     </div>
   );
 }
-//
-//     <div className="dashPart">
-//       <div className="flip-card">
-//         <div className="flip-card-inner">
-//           <div className="flip-card-front">
-//             {imgs.map((img) => {
-//               return <img src={img} alt="img" />;
-//             })}
-//           </div>
-//           <ul className="flip-card-back">
-//             {dash.dashboard.paths.map((paths) => {
-//               return (
-//                 <li>
-//                   <a href={`/dashboard/${paths}`}>
-//                     Manage Here Data
-//                     <br />
-//                     {paths.charAt(0).toUpperCase() + paths.slice(1)}
-//                   </a>
-//                 </li>
-//               );
-//             })}
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
-//

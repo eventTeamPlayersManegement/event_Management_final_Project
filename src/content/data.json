@@ -31,12 +31,12 @@
     "submit": "Submit",
     "title": "Your Event, your Way",
     "select": {
-      "select1": "Select Type Event",
+      "category": "Select Type Event",
       "select2": "Select Location",
-      "select3": "Select Date",
+      "date": "Select Date",
       "select4": "Select Space Preference",
       "select5": "Select Deckor",
-      "select6": "Select Entertainment"
+      "entertainment": "Select Entertainment"
     },
     "options": {
       "option1": "Birthday",
@@ -55,10 +55,10 @@
   "dashboard": {
     "paths": [
       "photographer",
-      "restaurants",
+      "restaurant",
       "rentauto",
       "entertainment",
-      "messages"
+      "message"
     ],
     "title": "Admins Dashboard"
   }

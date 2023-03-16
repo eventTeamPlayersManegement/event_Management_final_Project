@@ -91,7 +91,6 @@ function FlipImg() {
           </ul>
         </div>
       </div>
-      s
     </>
   );
 }

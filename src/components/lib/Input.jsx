@@ -24,10 +24,7 @@ function Input({ data, handleChange }) {
       Object.keys(e.target.files).forEach(async (el) => {
         storePicture(e.target.files[el]).then((res) => {
           handleChange(
-            (prev) =>
-              (prev = {
-                fotos: [...prev.fotos, res],
-              })
+            (prev) => (prev = { ...prev, fotos: [...prev.fotos, res] })
           );
         });
       });
@@ -36,13 +33,24 @@ function Input({ data, handleChange }) {
   return (
     <label>
       {capitalize(name)}
-      <input
-        name={name}
-        type={type}
-        onChange={type === "file" ? handleFile : handleData}
-        placeholder={placeholder}
-        multiple={multiple}
-      />
+      {type === "textarea" ? (
+        <textarea
+          cols={28}
+          rows={10}
+          name={name}
+          onChange={handleData}
+          placeholder={placeholder}
+          style={{ resize: false }}
+        />
+      ) : (
+        <input
+          name={name}
+          type={type}
+          onChange={type === "file" ? handleFile : handleData}
+          placeholder={placeholder}
+          multiple={multiple}
+        />
+      )}
     </label>
   );
 }
