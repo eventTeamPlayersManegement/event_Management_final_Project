@@ -1,0 +1,167 @@
+$primary: #9505e3;
+$secondary: #333;
+$background: #eaeaea;
+$sometextcolor: #555;
+$size: 1rem;
+$pad: 2rem;
+.manageBlock {
+  .blockMessage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $pad;
+    .oneEmail {
+      line-height: calc($size * 1.2);
+      width: calc(100% / 4);
+      padding: $size;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: calc($size / 2);
+      -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        -5px 22px 33px -20px rgba(0, 0, 0, 0);
+      box-shadow: 0px 10px 13px -7px #000000,
+        -5px 22px 33px -20px rgba(0, 0, 0, 0);
+      @media (max-width: 390px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: $pad;
+      }
+      h2 {
+        color: $primary;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 390px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .blockContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: $pad;
+
+    .blockInputs {
+      display: flex;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: $size;
+        width: 500px;
+        h1 {
+          color: $primary;
+          text-decoration: underline;
+          padding: calc($pad / 2);
+        }
+        label {
+          color: $primary;
+          font-weight: 800;
+          display: flex;
+          justify-content: space-between;
+
+          input {
+            display: flex;
+            padding: calc($size / 2);
+            border: none;
+            border-bottom: 1px solid $sometextcolor;
+            outline: none;
+          }
+          textarea {
+            outline: none;
+            padding: $size;
+          }
+        }
+        button {
+          background-color: $primary;
+          color: #eaeaea;
+          font-size: calc($size * 1.3);
+          font-weight: 900;
+          border-radius: 10px;
+          padding: calc($size/ 1.6) calc($size * 1.6);
+          border: none;
+          width: max-content;
+          margin: 0 auto;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .block {
+      h1 {
+        color: $primary;
+        text-decoration: underline;
+      }
+      .blockData {
+        display: flex;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $size;
+        padding: $pad;
+
+        .data {
+          display: flex;
+          flex-direction: column;
+          width: 400px;
+          height: 280px;
+          padding: $size;
+          justify-content: space-between;
+          -webkit-box-shadow: 0px 10px 13px -7px #000000,
+            -5px 22px 33px -20px rgba(0, 0, 0, 0);
+          box-shadow: 0px 10px 13px -7px #000000,
+            -5px 22px 33px -20px rgba(0, 0, 0, 0);
+          &:hover {
+            cursor: pointer;
+          }
+          .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $primary;
+            img {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .details {
+            padding: $size;
+            text-align: center;
+          }
+          .bottom {
+            .capacity {
+              font-weight: 900;
+              color: $primary;
+            }
+            text-align: center;
+            color: $secondary;
+            a {
+              font-weight: 900;
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .back {
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    .backButton {
+      text-decoration: none;
+      border-bottom: 5px solid $primary;
+      color: $primary;
+      font-size: calc($size * 1.3);
+      font-weight: 900;
+      border-radius: 10px;
+      padding: calc($size/ 1.6) calc($size * 1.6);
+    }
+  }
+}

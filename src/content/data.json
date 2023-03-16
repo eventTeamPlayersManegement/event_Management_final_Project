@@ -31,17 +31,21 @@
     "submit": "Submit",
     "title": "Your Event, your Way",
     "select": {
-      "select1": "Select Type Event",
+      "category": "Select Type Event",
       "select2": "Select Location",
-      "select3": "Select Date",
+      "date": "Select Date",
       "select4": "Select Space Preference",
       "select5": "Select Deckor",
+
+      "entertainment": "Select Entertainment"
+
       "select6": "Select Entertainment",
       "guestNumber": "Guest number",
       "budget": "Budget",
       "catering": "Catering",
       "rentCar": "Rent car",
       "photographer": "Photographer"
+
     },
     "options": {
       "option1": "Birthday",
@@ -56,5 +60,15 @@
 
   "photographer": { "title": "Our photographers" },
 
-  "rentauto": { "title": "Rent Autos" }
+  "rentauto": { "title": "Rent Autos" },
+  "dashboard": {
+    "paths": [
+      "photographer",
+      "restaurant",
+      "rentauto",
+      "entertainment",
+      "message"
+    ],
+    "title": "Admins Dashboard"
+  }
 }

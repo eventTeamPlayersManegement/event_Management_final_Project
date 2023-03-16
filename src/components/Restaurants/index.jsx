@@ -25,9 +25,7 @@ export default function index() {
                 alt="restaurant"
               />
 
-              <div className="photo-card--image__text">
-                <p>{el.title}</p>
-              </div>
+              <div className="photo-card--image__text"></div>
             </div>
           ))}
         </>

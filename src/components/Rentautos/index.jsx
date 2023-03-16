@@ -17,13 +17,11 @@ export default function index() {
       <div>
         <>
           <div className="home-galerie__container1">
-            <h1> {rentauto.provider.name}</h1>
+            <h1> {rentauto.name}</h1>
 
-            {rentauto.provider.address && (
-              <p>Provider City: {rentauto.provider.address.city}</p>
-            )}
-            <p> {rentauto.model}</p>
-            <p> {rentauto.jahr}</p>
+            {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
+            <p> {rentauto.name}</p>
+
             <p> {rentauto.price}</p>
           </div>
           <div className="home-galerie__container">
@@ -31,14 +29,12 @@ export default function index() {
               <div className="photo-card__container--polaroid" key={el._id}>
                 <img
                   className="photo-card--image__item"
-                  src={el.url}
+                  src={el}
                   alt="rentauto"
                 />
-                <div className="photo-card--image__text">
-                  <p>{el.title}</p>
-                </div>
+                <div className="photo-card--image__text"></div>
               </div>
-            ))}{" "}
+            ))}
           </div>
         </>
       </div>
