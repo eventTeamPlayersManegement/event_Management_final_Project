@@ -6,7 +6,23 @@ $size: 1rem;
 $pad: 2rem;
 
 .about {
-  padding: 2rem 2rem;
+  padding-top: 2rem;
+  .wedding-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .Video {
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -17,49 +33,20 @@ $pad: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
     font-size: $size;
     margin-bottom: 2rem;
-
-    .about__image {
-      height: 500px;
-      width: 900px;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
-
-    .about__text {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      text-align: center;
-    }
-
-    .about__images {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 2rem;
-
-      img {
-        width: 30%;
-      }
-    }
+    padding: 20px;
   }
-
   .carousel {
     position: relative;
     width: 100%;
     height: 300px;
-    overflow: hidden;
 
     .carousel-inner {
       display: flex;
-      width: calc(300px * 6);
       height: 100%;
       transition: transform 0.5s ease-in-out;
-      padding-left: 100px;
+      padding-bottom: 50px;
 
       img {
         flex: 1 0 auto;
@@ -67,14 +54,13 @@ $pad: 2rem;
         height: 100%;
         object-fit: cover;
         padding: 20px;
-
         border-radius: 50px;
       }
     }
 
     .carousel-controls {
       position: absolute;
-      top: 50%;
+      top: 40%;
       transform: translateY(-50%);
       width: 100%;
       display: flex;
@@ -92,6 +78,112 @@ $pad: 2rem;
         padding: 0.5rem;
         transition: background-color 0.2s ease-in-out;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about {
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+      margin: 0 auto;
+
+      .carousel-inner {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 700px) {
+//   .about {
+//     .carousel {
+//       position: relative;
+//       overflow: hidden;
+//       height: 200px;
+//       margin: 0 auto;
+
+//       .carousel-inner {
+//         position: absolute;
+//         width: 50%;
+//         height: 100%;
+//         display: flex;
+//         transition: transform 0.5s ease;
+//         img {
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 500px) {
+  .about {
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+      margin: 0 auto;
+
+      .carousel-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .carousel-controls {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-size: 2rem;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // Change image after 2 seconds
+    @keyframes changeImage {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .carousel img {
+      animation: changeImage 3s infinite;
     }
   }
 }
