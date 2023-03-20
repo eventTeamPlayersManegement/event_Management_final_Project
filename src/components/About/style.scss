@@ -10,32 +10,56 @@ $pad: 2rem;
   .wedding-video {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 20px;
+
     gap: 20px;
+    .Video {
+      width: 50%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .wedding-container {
+      display: flex;
+      flex-direction: column;
+      .text-video {
+        padding: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        color: $sometextcolor;
+      }
+      .ring-container {
+        display: inline-block;
+        text-align: center;
+
+        .img-ring {
+          width: 200px;
+          height: 200px;
+          padding: 20px;
+          border-radius: 100px;
+          object-fit: cover;
+        }
+      }
+    }
   }
-  .Video {
-    width: 50%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
+
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
+
     text-align: center;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: $size;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
-    padding: 20px;
+    padding: 20px 50px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
   .carousel {
     position: relative;
@@ -82,7 +106,7 @@ $pad: 2rem;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
   .about {
     .carousel {
       position: relative;
@@ -106,32 +130,15 @@ $pad: 2rem;
   }
 }
 
-// @media only screen and (max-width: 700px) {
-//   .about {
-//     .carousel {
-//       position: relative;
-//       overflow: hidden;
-//       height: 200px;
-//       margin: 0 auto;
-
-//       .carousel-inner {
-//         position: absolute;
-//         width: 50%;
-//         height: 100%;
-//         display: flex;
-//         transition: transform 0.5s ease;
-//         img {
-//           width: 100%;
-//           height: 100%;
-//           object-fit: cover;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media only screen and (max-width: 500px) {
   .about {
+    .wedding-video {
+      flex-direction: column;
+      .Video {
+        width: 100%;
+      }
+    }
+
     .carousel {
       position: relative;
       overflow: hidden;

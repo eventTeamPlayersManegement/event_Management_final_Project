@@ -37,6 +37,8 @@ import img33 from "../../assets/bilderEvent/img33.jpg";
 import img34 from "../../assets/bilderEvent/img34.webp";
 import weddingVideo from "../../assets/bilderEvent/wedding1.mp4";
 import birthVideo from "../../assets/bilderEvent/birth.mp4";
+import ring from "../../assets/bilderEvent/ring.jpg";
+import ringw from "../../assets/bilderEvent/ring1.jpeg";
 
 import { useState, useEffect } from "react";
 
@@ -109,19 +111,35 @@ export default function About() {
       <h1 className="about__title">{about.aboutUs[0].title}</h1>
 
       <section className="about__description">
-        <p>{about.aboutUs[0].description}</p>
+        <p className="text-video">{about.aboutUs[0].description}</p>
 
         <div className="wedding-video">
           <video className="Video" controls autoPlay muted>
             <source src={weddingVideo} type="video/mp4" />
           </video>
-          <p>{about.aboutUs[0].wedding}</p>
+          <div className="wedding-container">
+            <p className="text-video">{about.aboutUs[0].wedding}</p>
+            <div className="ring-container">
+              <img className="img-ring" src={ring} alt="" />
+              <img className="img-ring" src={ringw} alt="" />
+              {/* <img className="img-ring" src={img17} alt="" /> */}
+              <img className="img-ring" src={img29} alt="" />
+            </div>
+          </div>
         </div>
         <div className="wedding-video">
+          <div className="wedding-container">
+            <p className="text-video">{about.aboutUs[0].birthday}</p>
+            <div className="ring-container">
+              <img className="img-ring" src={img34} alt="" />
+              <img className="img-ring" src={img25} alt="" />
+              <img className="img-ring" src={img21} alt="" />
+            </div>
+          </div>
+
           <video className="Video" controls autoPlay muted>
             <source src={birthVideo} type="video/mp4" />
           </video>
-          <p>TEXT</p>
         </div>
       </section>
 
