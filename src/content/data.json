@@ -23,34 +23,72 @@
       "url1": "https://images.unsplash.com/photo-1553710120-23dd1551da41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1130&q=80",
       "url2": "https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
 
+
+            "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
+        }
+    ],
+    "contactUs": ["Contact Us"],
+    "Services": {
+        "submit": "Submit",
+        "title": "Your Event, your Way",
+        "select": {
+            "event": "Select Type Event",
+            "location": "Select Location",
+            "date": "Select Date",
+            "inOutdoor": "Select Space Preference",
+            "decor": "Select Deckor",
+            "entertainment": "Select Entertainment",
+            "guestNumber": "Guest number",
+            "budget": "Budget",
+            "catering": "Catering",
+            "rentAuto": "Rent car",
+            "photographer": "Photographer"
+        },
+        "options": {
+            "event": {
+                "option1": "Birthday",
+                "option2": "Wedding"
+            },
+            "location": {
+                "option1": "Hamburg",
+                "option2": "Berlin"
+            },
+            "date": "",
+            "inOutdoor": {
+                "option1": "Indoor",
+                "option2": "Outdoor"
+            },
+            "decor": {
+                "option1": "Flowers",
+                "option2": "Paintings"
+            },
+            "entertainment": {
+                "option1": "DJ",
+                "option2": "Music Band"
+            },
+            "guestNumber": 0,
+            "budget": {
+                "option1": "€",
+                "option2": "€€", 
+                "option3": "€€€"
+                },
+            "catering": {
+                "option1": "Fine dinning",
+                "option2": "Finger food"
+            },
+            "rentAuto": {
+                "option1": "Limousine",
+                "option2": "Party bus"
+            },
+            "photographer": {
+                "option1": "Max Gar",
+                "option2": "Maya Trune"
+            }
+        }
       "text": "At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style.  For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations.  When it comes to weddings, we understand that this is one of the most important days of your life. That's why we offer a full range of wedding planning services, from engagement parties to rehearsal dinners, ceremonies, and receptions. We'll work closely with you to understand your vision and preferences, and then bring that vision to life with expert planning and execution. Our services include everything from venue selection and vendor management to decor, catering, and entertainment. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. Contact us today to learn more about our services and how we can help you create an unforgettable celebration!"
     }
   ],
-  "contactUs": ["Contact Us"],
-  "Services": {
-    "submit": "Submit",
-    "title": "Your Event, your Way",
-    "select": {
-      "category": "Select Type Event",
-      "select2": "Select Location",
-      "date": "Select Date",
-      "select4": "Select Space Preference",
-      "select5": "Select Deckor",
 
-      "entertainment": "Select Entertainment",
-
-      "select6": "Select Entertainment",
-      "guestNumber": "Guest number",
-      "budget": "Budget",
-      "catering": "Catering",
-      "rentCar": "Rent car",
-      "photographer": "Photographer"
-    },
-    "options": {
-      "option1": "Birthday",
-      "option2": "Wedding"
-    }
-  },
   "suppliers": { "title": "Our Suppliers" },
 
   "restaurant": { "title": "Our Restaurants" },
