@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
 $primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
@@ -7,15 +9,40 @@ $pad: 2rem;
 
 .about {
   padding-top: 2rem;
+  .div-container {
+    width: 100%;
+    text-align: center;
+    h1 {
+      color: $secondary;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+        0px -4px 10px rgba(255, 255, 255, 0.3);
+    }
+    .div-line {
+      width: 80vw;
+      border: 1px solid $sometextcolor;
+      margin: 0 auto;
+    }
+    .steps-container {
+      display: flex;
+      width: 70vw;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+
   .wedding-video {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
 
     gap: 20px;
     .Video {
       width: 50%;
-      height: 600px;
+      height: 450px;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -29,6 +56,7 @@ $pad: 2rem;
       .text-video {
         padding: 20px;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 20px;
         color: $sometextcolor;
       }
       .ring-container {
@@ -59,7 +87,13 @@ $pad: 2rem;
     font-size: 1.1rem;
     margin-bottom: 2rem;
     padding: 20px 50px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+    .about-text {
+      font-family: "Italianno", cursive;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $sometextcolor;
+    }
   }
   .carousel {
     position: relative;
@@ -108,6 +142,17 @@ $pad: 2rem;
 
 @media only screen and (max-width: 700px) {
   .about {
+    .div-container {
+      .steps-container {
+        flex-direction: column;
+      }
+    }
+    .wedding-video {
+      flex-direction: column;
+      .Video {
+        width: 100%;
+      }
+    }
     .carousel {
       position: relative;
       overflow: hidden;

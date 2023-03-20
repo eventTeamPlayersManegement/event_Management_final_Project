@@ -111,7 +111,7 @@ export default function About() {
       <h1 className="about__title">{about.aboutUs[0].title}</h1>
 
       <section className="about__description">
-        <p className="text-video">{about.aboutUs[0].description}</p>
+        <p className="about-text">{about.aboutUs[0].description}</p>
 
         <div className="wedding-video">
           <video className="Video" controls autoPlay muted>
@@ -141,6 +141,50 @@ export default function About() {
             <source src={birthVideo} type="video/mp4" />
           </video>
         </div>
+      </section>
+
+      <section className="div-container">
+        <div className="div-line"></div>
+        <h1>{about.aboutUs[0].stepstitle}</h1>
+        <div className="steps-container">
+          <div>
+            <h1>
+              1. <br />
+              {about.aboutUs[0].step1}
+            </h1>
+            <p>{about.aboutUs[0].step1text}</p>
+          </div>
+          <div>
+            <h1>
+              2. <br />
+              {about.aboutUs[0].step2}
+            </h1>
+            <p>{about.aboutUs[0].step2text}</p>
+          </div>
+          <div>
+            <h1>
+              3. <br />
+              {about.aboutUs[0].step3}
+            </h1>
+            <p>{about.aboutUs[0].step3text}</p>
+          </div>
+          <div>
+            <h1>
+              4. <br />
+              {about.aboutUs[0].step4}
+            </h1>
+            <p>{about.aboutUs[0].step4text}</p>
+          </div>
+          <div>
+            <h1>
+              5. <br />
+              {about.aboutUs[0].step5}
+            </h1>
+            <p>{about.aboutUs[0].step5text}</p>
+          </div>
+        </div>
+
+        <div className="div-line"></div>
       </section>
 
       <div className="carousel">
