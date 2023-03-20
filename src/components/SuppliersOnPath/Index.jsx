@@ -45,9 +45,9 @@ function Index({ path }) {
           default: "",
         },
         {
-          name: "location",
+          name: "city",
           type: "text",
-          placeholder: "location",
+          placeholder: "city",
           default: "",
         },
         {
