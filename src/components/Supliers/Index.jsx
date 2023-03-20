@@ -5,16 +5,17 @@ import "./style.scss";
 
 export default function Supliers() {
   const [data, setData] = useState([]);
-  async function getData() {
-    const data = await getPath("suppliers");
-    setData(data);
-  }
+
   useEffect(() => {
+    async function getData() {
+      const data = await getPath("suppliers");
+      setData(data);
+    }
     getData();
   }, []);
 
   const Images = ({ image }) => {
-    return <img style={{ width: "200px" }} src={image.url} alt="image" />;
+    return <img style={{ width: "200px" }} src={image} alt="image" />;
   };
   return (
     <div className="ourSuppliers">

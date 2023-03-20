@@ -5,9 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
-import { toast } from "react-hot-toast";
+
 import Index from "../Chat/Index.jsx";
-// update
+import { MdDashboard } from "react-icons/md";
+
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [toggleChat, setToggleChat] = useState(false);
@@ -75,10 +76,15 @@ export default function Header() {
               }}
             ></i>
           )}
-          <i
-            className="uil uil-comment-message"
-            onClick={() => setToggleChat(!toggleChat)}
-          ></i>
+          {data?.id && (
+            <i
+              className="uil uil-comment-message"
+              onClick={() => setToggleChat(!toggleChat)}
+            ></i>
+          )}
+          {data.dbuser?.admin && (
+            <MdDashboard onClick={() => navigate("/dashboard")} />
+          )}
           <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
             <i className="uil uil-bars nav__icon"></i>
           </div>

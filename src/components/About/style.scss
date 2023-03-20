@@ -22,12 +22,13 @@ $pad: 2rem;
     margin-bottom: 2rem;
 
     .about__image {
-      width: 100%;
       height: 500px;
+      width: 900px;
       margin-bottom: 1rem;
       margin-top: 1rem;
       border-radius: 8px;
       aspect-ratio: 1;
+      object-fit: cover;
     }
 
     .about__text {
@@ -43,6 +44,53 @@ $pad: 2rem;
 
       img {
         width: 30%;
+      }
+    }
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    .carousel-inner {
+      display: flex;
+      width: calc(300px * 6);
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+      padding-left: 100px;
+
+      img {
+        flex: 1 0 auto;
+        width: 400px;
+        height: 100%;
+        object-fit: cover;
+        padding: 20px;
+
+        border-radius: 50px;
+      }
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      button {
+        background: rgba(255, 255, 255, 0.5);
+        border: none;
+        color: black;
+        cursor: pointer;
+        font-size: 2rem;
+        line-height: 1;
+        outline: none;
+        padding: 0.5rem;
+        transition: background-color 0.2s ease-in-out;
       }
     }
   }
