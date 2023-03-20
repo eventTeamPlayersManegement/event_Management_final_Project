@@ -7,6 +7,9 @@ import Video from "./Video.jsx";
 export default function Landing() {
   return (
     <div className="landingPageContainer">
+      <div className="video">
+        <Video />
+      </div>
       <div className="landingImg">
         <img src={img1} alt="happycouple" />
       </div>
