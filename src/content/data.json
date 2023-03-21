@@ -1,117 +1,151 @@
 {
-  "navItems": ["about", "services", "suppliers", "contact"],
+    "navItems": ["about", "services", "suppliers", "contact"],
 
-  "landingText": {
-    "wish": "Your Event, Your Wish",
-    "our": "Our Pleasure"
-  },
-  "footer": {
-    "copyright": "Copyright @ 2023 Event Elite Planners "
-  },
-  "payment": {
-    "h1": "Payment",
-    "h2": "Payment Methods"
-  },
-
-  "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"],
-
-  "aboutUs": [
-    {
-      "title": "About Us",
-      "description": "Event Elite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced  event planners, suppliers, venues and more. At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. ",
-      "wedding": "A wedding is one of the most significant events in a person's life and it is a time to celebrate love and commitment with family and  friends. As an event organizer for weddings, our job is to create a seamless and unforgettable experience for the couple and their guests.  With our expertise and creativity, we create a wedding day that the couple will cherish forever.",
-      "birthday": "For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations. ",
-      "stepstitle": "Our cooperation in 5 steps",
-      "step1": "Get to know",
-      "step1text": "We would like to learn as much as possible about you, your love story and your ideas for the wedding. We prefer to get to know you personally in our studio or virtually.",
-      "step2": "Planning phase",
-      "step2text": "Once the contract has been successfully concluded, we move on to the planning phase. All the foundations are laid and the first schedules are written.",
-      "step3": "Creative phase",
-      "step3text": "We attach great importance to individuality and quality. Our design concepts are unique for each of our bridal couples, filled with lots of ideas and always new inspiration.",
-      "step4": "Final check up",
-      "step4text": "Schedules are finalized and details are specified down to the smallest detail. All the pieces of the puzzle now add up to the big picture.",
-      "step5": "Wedding day",
-      "step5text": "The grand finale! We support you on the day of your wedding and make sure that you can enjoy the celebration to the fullest."
-    }
-  ],
-  "contactUs": ["Contact Us"],
-
-  "Services": {
-    "submit": "Submit",
-    "title": "Your Event, your Way",
-    "select": {
-      "event": "Select Type Event",
-      "location": "Select Location",
-      "date": "Select Date",
-      "inOutdoor": "Select Space Preference",
-      "decor": "Select Deckor",
-      "entertainment": "Select Entertainment",
-      "guestNumber": "Guest number",
-      "budget": "Budget",
-      "catering": "Catering",
-      "rentAuto": "Rent car",
-      "photographer": "Photographer"
+    "landingText": {
+        "wish": "Your Event, Your Wish",
+        "our": "Our Pleasure"
     },
-    "options": {
-      "event": {
-        "option1": "Birthday",
-        "option2": "Wedding"
-      },
-      "location": {
-        "option1": "Hamburg",
-        "option2": "Berlin"
-      },
-      "date": "",
-      "inOutdoor": {
-        "option1": "Indoor",
-        "option2": "Outdoor"
-      },
-      "decor": {
-        "option1": "Flowers",
-        "option2": "Paintings"
-      },
-      "entertainment": {
-        "option1": "DJ",
-        "option2": "Music Band"
-      },
-      "guestNumber": 0,
-      "budget": {
-        "option1": "€",
-        "option2": "€€",
-        "option3": "€€€"
-      },
-      "catering": {
-        "option1": "Fine dinning",
-        "option2": "Finger food"
-      },
-      "rentAuto": {
-        "option1": "Limousine",
-        "option2": "Party bus"
-      },
-      "photographer": {
-        "option1": "Max Gar",
-        "option2": "Maya Trune"
-      }
+    "footer": {
+        "copyright": "Copyright @ 2023 Event Elite Planners "
     },
-    "text": "At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style.  For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations.  When it comes to weddings, we understand that this is one of the most important days of your life. That's why we offer a full range of wedding planning services, from engagement parties to rehearsal dinners, ceremonies, and receptions. We'll work closely with you to understand your vision and preferences, and then bring that vision to life with expert planning and execution. Our services include everything from venue selection and vendor management to decor, catering, and entertainment. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. Contact us today to learn more about our services and how we can help you create an unforgettable celebration!"
-  },
-  "suppliers": { "title": "Our Suppliers" },
 
-  "restaurant": { "title": "Our Restaurants" },
+    "payment": {
+        "h1": "Payment",
+        "h2": "Payment Methods",
 
-  "baseURL": "http://localhost:3000",
+        "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
+    },
+    "invoice": {
+        "h2": ["Your desire - Our pleasure", "Your wishes"],
 
-  "photographer": { "title": "Our photographers" },
+        "paragraph": [
+            {
+                "name": "Photographer",
+                "duration": "2:30 hours",
+                "price": "800€"
+            },
+            {
+                "name": "Clown",
+                "duration": "1 hour",
+                "price": "800€"
+            },
+            {
+                "name": "Band",
+                "duration": "4 hours",
+                "price": "1000€"
+            },
+            {
+                "name": "Catering",
+                "duration": "5:30 hours",
+                "price": "1500€"
+            },
+            {
+                "name": "Venue",
+                "duration": "6:30 hours",
+                "price": "1000€"
+            }
+        ]
+    },
 
-  "rentauto": { "title": "Rent Autos" },
-  "dashboard": {
-    "paths": [
-      "photographer",
-      "restaurant",
-      "rentauto",
-      "entertainment",
-      "message"
+    "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"],
+
+    "aboutUs": [
+        {
+            "title": "About Us",
+            "description": "Event Elite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced  event planners, suppliers, venues and more. At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. ",
+            "wedding": "A wedding is one of the most significant events in a person's life and it is a time to celebrate love and commitment with family and  friends. As an event organizer for weddings, our job is to create a seamless and unforgettable experience for the couple and their guests.  With our expertise and creativity, we create a wedding day that the couple will cherish forever.",
+            "birthday": "For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations. ",
+            "stepstitle": "Our cooperation in 5 steps",
+            "step1": "Get to know",
+            "step1text": "We would like to learn as much as possible about you, your love story and your ideas for the wedding. We prefer to get to know you personally in our studio or virtually.",
+            "step2": "Planning phase",
+            "step2text": "Once the contract has been successfully concluded, we move on to the planning phase. All the foundations are laid and the first schedules are written.",
+            "step3": "Creative phase",
+            "step3text": "We attach great importance to individuality and quality. Our design concepts are unique for each of our bridal couples, filled with lots of ideas and always new inspiration.",
+            "step4": "Final check up",
+            "step4text": "Schedules are finalized and details are specified down to the smallest detail. All the pieces of the puzzle now add up to the big picture.",
+            "step5": "Wedding day",
+            "step5text": "The grand finale! We support you on the day of your wedding and make sure that you can enjoy the celebration to the fullest."
+        }
     ],
-    "title": "Admins Dashboard"
-  }
+    "contactUs": ["Contact Us"],
+
+    "Services": {
+        "submit": "Submit",
+        "title": "Your Event, your Way",
+        "select": {
+            "event": "Select Type Event",
+            "location": "Select Location",
+            "date": "Select Date",
+            "inOutdoor": "Select Space Preference",
+            "decor": "Select Deckor",
+            "entertainment": "Select Entertainment",
+            "guestNumber": "Guest number",
+            "budget": "Budget",
+            "catering": "Catering",
+            "rentAuto": "Rent car",
+            "photographer": "Photographer"
+        },
+        "options": {
+            "event": {
+                "option1": "Birthday",
+                "option2": "Wedding"
+            },
+            "location": {
+                "option1": "Hamburg",
+                "option2": "Berlin"
+            },
+            "date": "",
+            "inOutdoor": {
+                "option1": "Indoor",
+                "option2": "Outdoor"
+            },
+            "decor": {
+                "option1": "Flowers",
+                "option2": "Paintings"
+            },
+            "entertainment": {
+                "option1": "DJ",
+                "option2": "Music Band"
+            },
+            "guestNumber": 0,
+            "budget": {
+                "option1": "€",
+                "option2": "€€",
+                "option3": "€€€"
+            },
+            "catering": {
+                "option1": "Fine dinning",
+                "option2": "Finger food"
+            },
+            "rentAuto": {
+                "option1": "Limousine",
+                "option2": "Party bus"
+            },
+            "photographer": {
+                "option1": "Max Gar",
+                "option2": "Maya Trune"
+            }
+        },
+        "text": "At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style.  For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations.  When it comes to weddings, we understand that this is one of the most important days of your life. That's why we offer a full range of wedding planning services, from engagement parties to rehearsal dinners, ceremonies, and receptions. We'll work closely with you to understand your vision and preferences, and then bring that vision to life with expert planning and execution. Our services include everything from venue selection and vendor management to decor, catering, and entertainment. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. Contact us today to learn more about our services and how we can help you create an unforgettable celebration!"
+    },
+    "suppliers": { "title": "Our Suppliers" },
+
+    "restaurant": { "title": "Our Restaurants" },
+
+    "baseURL": "http://localhost:3000",
+
+    "photographer": { "title": "Our photographers" },
+
+    "rentauto": { "title": "Rent Autos" },
+    "dashboard": {
+        "paths": [
+            "photographer",
+            "restaurant",
+            "rentauto",
+            "entertainment",
+            "message"
+        ],
+        "title": "Admins Dashboard"
+    }
 }
