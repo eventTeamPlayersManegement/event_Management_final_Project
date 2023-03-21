@@ -3,6 +3,7 @@ import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
 import { capitalizeName } from "../lib/ultilitis";
+import SuppliersNav from "../SuppliersNav";
 
 function Index() {
   const [data, setData] = useState([]);
@@ -19,7 +20,7 @@ function Index() {
         <div className="home-galerie__container">
           {photograph.fotos.map((el, i) => (
             <Images key={i} image={el} />
-          ))}
+            ))}
         </div>
       </>
     );
@@ -49,18 +50,19 @@ function Index() {
       </div>
     );
   };
-
+  
   return (
     <>
-      <h1>{text.photographer.title}</h1>
+        <SuppliersNav/>
+      <h2>{text.photographer.title}</h2>
       <div className="home-galerie__container">
         {data.map((el, i) => (
           <Profilepicture key={i} photograph={el} />
-        ))}
+          ))}
       </div>
       {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
-      ))}
+        ))}
     </>
   );
 }

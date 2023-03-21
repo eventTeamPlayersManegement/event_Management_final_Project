@@ -42,7 +42,7 @@ export default function index() {
   };
   return (
     <div>
-      <h1>{text.rentauto.title}</h1>
+      <h2>{text.rentauto.title}</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
       ))}
