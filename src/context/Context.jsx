@@ -13,7 +13,9 @@ function Context({ children }) {
   const [theme, setTheme] = useState("light");
 
   const toggleModus = () => {
-    setTheme((cur) => (cur === "light" ? "dark" : "light"));
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
   useEffect(() => {
     checkProfile().then(async (res) => {
@@ -39,6 +41,9 @@ function Context({ children }) {
         setData({ user: res, id: user._id, dbuser: user });
       }
     });
+
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
   }, []);
 
   return (
