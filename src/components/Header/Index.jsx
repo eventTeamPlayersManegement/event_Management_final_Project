@@ -28,10 +28,13 @@ export default function Header() {
           alt="logo"
           onClick={() => navigate("/")}
         />
-        <label>
+        <label className="switchmodus">
           <span>{theme === "light" ? "Light Modus" : "Dark Modus"}</span>
-          <Switch onChange={toggleModus} checked={theme === "light"} />
+          <div className="switch">
+            <Switch onChange={toggleModus} checked={theme === "light"} />
+          </div>
         </label>
+
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           {navitems.navItems.map((el, i) => {
             return (
