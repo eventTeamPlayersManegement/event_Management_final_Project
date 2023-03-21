@@ -47,13 +47,13 @@
     },
     {
       "name": "Vaso Thom",
-      "portfolio": "test",
+      "portfolio": "https://vasosportofolio.vercel.app/",
       "linkedin": "https://www.linkedin.com/in/vaso-thomopoulou-6820a21b9/",
       "located": "Düsseldorf"
     },
     {
       "name": "Leo Volwahsen",
-      "portfolio": "",
+      "portfolio": "https://portfolio-lv.netlify.app",
       "linkedin": "https://www.linkedin.com/in/leo-volwahsen/",
       "located": "Berlin"
     },
