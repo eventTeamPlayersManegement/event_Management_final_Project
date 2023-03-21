@@ -9,10 +9,34 @@ $pad: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+  h1 { margin: 1rem 0;}
   .caruselContainer {
     flex: grid;
   }
   .mobile_grid_photos {
     flex: 1;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li {
+      display: inline;
+      border-right: 1px solid $primary !important;
+      a {
+        color: $secondary !important;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: $sometextcolor;
+      }
+    }
+    li:last-child {
+      border-right: none !important;
+    }
   }
 }

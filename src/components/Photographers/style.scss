@@ -2,9 +2,9 @@ h1, h2 {
     text-align: center;
 }
 .profile-picture__image--container{
-    width: min( 100%, 250px);
+    width: min( 100%, 150px);
     height: auto;
-    margin-inline: 1rem;
+    margin-inline: .5rem;
     .profile-picture--image__item{
         max-width: 100%;
         height: auto;

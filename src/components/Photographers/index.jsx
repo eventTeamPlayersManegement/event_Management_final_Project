@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
+import { capitalizeName } from "../lib/ultilitis";
 
 function Index() {
   const [data, setData] = useState([]);
@@ -12,7 +13,6 @@ function Index() {
   useEffect(() => {
     getData();
   }, []);
-
   const Photograph = ({ photograph }) => {
     return (
       <>
@@ -34,7 +34,7 @@ function Index() {
             alt="photograph"
           />
           <div>
-            <p className="profile-picture--image__text">{photograph.name}</p>
+            <p className="profile-picture--image__text">{capitalizeName(photograph.name)}</p>
           </div>
         </div>
         <div className="profile-picture__image--container"></div>
