@@ -49677,5 +49677,12 @@
     "stateCode": "HB",
     "latitude": "53.16667000",
     "longitude": "8.61667000"
+  },
+  {
+    "name": "Munich",
+    "countryCode": "DE",
+    "stateCode": "M",
+    "latitude": "48.1351000",
+    "longitude": "11.582000"
   }
 ]

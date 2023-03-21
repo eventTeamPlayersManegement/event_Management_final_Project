@@ -31,4 +31,16 @@ $pad: 2rem;
     font-size: calc($pad * 1.5);
     font-weight: 400;
   }
+  .video {
+    display: none;
+  }
+  @media (min-width: 390px) {
+    .video {
+      display: block;
+    }
+    .moto,
+    .landingImg {
+      display: none;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import storePicture from "../../library/storePicture.js";
+import { capitalize } from "../lib/ultilitis.js";
 
 function Input({ data, handleChange }) {
   const { name, type, placeholder, multiple = false } = data;
@@ -23,23 +24,34 @@ function Input({ data, handleChange }) {
       Object.keys(e.target.files).forEach(async (el) => {
         storePicture(e.target.files[el]).then((res) => {
           handleChange(
-            (prev) =>
-              (prev = {
-                fotos: [...prev.fotos, res],
-              })
+            (prev) => (prev = { ...prev, fotos: [...prev.fotos, res] })
           );
         });
       });
     }
   };
   return (
-    <input
-      name={name}
-      type={type}
-      onChange={type === "file" ? handleFile : handleData}
-      placeholder={placeholder}
-      multiple={multiple}
-    />
+    <label>
+      {capitalize(name)}
+      {type === "textarea" ? (
+        <textarea
+          cols={28}
+          rows={10}
+          name={name}
+          onChange={handleData}
+          placeholder={placeholder}
+          style={{ resize: false }}
+        />
+      ) : (
+        <input
+          name={name}
+          type={type}
+          onChange={type === "file" ? handleFile : handleData}
+          placeholder={placeholder}
+          multiple={multiple}
+        />
+      )}
+    </label>
   );
 }
 

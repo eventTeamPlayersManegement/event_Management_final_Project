@@ -15,19 +15,17 @@ export default function index() {
   const Restaurant = ({ restaurant }) => {
     return (
       <div className="home-galerie__container">
-        {/* <h1> {restaurant.name}</h1> */}
+        <h1> {restaurant.name}</h1>
         <>
           {restaurant.fotos.map((el) => (
             <div className="photo-card__container--polaroid" key={el._id}>
               <img
                 className="photo-card--image__item"
-                src={el.url}
+                src={el}
                 alt="restaurant"
               />
 
-              <div className="photo-card--image__text">
-                <p>{el.title}</p>
-              </div>
+              <div className="photo-card--image__text"></div>
             </div>
           ))}
         </>
