@@ -20,10 +20,16 @@ import Restaurant from "./views/Restaurant.jsx";
 import Entertainment from "./views/Entertainment.jsx";
 import Rentauto from "./views/Rentauto.jsx";
 import AddSuppliersOnPath from "./views/AddSuppliersOnPath.jsx";
+import { EventContext } from "./context/Context.jsx";
+import { useContext } from "react";
 
 function App() {
+  const { theme } = useContext(EventContext)[2];
+  // const test = useContext(EventContext);
+  // console.log(test[2].theme);
+
   return (
-    <div className="App">
+    <div className="App" id={theme}>
       <Header />
       <Toaster position="top-right" />
       <Routes>

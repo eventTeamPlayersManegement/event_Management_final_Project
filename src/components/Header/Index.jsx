@@ -8,6 +8,7 @@ import { EventContext } from "../../context/Context.jsx";
 
 import Index from "../Chat/Index.jsx";
 import { MdDashboard } from "react-icons/md";
+import Switch from "react-switch";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
@@ -15,6 +16,7 @@ export default function Header() {
 
   const navigate = useNavigate();
   const [data, setData] = useContext(EventContext);
+  const { theme, setTheme, toggleModus } = useContext(EventContext)[2];
 
   return (
     <header className="header">
@@ -26,6 +28,12 @@ export default function Header() {
           alt="logo"
           onClick={() => navigate("/")}
         />
+        <label className="switchmodus">
+          <span>{theme === "light" ? "Light Modus" : "Dark Modus"}</span>
+          <div className="switch">
+            <Switch onChange={toggleModus} checked={theme === "light"} />
+          </div>
+        </label>
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           {navitems.navItems.map((el, i) => {

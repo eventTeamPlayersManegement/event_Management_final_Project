@@ -1,57 +1,4 @@
 {
-
-  "navItems": ["about", "services", "suppliers", "contact"],
-
-  "landingText": {
-    "wish": "Your Event, Your Wish",
-    "our": "Our Pleasure"
-  },
-  "footer": {
-    "copyright": "Copyright @ 2023 Event Elite Planners "
-  },
-  "payment": {
-    "h1": "Payment",
-    "h2": "Payment Methods"
-  },
-
-  "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"],
-
-  "aboutUs": [
-    {
-      "title": "About Us",
-      "description": "Event Elite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced  event planners, suppliers, venues and more. At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. ",
-      "wedding": "A wedding is one of the most significant events in a person's life and it is a time to celebrate love and commitment with family and  friends. As an event organizer for weddings, our job is to create a seamless and unforgettable experience for the couple and their guests.  With our expertise and creativity, we create a wedding day that the couple will cherish forever.",
-      "birthday": "For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations. ",
-      "stepstitle": "Our cooperation in 5 steps",
-      "step1": "Get to know",
-      "step1text": "We would like to learn as much as possible about you, your love story and your ideas for the wedding. We prefer to get to know you personally in our studio or virtually.",
-      "step2": "Planning phase",
-      "step2text": "Once the contract has been successfully concluded, we move on to the planning phase. All the foundations are laid and the first schedules are written.",
-      "step3": "Creative phase",
-      "step3text": "We attach great importance to individuality and quality. Our design concepts are unique for each of our bridal couples, filled with lots of ideas and always new inspiration.",
-      "step4": "Final check up",
-      "step4text": "Schedules are finalized and details are specified down to the smallest detail. All the pieces of the puzzle now add up to the big picture.",
-      "step5": "Wedding day",
-      "step5text": "The grand finale! We support you on the day of your wedding and make sure that you can enjoy the celebration to the fullest."
-    }
-  ],
-  "contactUs": ["Contact Us"],
-  "Services": {
-    "submit": "Submit",
-    "title": "Your Event, your Way",
-    "select": {
-      "select1": "Select Type Event",
-      "select2": "Select Location",
-      "select3": "Select Date",
-      "select4": "Select Space Preference",
-      "select5": "Select Deckor",
-      "select6": "Select Entertainment",
-      "guestNumber": "Guest number",
-      "budget": "Budget",
-      "catering": "Catering",
-      "rentCar": "Rent car",
-      "photographer": "Photographer"
-
     "navItems": ["about", "services", "suppliers", "contact"],
 
     "landingText": {
@@ -61,9 +8,43 @@
     "footer": {
         "copyright": "Copyright @ 2023 Event Elite Planners "
     },
+
     "payment": {
         "h1": "Payment",
-        "h2": "Payment Methods"
+        "h2": "Payment Methods",
+
+        "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"]
+    },
+    "invoice": {
+        "h2": ["Your desire - Our pleasure", "Your wishes"],
+
+        "paragraph": [
+            {
+                "name": "Photographer",
+                "duration": "2:30 hours",
+                "price": "800€"
+            },
+            {
+                "name": "Clown",
+                "duration": "1 hour",
+                "price": "800€"
+            },
+            {
+                "name": "Band",
+                "duration": "4 hours",
+                "price": "1000€"
+            },
+            {
+                "name": "Catering",
+                "duration": "5:30 hours",
+                "price": "1500€"
+            },
+            {
+                "name": "Venue",
+                "duration": "6:30 hours",
+                "price": "1000€"
+            }
+        ]
     },
 
     "paragraph": ["Your invoice", "Total", "3247€", "PayPal", "MasterCard"],
@@ -71,15 +52,24 @@
     "aboutUs": [
         {
             "title": "About Us",
-            "description": "Event Lite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced and energetic event planners, suppliers, venues and more. With the number of events we organise, Event  Lite Planner does not need to add exorbitant fees and mark-ups to make its profit margins. This ensures that our clients list make regular use of our services. ",
-            "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-            "url1": "https://images.unsplash.com/photo-1553710120-23dd1551da41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1130&q=80",
-            "url2": "https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-
-            "text": "Donec eu felis ligula. Donec sollicitudin ac purus in lacinia. Nulla facilisi. Nunc quis tellus odio. Donec accumsan, urna vel imperdiet pellentesque, orci neque interdum orci, sed volutpat turpis urna sit amet ipsum. Maecenas et magna molestie nulla laoreet tempus. Maecenas bibendum mi ultrices ex ornare maximus. Nullam eget interdum ex. Sed iaculis, lacus quis euismod tincidunt, enim quam consectetur magna, eget consequat augue risus nec dui. Praesent dictum at turpis vel sagittis. Phasellus non erat venenatis, euismod lacus quis, fringilla ante.Quisque id ex id ipsum congue rhoncus ut non risus. Integer id arcu eget nunc volutpat vulputate. Nulla magna dui, ullamcorper eget finibus ornare, consequat a nibh. Sed ac mollis nisi, vitae placerat mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus bibendum, tempor quam at, tincidunt ex. Aliquam turpis diam, bibendum nec tempor sed, bibendum at lorem. Suspendisse fringilla ultrices ipsum a porttitor.Morbi at lorem vel sem efficitur euismod quis a tortor. Phasellus feugiat enim vitae sapien efficitur, id blandit est ultricies. Vestibulum luctus arcu nunc, in eleifend nibh fringilla eu. Phasellus id mauris ac orci tempor porta ac in est. Etiam a urna quam. Phasellus porttitor tellus et lectus cursus, ut maximus mauris accumsan. Cras eu lectus pellentesque, convallis sapien vitae, vehicula nibh. Aenean orci risus, feugiat eu arcu eu, posuere laoreet dolor. Integer lacus quam, molestie nec rhoncus non, ultrices quis lectus. Cras et turpis cursus, elementum nisi ut, luctus neque. Integer vitae mollis lorem. Nulla vulputate pretium felis, ac ultrices sapien congue eu. Nullam condimentum id tellus at hendrerit. "
+            "description": "Event Elite Planners is an event company which was formed  in 2023. The company offers event planning services from a team of experienced  event planners, suppliers, venues and more. At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. ",
+            "wedding": "A wedding is one of the most significant events in a person's life and it is a time to celebrate love and commitment with family and  friends. As an event organizer for weddings, our job is to create a seamless and unforgettable experience for the couple and their guests.  With our expertise and creativity, we create a wedding day that the couple will cherish forever.",
+            "birthday": "For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations. ",
+            "stepstitle": "Our cooperation in 5 steps",
+            "step1": "Get to know",
+            "step1text": "We would like to learn as much as possible about you, your love story and your ideas for the wedding. We prefer to get to know you personally in our studio or virtually.",
+            "step2": "Planning phase",
+            "step2text": "Once the contract has been successfully concluded, we move on to the planning phase. All the foundations are laid and the first schedules are written.",
+            "step3": "Creative phase",
+            "step3text": "We attach great importance to individuality and quality. Our design concepts are unique for each of our bridal couples, filled with lots of ideas and always new inspiration.",
+            "step4": "Final check up",
+            "step4text": "Schedules are finalized and details are specified down to the smallest detail. All the pieces of the puzzle now add up to the big picture.",
+            "step5": "Wedding day",
+            "step5text": "The grand finale! We support you on the day of your wedding and make sure that you can enjoy the celebration to the fullest."
         }
     ],
     "contactUs": ["Contact Us"],
+
     "Services": {
         "submit": "Submit",
         "title": "Your Event, your Way",
