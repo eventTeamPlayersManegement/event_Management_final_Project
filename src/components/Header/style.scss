@@ -54,6 +54,7 @@ $pad: 2rem;
         font-size: calc($pad * 0.7);
         font-weight: 900;
         text-decoration: none;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
     }
   }
@@ -73,12 +74,37 @@ $pad: 2rem;
     display: none;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 950px) {
+  .nav {
+    .switchmodus span {
+      display: none;
+    }
+    .nav__menu {
+      gap: 1rem;
+      .nav__item {
+        list-style-type: none;
+        .nav__link {
+          font-size: 15px;
+        }
+      }
+    }
+    .nav__icons {
+      font-size: 18px;
+      gap: 3px;
+    }
+    .userData {
+      font-size: 15px;
+      .avatar {
+        border-radius: 50%;
+        width: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
   .header {
     .nav {
-      .switchmodus span {
-        display: none;
-      }
       .nav__menu {
         position: fixed;
         bottom: -100%;
