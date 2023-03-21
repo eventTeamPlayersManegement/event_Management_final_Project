@@ -35,7 +35,12 @@ import img31 from "../../assets/bilderEvent/img31.jpg";
 import img32 from "../../assets/bilderEvent/img32.jpg";
 import img33 from "../../assets/bilderEvent/img33.jpg";
 import img34 from "../../assets/bilderEvent/img34.webp";
-import { useState } from "react";
+import weddingVideo from "../../assets/bilderEvent/wedding1.mp4";
+import birthVideo from "../../assets/bilderEvent/birth.mp4";
+import ring from "../../assets/bilderEvent/ring.jpg";
+import ringw from "../../assets/bilderEvent/ring1.jpeg";
+
+import { useState, useEffect } from "react";
 
 export default function About() {
   const images = [
@@ -75,6 +80,13 @@ export default function About() {
     img34,
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const index = (currentIndex + 1) % images.length;
+      setCurrentIndex(index);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [currentIndex, images.length]);
 
   const goToPrevious = () => {
     const index = (currentIndex - 1 + images.length) % images.length;
@@ -87,7 +99,7 @@ export default function About() {
   };
 
   const getVisibleImages = () => {
-    const lastIndex = (currentIndex + 2) % images.length;
+    const lastIndex = (currentIndex + 3) % images.length;
     const visibleImages = [];
     for (let i = currentIndex; i <= lastIndex; i++) {
       visibleImages.push(images[i % images.length]);
@@ -99,23 +111,82 @@ export default function About() {
       <h1 className="about__title">{about.aboutUs[0].title}</h1>
 
       <section className="about__description">
-        <p>{about.aboutUs[0].description}</p>
-        <img
-          className="about__image"
-          src={about.aboutUs[0].image}
-          alt="married"
-        />
-        <p className="about__text">{about.aboutUs[0].text}</p>
+        <p className="about-text">{about.aboutUs[0].description}</p>
 
-        {/* <img src={about.aboutUs[0].url1} alt="" />
-          <img src={about.aboutUs[0].url2} alt="" />
-          <img src={about.aboutUs[0].image} alt="" />
+        <div className="wedding-video">
+          <video className="Video" controls autoPlay muted>
+            <source src={weddingVideo} type="video/mp4" />
+          </video>
+          <div className="wedding-container">
+            <p className="text-video">{about.aboutUs[0].wedding}</p>
+            <div className="ring-container">
+              <img className="img-ring" src={ring} alt="" />
+              <img className="img-ring" src={ringw} alt="" />
+              {/* <img className="img-ring" src={img17} alt="" /> */}
+              <img className="img-ring" src={img29} alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="wedding-video">
+          <div className="wedding-container">
+            <p className="text-video">{about.aboutUs[0].birthday}</p>
+            <div className="ring-container">
+              <img className="img-ring" src={img34} alt="" />
+              <img className="img-ring" src={img25} alt="" />
+              <img className="img-ring" src={img21} alt="" />
+            </div>
+          </div>
 
-          <img
-            src="https://genethlia.com/wp-content/uploads/2020/08/slider2.jpg"
-            alt="birthday"
-          /> */}
+          <video className="Video" controls autoPlay muted>
+            <source src={birthVideo} type="video/mp4" />
+          </video>
+        </div>
       </section>
+
+      <section className="div-container">
+        <div className="div-line"></div>
+        <h1>{about.aboutUs[0].stepstitle}</h1>
+        <div className="steps-container">
+          <div>
+            <h1>
+              1. <br />
+              {about.aboutUs[0].step1}
+            </h1>
+            <p>{about.aboutUs[0].step1text}</p>
+          </div>
+          <div>
+            <h1>
+              2. <br />
+              {about.aboutUs[0].step2}
+            </h1>
+            <p>{about.aboutUs[0].step2text}</p>
+          </div>
+          <div>
+            <h1>
+              3. <br />
+              {about.aboutUs[0].step3}
+            </h1>
+            <p>{about.aboutUs[0].step3text}</p>
+          </div>
+          <div>
+            <h1>
+              4. <br />
+              {about.aboutUs[0].step4}
+            </h1>
+            <p>{about.aboutUs[0].step4text}</p>
+          </div>
+          <div>
+            <h1>
+              5. <br />
+              {about.aboutUs[0].step5}
+            </h1>
+            <p>{about.aboutUs[0].step5text}</p>
+          </div>
+        </div>
+
+        <div className="div-line"></div>
+      </section>
+
       <div className="carousel">
         <div className="carousel-inner">
           {getVisibleImages().map((el, i) => (
