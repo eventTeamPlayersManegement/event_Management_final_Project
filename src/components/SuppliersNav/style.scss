@@ -6,7 +6,9 @@ $size: 1rem;
 $pad: 2rem;
 .suppliers__nav--container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: .5rem 0;
   .suppliers__nav--ul {
       list-style-type: none;
@@ -15,9 +17,10 @@ $pad: 2rem;
       overflow: hidden;
       .suppliers__nav--li {
         display: inline;
-        border-right: 4px solid $primary;
+        border-right: 3px solid $primary;
         a {
           color: $secondary;
+          font-weight: bolder;
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;

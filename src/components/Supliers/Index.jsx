@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import suppliers from "../../content/data.json";
 import { getPath } from "../../library/api";
 import "./style.scss";
 import SuppliersNav from "../SuppliersNav";
@@ -20,10 +19,9 @@ export default function Supliers() {
   };
   return (
     <div className="ourSuppliers">
-      <h1>{suppliers.suppliers.title}</h1>
+
       <SuppliersNav />
-     
-     
+
       <div className="caruselContainer">
         <div className="restaurants"></div>
         <div className="entertainement"></div>

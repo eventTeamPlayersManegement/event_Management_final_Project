@@ -46,14 +46,14 @@ function Index() {
     return (
       <div className="photo-card__container--polaroid">
         <img className="photo-card--image__item" src={image} alt="image" />
-        {/* <div className="photo-card--image__text"></div> */}
+        <div className="photo-card--image__text">Test</div>
       </div>
     );
   };
   
   return (
-    <>
-        <SuppliersNav/>
+    <div className="photographers__container">
+      <SuppliersNav/>
       <h2>{text.photographer.title}</h2>
       <div className="home-galerie__container">
         {data.map((el, i) => (
@@ -63,7 +63,7 @@ function Index() {
       {data.map((el, i) => (
         <Photograph key={i} photograph={el} />
         ))}
-    </>
+    </div>
   );
 }
 
