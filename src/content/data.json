@@ -1,5 +1,5 @@
 {
-  "navItems": ["about", "services", "suppliers", "contact"],
+  "navItems": ["about", "suppliers", "services", "contact"],
 
   "landingText": {
     "wish": "Your Event, Your Wish",
@@ -37,40 +37,50 @@
       "name": "Ella Rotari",
       "portfolio": "https://www.ella-rotari.com/",
       "linkedin": "https://www.linkedin.com/in/elena-rotari-45b330243/",
+      "github": "",
+      "instagram": "",
       "located": "Berlin"
     },
     {
       "name": "Marcel Jaworski",
       "portfolio": "https://marceljaworski.de/",
       "linkedin": "https://www.linkedin.com/in/marcel-jaworski-0b58aba9/",
+      "github": "",
+      "instagram": "",
       "located": "Regensburg"
     },
     {
       "name": "Vaso Thom",
       "portfolio": "https://vasosportofolio.vercel.app/",
       "linkedin": "https://www.linkedin.com/in/vaso-thomopoulou-6820a21b9/",
+      "github": "",
+      "instagram": "",
       "located": "Düsseldorf"
     },
     {
       "name": "Leo Volwahsen",
       "portfolio": "https://portfolio-lv.netlify.app",
       "linkedin": "https://www.linkedin.com/in/leo-volwahsen/",
+      "github": "",
+      "instagram": "",
       "located": "Berlin"
     },
     {
       "name": "Vladislava Pavliy",
       "portfolio": "",
       "linkedin": "",
+      "github": "",
+      "instagram": "",
       "located": "Köln"
     }
   ],
   "Services": {
     "submit": "Submit",
-    "title": "Your Event, your Way",
+    "title": "Your Event In Our Hands ",
     "select": {
-      "event": "Select Type Event",
       "location": "Select Location",
-      "date": "Select Date",
+      "event": "Select Type Event",
+      "date": "Select Your Event Date",
       "inOutdoor": "Select Space Preference",
       "decor": "Select Deckor",
       "entertainment": "Select Entertainment",
@@ -91,8 +101,8 @@
       },
       "date": "",
       "inOutdoor": {
-        "option1": "Indoor",
-        "option2": "Outdoor"
+        "option1": "Indoor Party",
+        "option2": "Outdoor Party"
       },
       "decor": {
         "option1": "Flowers",
@@ -100,7 +110,8 @@
       },
       "entertainment": {
         "option1": "DJ",
-        "option2": "Music Band"
+        "option2": "Music Band",
+        "option3": "Clowns & Magicians"
       },
       "guestNumber": 0,
       "budget": {

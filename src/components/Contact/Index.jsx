@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import contact from "../../content/data.json";
 import { useState } from "react";
+import Team from "./Team.jsx";
 
 export default function Contact() {
   const initial = {
@@ -46,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="block">
+    <div className="blockContact">
       <div className="form-container">
         <h1>{contact.contactUs[0]}</h1>
 
@@ -88,11 +89,13 @@ export default function Contact() {
           )}
         </form>
       </div>
-      <div className="detailsContainer">
+      <div className="team">
         <div>
           <h1>{contact.contactUs[3]}</h1>
         </div>
-        <ul className="images"></ul>
+        <ul className="images">
+          <Team />
+        </ul>
         <div className="bottom">
           <h1>{contact.contactUs[1]}</h1>
           <h1>{contact.contactUs[2]}</h1>
