@@ -16,7 +16,6 @@ export default function index() {
   const Rentauto = ({ rentauto }) => {
     return (
       <div>
-        <SuppliersNav/>
         <>
           <div className="home-galerie__container1">
             <h1> {rentauto.name}</h1>
@@ -44,6 +43,7 @@ export default function index() {
   };
   return (
     <div>
+      <SuppliersNav />
       <h2>{text.rentauto.title}</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
