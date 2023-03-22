@@ -10,6 +10,13 @@ userRes → check if our user in dataBase is, if not create one,
 */
 function Context({ children }) {
   const [data, setData] = useState({});
+  const [theme, setTheme] = useState("light");
+
+  const toggleModus = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
   useEffect(() => {
     checkProfile().then(async (res) => {
       const userId = res.user.sub.split("|")[1];
@@ -34,9 +41,15 @@ function Context({ children }) {
         setData({ user: res, id: user._id, dbuser: user });
       }
     });
+
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
   }, []);
+
   return (
-    <EventContext.Provider value={[data, setData]}>
+    <EventContext.Provider
+      value={[data, setData, { theme, setTheme, toggleModus }]}
+    >
       {children}
     </EventContext.Provider>
   );
