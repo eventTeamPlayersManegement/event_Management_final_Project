@@ -29,9 +29,13 @@ export default function Header() {
           onClick={() => navigate("/")}
         />
         <label className="switchmodus">
-          <span>{theme === "light" ? "Light Modus" : "Dark Modus"}</span>
+          <span>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
           <div className="switch">
-            <Switch onChange={toggleModus} checked={theme === "light"} />
+            <Switch
+              onChange={toggleModus}
+              checked={theme === "light"}
+              onColor={"#9505e3"}
+            />
           </div>
         </label>
 
