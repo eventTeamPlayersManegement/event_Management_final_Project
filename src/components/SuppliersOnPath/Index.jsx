@@ -230,19 +230,18 @@ function Index({ path }) {
           placeholder: "city",
           default: "",
         },
-
-        {
-          name: "street",
-          type: "text",
-          placeholder: "street",
-          default: "",
-        },
-        {
-          name: "houseNumber",
-          type: "text",
-          placeholder: "houseNumber",
-          default: "",
-        },
+        // {
+        //   name: "street",
+        //   type: "text",
+        //   placeholder: "street",
+        //   default: "",
+        // },
+        // {
+        //   name: "houseNumber",
+        //   type: "text",
+        //   placeholder: "houseNumber",
+        //   default: "",
+        // },
         {
           name: "fotos",
           type: "file",
