@@ -47,12 +47,6 @@ function Index({ path }) {
         },
 
         {
-          name: "description",
-          type: "textarea",
-          placeholder: "description",
-          default: "",
-        },
-        {
           name: "city",
           type: "text",
           placeholder: "city",
@@ -64,6 +58,12 @@ function Index({ path }) {
           placeholder: "",
           multiple: true,
           default: [],
+        },
+        {
+          name: "description",
+          type: "textarea",
+          placeholder: "description",
+          default: "",
         },
         {
           name: "price",
@@ -95,12 +95,7 @@ function Index({ path }) {
           default: "wedding",
           options: ["wedding", "birthday"],
         },
-        {
-          name: "description",
-          type: "textarea",
-          placeholder: "decsription",
-          default: "",
-        },
+
         {
           name: "capacitymax",
           type: "number",
@@ -139,9 +134,15 @@ function Index({ path }) {
           default: [],
         },
         {
+          name: "description",
+          type: "textarea",
+          placeholder: "decsription",
+          default: "",
+        },
+        {
           name: "price",
           type: "text",
-          placeholder: "price",
+          placeholder: "price pro person",
           default: "",
         },
       ],
@@ -318,7 +319,14 @@ function Index({ path }) {
                           {el.portfolio}
                         </a>
                       )}
-                      <h4> Price: {el.price} €</h4>
+                      {path === "restaurant" ? (
+                        <h4>
+                          {" "}
+                          Price: from <span>{el.price}€</span> pro Pers.
+                        </h4>
+                      ) : (
+                        <h4>Price : from {el.price}</h4>
+                      )}
                     </div>
                   </div>
                 );
