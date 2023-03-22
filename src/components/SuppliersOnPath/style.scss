@@ -140,6 +140,9 @@ $pad: 2rem;
             }
             text-align: center;
             color: $secondary;
+            span {
+              color: $primary;
+            }
             a {
               font-weight: 900;
               color: $primary;

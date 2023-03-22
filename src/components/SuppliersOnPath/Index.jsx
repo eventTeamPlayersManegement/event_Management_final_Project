@@ -1,20 +1,28 @@
 import Form from "../lib/Form.jsx";
 import "./style.scss";
+import useSWR from "swr";
 import { useEffect, useState } from "react";
-import { getPath } from "../../library/api";
+import { fetcher, getPath } from "../../library/api";
 import { capitalizeName, capitalize } from "../lib/ultilitis.js";
 
 function Index({ path }) {
-  const [dataBase, setDataBase] = useState([]);
+  // const [dataBase, setDataBase] = useState([]);
 
-  useEffect(() => {
-    async function getData() {
-      const daten = await getPath(path);
+  // useEffect(() => {
+  //   async function getData() {
+  //     const daten = await getPath(path);
 
-      setDataBase(daten);
-    }
-    getData();
-  }, []);
+  //     setDataBase(daten);
+  //   }
+  //   getData();
+  // }, []);
+  const {
+    data: dataBase,
+    error,
+    isLoading,
+  } = useSWR(`/api/${path}`, fetcher, {
+    refreshInterval: 1000,
+  });
 
   const data = {
     photographer: {
@@ -39,12 +47,6 @@ function Index({ path }) {
         },
 
         {
-          name: "description",
-          type: "textarea",
-          placeholder: "description",
-          default: "",
-        },
-        {
           name: "city",
           type: "text",
           placeholder: "city",
@@ -56,6 +58,12 @@ function Index({ path }) {
           placeholder: "",
           multiple: true,
           default: [],
+        },
+        {
+          name: "description",
+          type: "textarea",
+          placeholder: "description",
+          default: "",
         },
         {
           name: "price",
@@ -81,17 +89,13 @@ function Index({ path }) {
           default: "",
         },
         {
-          name: "description",
-          type: "textarea",
-          placeholder: "decsription",
-          default: "",
+          name: "eventType",
+          type: "select",
+          placeholder: "eventType",
+          default: "wedding",
+          options: ["wedding", "birthday"],
         },
-        {
-          name: "capacitymin",
-          type: "number",
-          placeholder: "capacity",
-          default: 5,
-        },
+
         {
           name: "capacitymax",
           type: "number",
@@ -130,9 +134,15 @@ function Index({ path }) {
           default: [],
         },
         {
+          name: "description",
+          type: "textarea",
+          placeholder: "decsription",
+          default: "",
+        },
+        {
           name: "price",
           type: "text",
-          placeholder: "price",
+          placeholder: "price pro person",
           default: "",
         },
       ],
@@ -201,11 +211,26 @@ function Index({ path }) {
           default: "",
         },
         {
-          name: "description",
-          type: "textarea",
-          placeholder: "decsription",
+          name: "avatar",
+          type: "file",
+          placeholder: "avatar",
           default: "",
         },
+        {
+          name: "type",
+          type: "select",
+          placeholder: "type",
+          default: "",
+          options: ["clown", "magician", "band", "dj"],
+        },
+
+        {
+          name: "city",
+          type: "text",
+          placeholder: "city",
+          default: "",
+        },
+
         {
           name: "street",
           type: "text",
@@ -216,6 +241,19 @@ function Index({ path }) {
           name: "houseNumber",
           type: "text",
           placeholder: "houseNumber",
+          default: "",
+        },
+        {
+          name: "fotos",
+          type: "file",
+          placeholder: "",
+          multiple: true,
+          default: [],
+        },
+        {
+          name: "description",
+          type: "textarea",
+          placeholder: "decsription",
           default: "",
         },
         {
@@ -238,7 +276,7 @@ function Index({ path }) {
     <div className="manageBlock">
       {path === "message" ? (
         <div className="blockMessage">
-          {dataBase.map((el) => {
+          {dataBase?.map((el) => {
             return (
               <div key={el._id} className="oneEmail">
                 <h2> From: {capitalizeName(el.name)}</h2>
@@ -257,10 +295,10 @@ function Index({ path }) {
           </div>
           <div className="block">
             <h1>
-              We have {dataBase.length} supplires as {capitalize(path)}
+              We have {dataBase?.length} supplires as {capitalize(path)}
             </h1>
             <div className="blockData">
-              {dataBase.map((el) => {
+              {dataBase?.map((el) => {
                 return (
                   <div key={el._id} className="data">
                     <div className="top">
@@ -281,7 +319,14 @@ function Index({ path }) {
                           {el.portfolio}
                         </a>
                       )}
-                      <h4> Price: {el.price} €</h4>
+                      {path === "restaurant" ? (
+                        <h4>
+                          {" "}
+                          Price: from <span>{el.price}€</span> pro Pers.
+                        </h4>
+                      ) : (
+                        <h4>Price : from {el.price}</h4>
+                      )}
                     </div>
                   </div>
                 );

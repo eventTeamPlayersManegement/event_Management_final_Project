@@ -35,8 +35,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
-        <Route path={navItems.navItems[1]} element={<Services />} />
-        <Route path={navItems.navItems[2]} element={<Suppliers />} />
+        <Route path={navItems.navItems[1]} element={<Suppliers />} />
+        <Route path={navItems.navItems[2]} element={<Services />} />
         <Route path={navItems.navItems[3]} element={<Contact />} />
         <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />

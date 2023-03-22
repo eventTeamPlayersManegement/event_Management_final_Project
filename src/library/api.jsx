@@ -11,7 +11,19 @@ export const getPath = async (path) => {
     return;
   }
 };
+export const getPathonId = async (path, id) => {
+  try {
+    let urlGetAll = `/api/${path}/${id}`;
 
+    const response = await fetch(urlGetAll);
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    return;
+  }
+};
 // we are checking wich user is logged with :
 export const checkProfile = async () => {
   const res = await fetch(`/profile`, {
