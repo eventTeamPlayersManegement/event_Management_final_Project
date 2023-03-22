@@ -14,7 +14,6 @@ $pad: 2rem;
 
 #light {
   background-color: $background;
-  color: $primary;
 }
 
 #dark {
@@ -22,5 +21,8 @@ $pad: 2rem;
   color: $background;
 }
 #dark p {
+  color: #eaeaea;
+}
+#dark a {
   color: #eaeaea;
 }
