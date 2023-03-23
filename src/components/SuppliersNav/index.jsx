@@ -5,7 +5,6 @@ import suppliers from "../../content/data.json";
 function SuppliersNav() {
   return (
     <div className="suppliers__nav--container">
-      {/* <h1>{suppliers.suppliers.title}</h1> */}
 
       <ul className="suppliers__nav--ul">
         <li className="suppliers__nav--li">
