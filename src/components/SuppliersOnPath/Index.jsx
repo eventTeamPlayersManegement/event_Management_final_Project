@@ -220,7 +220,7 @@ function Index({ path }) {
           name: "type",
           type: "select",
           placeholder: "type",
-          default: "",
+          default: "clown",
           options: ["clown", "magician", "band", "dj"],
         },
 

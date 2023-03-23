@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import config from "../../content/data.json";
 import { EventContext } from "../../context/Context.jsx";
 import CustomButton from "../lib/CustomButton.jsx";
 function Conversations({ user, setSelected }) {
@@ -12,7 +11,6 @@ function Conversations({ user, setSelected }) {
     setSelected(data);
   };
   const createConversation = () => {
-    console.log(user);
     fetch(`/api/conversation`, {
       method: "POST",
       body: JSON.stringify({
