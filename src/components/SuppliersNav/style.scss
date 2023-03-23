@@ -31,6 +31,11 @@ $pad: 2rem;
         a:hover {
           background-color: $primary;
         }
+        @media screen and (max-width: 650px) { 
+          a {
+            font-size: 1rem;
+          }
+        }
       }
       .suppliers__nav--li:last-child {
         border-right: none;
