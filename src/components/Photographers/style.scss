@@ -5,12 +5,16 @@
     align-items: center;
 }
 .profile-picture__image--container{
-    width: min( 100%, 150px);
+    display: flex;
+    width: min( 100%, 300px);
     height: auto;
-    margin-inline: .5rem;
+    margin: .5rem;
+    padding: .2rem;
+    border: solid 2px black;
+
     .profile-picture--image__item{
         max-width: 100%;
-        height: auto;
+        height: 150px;
         border-radius: 50%;
         object-fit: cover; 
         aspect-ratio: 1/1;
@@ -48,7 +52,7 @@
     object-fit: cover; 
 
 }
-.photo-card--image__text{
-    color: var(--black);
-    text-align: center;
-}
+// .photo-card--image__text{
+//     color: var(--black);
+//     text-align: center;
+// }

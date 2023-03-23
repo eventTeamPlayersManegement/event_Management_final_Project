@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
-import { capitalizeName } from "../lib/ultilitis";
+import { capitalizeName, capitalize } from "../lib/ultilitis";
 import SuppliersNav from "../SuppliersNav";
 
 function Index() {
@@ -14,6 +14,7 @@ function Index() {
   useEffect(() => {
     getData();
   }, []);
+  console.log(data)
   const Photograph = ({ photograph }) => {
     return (
       <>
@@ -35,10 +36,10 @@ function Index() {
             alt="photograph"
           />
           <div>
-            <p className="profile-picture--image__text">{capitalizeName(photograph.name)}</p>
+            <h3 className="profile-picture--image__title">{capitalizeName(photograph.name)}</h3>
+            <p className="profile-picture--image__text">{capitalize(photograph.description)}</p>
           </div>
         </div>
-        <div className="profile-picture__image--container"></div>
       </>
     );
   };
@@ -46,7 +47,7 @@ function Index() {
     return (
       <div className="photo-card__container--polaroid">
         <img className="photo-card--image__item" src={image} alt="image" />
-        <div className="photo-card--image__text">Test</div>
+        {/* <div className="photo-card--image__text">Test</div> */}
       </div>
     );
   };
@@ -54,7 +55,7 @@ function Index() {
   return (
     <div className="photographers__container">
       <SuppliersNav/>
-      <h2>{text.photographer.title}</h2>
+      {/* <h2>{text.photographer.title}</h2> */}
       <div className="home-galerie__container">
         {data.map((el, i) => (
           <Profilepicture key={i} photograph={el} />
