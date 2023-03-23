@@ -48,6 +48,18 @@ export default function Contact() {
 
   return (
     <div className="blockContact">
+      <div className="team">
+        <div>
+          <h1>{contact.contactUs[3]}</h1>
+        </div>
+        <ul className="images">
+          <Team />
+        </ul>
+        <div className="bottom">
+          <h1>{contact.contactUs[1]}</h1>
+          <h1>{contact.contactUs[2]}</h1>
+        </div>
+      </div>
       <div className="form-container">
         <h1>{contact.contactUs[0]}</h1>
 
@@ -88,18 +100,6 @@ export default function Contact() {
             <div className="success-message">Message sent successfully!!!!</div>
           )}
         </form>
-      </div>
-      <div className="team">
-        <div>
-          <h1>{contact.contactUs[3]}</h1>
-        </div>
-        <ul className="images">
-          <Team />
-        </ul>
-        <div className="bottom">
-          <h1>{contact.contactUs[1]}</h1>
-          <h1>{contact.contactUs[2]}</h1>
-        </div>
       </div>
     </div>
   );

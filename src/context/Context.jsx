@@ -20,9 +20,8 @@ function Context({ children }) {
   useEffect(() => {
     checkProfile().then(async (res) => {
       const userId = res.user.sub.split("|")[1];
-      const userRes = await fetch(`api/users/sub/` + userId);
+      const userRes = await fetch(`/api/users/sub/` + userId);
       const user = await userRes.json();
-
       if (!user) {
         const res2 = await fetch(`/api/users`, {
           method: "POST",
@@ -35,7 +34,6 @@ function Context({ children }) {
           },
         });
         const data2 = await res2.json();
-
         setData({ user: res, id: data2._id, dbuser: user });
       } else {
         setData({ user: res, id: user._id, dbuser: user });

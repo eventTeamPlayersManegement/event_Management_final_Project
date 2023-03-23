@@ -21,7 +21,7 @@ export default function index() {
             <div className="photo-card__container--polaroid" key={fotos._id}>
               <img
                 className="photo-card--image__item"
-                src={fotos.url}
+                src={fotos}
                 alt="entertainment"
               />
               <div className="photo-card--image__text">
