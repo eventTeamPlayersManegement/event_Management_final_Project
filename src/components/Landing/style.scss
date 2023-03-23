@@ -13,6 +13,7 @@ $pad: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
   .landingImg {
     background-color: $secondary;
     img {
@@ -30,5 +31,26 @@ $pad: 2rem;
 
     font-size: calc($pad * 1.5);
     font-weight: 400;
+  }
+  .video {
+    display: none;
+  }
+  @media (min-width: 400px) {
+    .video {
+      display: block;
+    }
+    .moto,
+    .landingImg {
+      display: none;
+    }
+  }
+  @media (min-width: 800px) {
+    .video {
+      display: flex;
+    }
+    .moto,
+    .landingImg {
+      display: none;
+    }
   }
 }

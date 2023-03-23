@@ -5,15 +5,18 @@ import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
-import { toast } from "react-hot-toast";
+
 import Index from "../Chat/Index.jsx";
-// update
+import { MdDashboard } from "react-icons/md";
+import Switch from "react-switch";
+
 export default function Header() {
   const [toggle, setToggle] = useState(false);
   const [toggleChat, setToggleChat] = useState(false);
 
   const navigate = useNavigate();
   const [data, setData] = useContext(EventContext);
+  const { theme, setTheme, toggleModus } = useContext(EventContext)[2];
 
   return (
     <header className="header">
@@ -25,6 +28,16 @@ export default function Header() {
           alt="logo"
           onClick={() => navigate("/")}
         />
+        <label className="switchmodus">
+          <span>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
+          <div className="switch">
+            <Switch
+              onChange={toggleModus}
+              checked={theme === "light"}
+              onColor={"#9505e3"}
+            />
+          </div>
+        </label>
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           {navitems.navItems.map((el, i) => {
@@ -75,10 +88,15 @@ export default function Header() {
               }}
             ></i>
           )}
-          <i
-            className="uil uil-comment-message"
-            onClick={() => setToggleChat(!toggleChat)}
-          ></i>
+          {data?.id && (
+            <i
+              className="uil uil-comment-message"
+              onClick={() => setToggleChat(!toggleChat)}
+            ></i>
+          )}
+          {data.dbuser?.admin && (
+            <MdDashboard onClick={() => navigate("/dashboard")} />
+          )}
           <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
             <i className="uil uil-bars nav__icon"></i>
           </div>

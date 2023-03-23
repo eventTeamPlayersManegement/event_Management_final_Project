@@ -1,20 +1,16 @@
-import React from "react";
+import dash from "../../content/data.json";
+
+import { capitalize } from "../lib/ultilitis.js";
+import FlipImg from "./FlipImg.jsx";
+import "../Dashboard/style.scss";
 
 export default function Dashboard() {
   return (
-    <ul>
-      <li>
-        <a href="/dashboard/photographer">photographer</a>
-      </li>
-      <li>
-        <a href="/dashboard/restaurant">restaurants</a>
-      </li>
-      <li>
-        <a href="/dashboard/rentauto">rent auto</a>
-      </li>
-      <li>
-        <a href="/dashboard/entertainment">entertainment</a>
-      </li>
-    </ul>
+    <div className="dashboardCont">
+      <h1>{dash.dashboard.title}</h1>
+      <div className="dashPart">
+        <FlipImg />
+      </div>
+    </div>
   );
 }

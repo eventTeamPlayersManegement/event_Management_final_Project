@@ -1,23 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ServiceData from "../../content/data.json";
 import CustomButton from "../lib/CustomButton.jsx";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import city from "../../content/city.json";
+import { getPath, getPathonId } from "../../library/api.jsx";
+import { capitalizeName } from "../lib/ultilitis.js";
 export default function Service() {
   const inicialValues = {
-    select1: "",
-    select2: "",
-    select4: "",
-    select5: "",
-    select6: "",
-    select7: "",
+    event: "",
+    location: "",
+    date: new Date(),
+    indoor: true,
+    entertainment: "",
+    guestNumber: 10,
+    budget: 500,
+    rentAuto: false,
+    photographer: false,
   };
-
+  const partners = ["entertainment", "rentauto", "photographer"];
+  const navigate = useNavigate();
   const [values, setValues] = useState(inicialValues);
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [suppliers, setSuppliers] = useState([]);
+  useEffect(() => {
+    Promise.all(partners.map((el) => getPath(el))).then((res) => {
+      const modified = partners.reduce((acc, el, i) => {
+        acc[el] = res[i];
+        return acc;
+      }, {});
+      setSuppliers(modified);
+    });
+  }, []);
 
   const cityOptions = city.map((city, i) => (
     <option key={i} value={city.name}>
@@ -29,11 +45,73 @@ export default function Service() {
     setValues({ ...values, [event.target.name]: event.target.value });
   }
 
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
-    console.log("submited");
-    setValues(inicialValues);
-    setSelectedDate(new Date());
+
+    const restaurants = fetch("api/restaurant/filtered", {
+      method: "POST",
+      body: JSON.stringify({
+        eventType: values.event.toLowerCase(),
+        indoor: values.indoor,
+        city: values.location.toLowerCase(),
+        capacity: values.guestNumber,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+    const rentcar = getPathonId("rentauto", values.rentAuto);
+    const photographer = getPathonId("photographer", values.photographer);
+    const entertainment = getPathonId("entertainment", values.entertainment);
+
+    Promise.all([restaurants]).then((res) =>
+      Promise.all([
+        ...res.map((el) => el.json()),
+        rentcar,
+        entertainment,
+        photographer,
+      ]).then((json) => {
+        const [restaurants, rent, entertainement, photo] = json;
+
+        if (restaurants.length) {
+          const updated = restaurants.map(
+            (el) => (el = { ...el, rent, entertainement, photo })
+          );
+          const checkBudget = updated
+            .filter((el) => {
+              const cost =
+                +el.price * +values.guestNumber +
+                +el.rent.price +
+                +el.entertainement.price +
+                +el.photo.price;
+              const diff = +values.budget - cost > 0;
+              return diff;
+            })
+            .map((el) => {
+              const cost =
+                +el.price * +values.guestNumber +
+                +el.rent.price +
+                +el.entertainement.price +
+                +el.photo.price;
+              return { ...el, cost: cost };
+            });
+
+          setValues((prev) => (prev = { ...prev, filtred: checkBudget }));
+        }
+      })
+    );
+
+    //     const result = res.map((el) => el.json());
+    //     return result;
+    //   })
+    //   .then((json) => setValues((prev) => (prev = { ...prev, filtred: json })));
+
+    // // console.log("submited");
+    // const json = JSON.stringify(values);
+    // localStorage.setItem("onSubmitHandler", json);
+    // setValues(inicialValues);
+    // navigate("/invoice");
+    // setSelectedDate(new Date());
   };
 
   return (
@@ -42,72 +120,138 @@ export default function Service() {
 
       <form onSubmit={onSubmitHandler}>
         <div className="input-select-container">
-          <label htmlFor="option1"></label>
+          <label htmlFor="location"></label>
           <select
-            id="option1"
-            name="select1"
-            value={values.select1}
+            id="location"
+            name="location"
+            value={values.location}
             onChange={handleOptionChange}
           >
-            <option value="">{ServiceData.Services.select.select1}</option>
-            <option value="option1">
-              {ServiceData.Services.options.option1}
+            <option>{ServiceData.Services.select.location}</option>
+            {cityOptions}
+          </select>
+          <label htmlFor="event"></label>
+          <select
+            id="event"
+            name="event"
+            value={values.event}
+            onChange={handleOptionChange}
+          >
+            <option>{ServiceData.Services.select.event}</option>
+            <option value="Birthday">
+              {ServiceData.Services.options.event.option1}
             </option>
-            <option value="option2">
-              {ServiceData.Services.options.option2}
+            <option value="Wedding">
+              {ServiceData.Services.options.event.option2}
             </option>
           </select>
 
-          <label htmlFor="city"></label>
-          <select
-            id="city"
-            name="select2"
-            value={values.select2}
-            onChange={handleOptionChange}
-          >
-            <option>{ServiceData.Services.select.select2}</option>
-            {cityOptions}
-          </select>
           <div>
             <DatePicker
               className="datepicker"
-              selected={selectedDate}
-              onChange={(date) => setSelectedDate(date)}
+              selected={values.date}
+              onChange={(date) =>
+                setValues((prev) => (prev = { ...prev, date }))
+              }
             />
           </div>
-          <label htmlFor="option4"></label>
+          <label htmlFor="inOutdoor"></label>
           <select
-            id="option4"
-            value={values.select4}
-            name="select4"
+            id="inOutdoor"
+            value={values.indoor}
+            name="indoor"
             onChange={handleOptionChange}
           >
-            <option value="select4">
-              {ServiceData.Services.select.select4}
+            <option value="">{ServiceData.Services.select.inOutdoor}</option>
+            <option value={true}>
+              {ServiceData.Services.options.inOutdoor.option1}
             </option>
-            <option value="option1">Space</option>
+            <option value={false}>
+              {ServiceData.Services.options.inOutdoor.option2}
+            </option>
+          </select>
+          <label htmlFor="guestNumber">
+            {ServiceData.Services.select.guestNumber}
+          </label>
+          <input
+            type="number"
+            id="guestNumber"
+            name="guestNumber"
+            onChange={handleOptionChange}
+            value={values.guestNumber}
+            min="10"
+            max="1000"
+          ></input>
+          <label htmlFor="entertainment"></label>
+          <select
+            id="entertainment"
+            value={values.entertainment}
+            name="entertainment"
+            onChange={handleOptionChange}
+          >
+            <option value="">
+              {ServiceData.Services.select.entertainment}
+            </option>
+            {suppliers?.entertainment?.map((enter) => {
+              return (
+                <option key={enter._id} value={enter._id}>
+                  {enter.name}
+                </option>
+              );
+            })}
           </select>
 
-          <label htmlFor="option5"></label>
+          <label htmlFor="rentAuto"></label>
           <select
-            id="option5"
-            value={values.select5}
-            name="select5"
+            id="rentAuto"
+            name="rentAuto"
+            value={values.rentAuto}
             onChange={handleOptionChange}
           >
-            <option value="">{ServiceData.Services.select.select5}</option>
-            <option value="option1">Deckor</option>
+            <option value="">{ServiceData.Services.select.rentAuto}</option>
+            {suppliers?.rentauto?.map((auto) => {
+              return (
+                <option key={auto._id} value={auto._id}>
+                  {auto.name}
+                </option>
+              );
+            })}
           </select>
-          <label htmlFor="option6"></label>
+          <label htmlFor="photographer"></label>
           <select
-            id="option6"
-            value={values.select6}
-            name="select6"
+            id="photographer"
+            name="photographer"
+            value={values.photographer}
             onChange={handleOptionChange}
           >
-            <option value="">{ServiceData.Services.select.select6}</option>
-            <option value="option1">Deckor</option>
+            <option value="">{ServiceData.Services.select.photographer}</option>
+            {suppliers?.photographer?.map((photo) => {
+              return (
+                <option key={photo._id} value={photo._id}>
+                  {capitalizeName(photo.name)}
+                </option>
+              );
+            })}
           </select>
+          <label htmlFor="budget"></label>
+          <select
+            id="budget"
+            value={values.budget}
+            name="budget"
+            onChange={handleOptionChange}
+          >
+            <option value="">{ServiceData.Services.select.budget}</option>
+            <option value="500">
+              {ServiceData.Services.options.budget.option1}
+            </option>
+            <option value="3000">
+              {ServiceData.Services.options.budget.option2}
+            </option>
+            <option value="10000">
+              {ServiceData.Services.options.budget.option3}
+            </option>
+          </select>
+
           <CustomButton
             type="submit"
             submit={ServiceData.Services.submit}

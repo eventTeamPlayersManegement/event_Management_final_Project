@@ -20,17 +20,23 @@ import Restaurant from "./views/Restaurant.jsx";
 import Entertainment from "./views/Entertainment.jsx";
 import Rentauto from "./views/Rentauto.jsx";
 import AddSuppliersOnPath from "./views/AddSuppliersOnPath.jsx";
+import { EventContext } from "./context/Context.jsx";
+import { useContext } from "react";
 
 function App() {
+  const { theme } = useContext(EventContext)[2];
+  // const test = useContext(EventContext);
+  // console.log(test[2].theme);
+
   return (
-    <div className="App">
+    <div className="App" id={theme}>
       <Header />
       <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path={navItems.navItems[0]} element={<About />} />
-        <Route path={navItems.navItems[1]} element={<Services />} />
-        <Route path={navItems.navItems[2]} element={<Suppliers />} />
+        <Route path={navItems.navItems[1]} element={<Suppliers />} />
+        <Route path={navItems.navItems[2]} element={<Services />} />
         <Route path={navItems.navItems[3]} element={<Contact />} />
         <Route path="/signin" element={<Auth />} />
         <Route path="/chat" element={<Chat />} />
@@ -42,7 +48,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />
         <Route path="/restaurant" element={<Restaurant />} />
-        <Route path="/entertainement" element={<Entertainment />} />
+        <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/rentauto" element={<Rentauto />} />
 
         <Route path="/suppliers" element={<Suppliers />} />

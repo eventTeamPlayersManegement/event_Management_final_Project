@@ -6,8 +6,10 @@ import config from "../../content/data.json";
 function ChatInput({ conversationId, userId }) {
   const [message, setMessage] = useState("");
   const [data, setData] = useContext(EventContext);
+
   const saveNewMessage = async (e) => {
     e.preventDefault();
+
     await fetch(`/api/conversation/${conversationId}`, {
       method: "PATCH",
       body: JSON.stringify({
@@ -30,9 +32,13 @@ function ChatInput({ conversationId, userId }) {
         disabled={!conversationId}
         placeholder={"Type your text..."}
       />
-      {message.length > 0 && (
-        <CustomButton submit={"Send"} style={"customBtnDefault"} />
-      )}
+      {
+        <CustomButton
+          submit={"Send"}
+          style={"customBtnDefault"}
+          active={message.length}
+        />
+      }
     </form>
   );
 }

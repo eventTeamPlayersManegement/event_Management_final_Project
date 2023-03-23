@@ -32,6 +32,10 @@ $pad: 2rem;
       .usersChatsList {
         border: none;
         border-bottom: 1px solid $secondary;
+        &:active {
+          background-color: #555;
+        }
+
         p {
           font-weight: 600;
         }
