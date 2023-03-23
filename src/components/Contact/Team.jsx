@@ -1,8 +1,8 @@
-import img from "../../assets/test.jpg";
-import img1 from "../../assets/test.jpg";
-import img2 from "../../assets/test.jpg";
-import img3 from "../../assets/test.jpg";
-import img4 from "../../assets/test.jpg";
+import img from "../../assets/team/ella.jpg";
+import img1 from "../../assets/team/marcel.jpg";
+import img2 from "../../assets/team/vaso.jpg";
+import img3 from "../../assets/team/propfilbild.png";
+import img4 from "../../assets/team/vladi.png";
 import developers from "../../content/data.json";
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import "./team.scss";
@@ -21,16 +21,14 @@ function Team() {
                 <a href={developers.developers[i].portfolio} target="_blank">
                   Portfolio
                 </a>
+                <p>{developers.developers[i].located}</p>
+                <br />
                 <a href={developers.developers[i].linkedin} target={"_blank"}>
                   <BsLinkedin />
                 </a>
                 <a href={developers.developers[i].github} target={"_blank"}>
                   <BsGithub />
                 </a>
-                <a href={developers.developers[i].instagram} target={"_blank"}>
-                  <BsInstagram />
-                </a>
-                <p>{developers.developers[i].located}</p>
               </div>
             </div>
           </div>

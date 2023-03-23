@@ -21,7 +21,7 @@ function Index({ path }) {
     error,
     isLoading,
   } = useSWR(`/api/${path}`, fetcher, {
-    refreshInterval: 1000,
+    refreshInterval: 5000,
   });
 
   const data = {
@@ -220,7 +220,7 @@ function Index({ path }) {
           name: "type",
           type: "select",
           placeholder: "type",
-          default: "",
+          default: "clown",
           options: ["clown", "magician", "band", "dj"],
         },
 
@@ -231,18 +231,6 @@ function Index({ path }) {
           default: "",
         },
 
-        {
-          name: "street",
-          type: "text",
-          placeholder: "street",
-          default: "",
-        },
-        {
-          name: "houseNumber",
-          type: "text",
-          placeholder: "houseNumber",
-          default: "",
-        },
         {
           name: "fotos",
           type: "file",
@@ -325,7 +313,7 @@ function Index({ path }) {
                           Price: from <span>{el.price}€</span> pro Pers.
                         </h4>
                       ) : (
-                        <h4>Price : from {el.price}</h4>
+                        <h4>Price : from {el.price}€</h4>
                       )}
                     </div>
                   </div>
