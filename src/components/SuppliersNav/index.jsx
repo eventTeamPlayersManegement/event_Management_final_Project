@@ -21,6 +21,7 @@ function SuppliersNav() {
           <a href="/entertainment">Entertainments</a>
         </li>
       </ul>
+      
     </div>
   );
 }
