@@ -1,4 +1,4 @@
-$primary: #9962d7;
+$primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
 $sometextcolor: #555;
@@ -9,28 +9,28 @@ $pad: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   .suppliers__nav--ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      .suppliers__nav--li {
-        display: inline;
-        border-right: 3px solid $primary;
-        a {
-          color: $secondary;
-          font-weight: bolder;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        a:hover {
-          background-color: $primary;
-        }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    .suppliers__nav--li {
+      display: inline;
+      border-right: 3px solid $primary;
+      a {
+        color: $secondary;
+        font-weight: bolder;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
       }
-      .suppliers__nav--li:last-child {
-        border-right: none;
+      a:hover {
+        background-color: $primary;
       }
     }
+    .suppliers__nav--li:last-child {
+      border-right: none;
+    }
+  }
 }
