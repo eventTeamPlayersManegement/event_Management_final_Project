@@ -171,3 +171,17 @@ $pad: 2rem;
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .header {
+    .nav {
+      .nav__icons {
+        .userData {
+          .nickName {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
