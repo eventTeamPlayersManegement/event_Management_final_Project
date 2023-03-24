@@ -15,7 +15,8 @@ $pad: 2rem;
   flex: 1;
   justify-content: center;
   align-self: center;
-  height: 890px;
+  gap: $pad;
+  height: 850px;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
@@ -40,8 +41,8 @@ $pad: 2rem;
         font-size: calc($size * 1.1);
         padding: 10px 30px;
         border: none;
-        span {
-          font-size: 20px;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
