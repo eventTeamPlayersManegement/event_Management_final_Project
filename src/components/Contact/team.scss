@@ -52,4 +52,10 @@ $pad: 2rem;
       }
     }
   }
+
+  @media screen and (max-width: 550px) {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
 }
