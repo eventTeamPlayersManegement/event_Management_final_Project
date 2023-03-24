@@ -5,6 +5,7 @@ $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
 .servicesBlock {
+  padding: $pad;
   display: flex;
   flex: wrap;
   justify-content: space-between;

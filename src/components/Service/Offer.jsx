@@ -129,7 +129,7 @@ function Offer({ offer }) {
               </div>
               <div className="costs">
                 <button onClick={() => handleSelect(el, user.id, navigator)}>
-                  Get Your Event <br /> <span>{el.cost}€</span>
+                  Get Your Event {el.cost}€
                 </button>
               </div>
             </div>
