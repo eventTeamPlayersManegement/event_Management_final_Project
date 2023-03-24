@@ -7,6 +7,11 @@ export const capitalizeName = (str) => {
     .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
     .join(" ");
 };
-// export const capitalizeSentence = (str) => {
-//   return str.split(".").map((el)=>{console.log(el)})
-// console.log(capitalizeSentence("zukgafkahwe. ushefslekuh. skujhfeliu"))
+export const capitalizeSentence = (str) => {
+  return str.split(".").map((el) => {
+    return el.trim().charAt(0).toUpperCase() + el.trim().slice(1);
+  });
+};
+export const splitSentence = (str) => {
+  return str.slice(0, 51);
+};

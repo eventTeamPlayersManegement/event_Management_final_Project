@@ -16,7 +16,7 @@ $pad: 2rem;
     color: $sometextcolor;
     font-size: calc($pad * 2);
     font-family: "Italianno", cursive;
-    font-weight: 400;
+    font-weight: 500;
   }
   .form-container {
     flex: 1;
@@ -93,8 +93,13 @@ $pad: 2rem;
       border-radius: 10px;
     }
     h1 {
+
+      font-size: 4rem;
+      font-weight: 500;
+
       font-size: 3rem;
       font-weight: 400;
+
     }
   }
 }
