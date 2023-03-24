@@ -82,7 +82,7 @@ function Offer({ offer }) {
                       ...
                     </p>
                     <p className="price"> {el.rent.price}€ </p>
-                    <a href={"handleClick"}>More Info</a>
+                    <a href={"/rentauto"}>More Info</a>
                   </div>
                 </div>
 
@@ -105,7 +105,7 @@ function Offer({ offer }) {
                       ...
                     </p>
                     <p className="price">{el.entertainement.price}€</p>
-                    <a href={"/suppliers"}>More Info</a>
+                    <a href={"/entertainment"}>More Info</a>
                   </div>
                 </div>
                 <div className="small">
@@ -123,7 +123,7 @@ function Offer({ offer }) {
                       ...
                     </p>
                     <p className="price"> {el.photo.price}€</p>
-                    <a href={"/suppliers"}>More Info</a>
+                    <a href={"/photographer"}>More Info</a>
                   </div>
                 </div>
               </div>
