@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+$primary: #9505e3;
+$secondary: #333;
+$background: #eaeaea;
+$sometextcolor: #555;
+$size: 1rem;
+$pad: 2rem;
+
+.wrapper {
+  display: flex;
+  position: relative;
+  min-height: 80vh;
+  .thanks {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: calc($pad * 2);
+      font-family: "Italianno", cursive;
+      color: $secondary;
+      font-weight: 500;
+      span {
+        color: $primary;
+      }
+    }
+  }
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+$colors: (#d13447, #ffbf00, #9505e3);
+
+@for $i from 0 through 500 {
+  $w: random(15);
+  $l: random(100);
+  .confetti-#{$i} {
+    width: #{$w}px;
+    height: #{$w * 0.4}px;
+    background-color: nth($colors, random(3));
+    top: -10%;
+    left: unquote($l + "%");
+    opacity: random() + 0.5;
+    transform: rotate(#{random() * 360}deg);
+    animation: drop-#{$i}
+      unquote(4 + random() + "s")
+      unquote(random() + "s")
+      infinite;
+  }
+
+  @keyframes drop-#{$i} {
+    100% {
+      top: 108%;
+      left: unquote($l + random(15) + "%");
+    }
+  }
+}
