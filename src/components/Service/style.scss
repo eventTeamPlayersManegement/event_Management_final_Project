@@ -12,6 +12,7 @@ $pad: 2rem;
   .formBlock {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     align-items: center;
     padding: 0 $pad;
@@ -81,7 +82,7 @@ $pad: 2rem;
     }
     @media screen and (min-width: 860px) {
       .title {
-        margin-top: 6rem;
+        margin-top: 2rem;
       }
       .input-select-container {
         select,
