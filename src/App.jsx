@@ -10,7 +10,7 @@ import Contact from "./views/Contact.jsx";
 import Auth from "./views/Auth.jsx";
 import Chat from "./views/Chat.jsx";
 import Dashbord from "./views/Dashbord.jsx";
-import Invoice from "./views/Invoice.jsx";
+
 import Payment from "./views/Payment";
 import Page404 from "./views/Page404.jsx";
 import { Toaster } from "react-hot-toast";
@@ -44,7 +44,7 @@ function App() {
           <Route index element={<Dashbord />} />
           <Route path=":path" element={<AddSuppliersOnPath />} />
         </Route>
-        <Route path="/invoice" element={<Invoice />} />
+
         <Route path="/payment" element={<Payment />} />
         <Route path="/photographer" element={<Photographer />} />
         <Route path="/restaurant" element={<Restaurant />} />

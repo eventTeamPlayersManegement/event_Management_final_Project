@@ -11,6 +11,7 @@ import Offer from "./Offer.jsx";
 import { EventContext } from "../../context/Context.jsx";
 import "react-datepicker/dist/react-datepicker.css";
 import "./style.scss";
+import HappyCustomers from "./HappyCustomers.jsx";
 
 export default function Service() {
   const data = useContext(EventContext);
@@ -269,7 +270,7 @@ export default function Service() {
         </form>
       </div>
 
-      {user.filtred && <Offer offer={user.filtred} />}
+      {!user.filtred ? <HappyCustomers /> : <Offer offer={user.filtred} />}
     </div>
   );
 }

@@ -66,6 +66,12 @@ $pad: 2rem;
           font-weight: 800;
           display: flex;
           justify-content: space-between;
+          select {
+            border: none;
+            padding: 0.5rem;
+            outline: none;
+            font-size: $size;
+          }
 
           input {
             display: flex;
@@ -73,10 +79,12 @@ $pad: 2rem;
             border: none;
             border-bottom: 1px solid $sometextcolor;
             outline: none;
+            background-color: inherit;
           }
           textarea {
             outline: none;
             padding: $size;
+            background-color: inherit;
           }
         }
         button {
