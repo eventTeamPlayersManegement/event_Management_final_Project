@@ -11,7 +11,8 @@ userRes → check if our user in dataBase is, if not create one,
 function Context({ children }) {
   const [data, setData] = useState({});
   const [theme, setTheme] = useState("light");
-
+  const filtred = JSON.parse(sessionStorage.getItem("offers")) || [];
+  console.log(filtred);
   const toggleModus = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -34,9 +35,9 @@ function Context({ children }) {
           },
         });
         const data2 = await res2.json();
-        setData({ user: res, id: data2._id, dbuser: user });
+        setData({ user: res, id: data2._id, dbuser: user, filtred });
       } else {
-        setData({ user: res, id: user._id, dbuser: user });
+        setData({ user: res, id: user._id, dbuser: user, filtred });
       }
     });
 

@@ -101,6 +101,7 @@ export default function Service() {
                 +el.photo.price;
               return { ...el, cost: cost };
             });
+          sessionStorage.setItem("offers", JSON.stringify(checkBudget));
           setUser((prev) => (prev = { ...prev, filtred: checkBudget }));
         }
       })
@@ -132,6 +133,7 @@ export default function Service() {
               name="location"
               value={values.location}
               onChange={handleOptionChange}
+              required
             >
               <option>{ServiceData.Services.select.location}</option>
               {cityOptions}
@@ -270,7 +272,11 @@ export default function Service() {
         </form>
       </div>
 
-      {!user.filtred ? <HappyCustomers /> : <Offer offer={user.filtred} />}
+      {!user.filtred.length ? (
+        <HappyCustomers />
+      ) : (
+        <Offer offer={user.filtred} />
+      )}
     </div>
   );
 }
