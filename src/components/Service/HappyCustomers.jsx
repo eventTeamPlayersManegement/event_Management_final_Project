@@ -22,7 +22,7 @@ function HappyCustomers() {
               return (
                 <div className={`gallery__item gallery__item--${pic}`}>
                   <img
-                    src={`src/assets/happycustomers/${el}/${pic}.jpg`}
+                    src={`/happycustomers/${el}/${pic}.jpg`}
                     className="gallery__img"
                     alt={`Image ${pic}`}
                   />
