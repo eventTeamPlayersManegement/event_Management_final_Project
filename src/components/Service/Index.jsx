@@ -272,7 +272,7 @@ export default function Service() {
         </form>
       </div>
 
-      {!user.filtred.length ? (
+      {!user.filtred?.length ? (
         <HappyCustomers />
       ) : (
         <Offer offer={user.filtred} />
