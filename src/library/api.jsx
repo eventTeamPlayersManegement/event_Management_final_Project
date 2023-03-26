@@ -12,7 +12,11 @@ export const getPath = async (path) => {
   }
 };
 export const getPathonId = async (path, id) => {
+  console.log(id);
+
   try {
+    if (!id) return { name: `kein ${path}`, price: 0 };
+
     let urlGetAll = `/api/${path}/${id}`;
 
     const response = await fetch(urlGetAll);

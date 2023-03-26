@@ -20,7 +20,7 @@ const handleSelect = async (obj, id, navigator) => {
     },
   });
   const json = await res.json();
-  const resEvent = await fetch(`/api/event`, {
+  await fetch(`/api/event`, {
     method: "POST",
     body: JSON.stringify({
       user: id,
@@ -71,61 +71,69 @@ function Offer({ offer }) {
               </div>
 
               <div className="cardsOffers">
-                <div className="small">
-                  <h1>RentAuto</h1>
-                  <img src={el.rent.avatar} alt="rent" className="img1" />
-                  <div className="small_tip">
-                    <h3>More Info</h3>
-                    <p className="name"> {capitalizeName(el.rent.name)} </p>
-                    <p>
-                      {capitalizeSentence(splitSentence(el.rent.description))}
-                      ...
-                    </p>
-                    <p className="price"> {el.rent.price}€ </p>
-                    <a href={"/rentauto"}>More Info</a>
+                {el.rent.avatar && (
+                  <div className="small">
+                    <h1>RentAuto</h1>
+                    <img src={el.rent.avatar} alt="rent" className="img1" />
+                    <div className="small_tip">
+                      <h3>More Info</h3>
+                      <p className="name"> {capitalizeName(el.rent.name)} </p>
+                      <p>
+                        {capitalizeSentence(splitSentence(el.rent.description))}
+                        ...
+                      </p>
+                      <p className="price"> {el.rent.price}€ </p>
+                      <a href={"/rentauto"}>More Info</a>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div className="small">
-                  <h1>Entertainment</h1>
-                  <img
-                    src={el.entertainement.avatar}
-                    alt="entertainement"
-                    className="img2"
-                  />
-                  <div className="small_tip">
-                    <h3>More Info</h3>
-                    <p className="name">
-                      {capitalizeName(el.entertainement.name)}
-                    </p>
-                    <p>
-                      {capitalizeSentence(
-                        splitSentence(el.entertainement.description)
-                      )}
-                      ...
-                    </p>
-                    <p className="price">{el.entertainement.price}€</p>
-                    <a href={"/entertainment"}>More Info</a>
+                {el.entertainement.avatar && (
+                  <div className="small">
+                    <h1>Entertainment</h1>
+                    <img
+                      src={el.entertainement.avatar}
+                      alt="entertainement"
+                      className="img2"
+                    />
+                    <div className="small_tip">
+                      <h3>More Info</h3>
+                      <p className="name">
+                        {capitalizeName(el.entertainement.name)}
+                      </p>
+                      <p>
+                        {capitalizeSentence(
+                          splitSentence(el.entertainement.description)
+                        )}
+                        ...
+                      </p>
+                      <p className="price">{el.entertainement.price}€</p>
+                      <a href={"/entertainment"}>More Info</a>
+                    </div>
                   </div>
-                </div>
-                <div className="small">
-                  <h1>Photographer</h1>
-                  <img
-                    src={el.photo.avatar}
-                    alt="photograph"
-                    className="img3"
-                  />
-                  <div className="small_tip">
-                    <h3>More Info</h3>
-                    <p className="name"> {capitalizeName(el.photo.name)}</p>
-                    <p>
-                      {capitalizeSentence(splitSentence(el.photo.description))}
-                      ...
-                    </p>
-                    <p className="price"> {el.photo.price}€</p>
-                    <a href={"/photographer"}>More Info</a>
+                )}
+                {el.photo.avatar && (
+                  <div className="small">
+                    <h1>Photographer</h1>
+                    <img
+                      src={el.photo.avatar}
+                      alt="photograph"
+                      className="img3"
+                    />
+                    <div className="small_tip">
+                      <h3>More Info</h3>
+                      <p className="name"> {capitalizeName(el.photo.name)}</p>
+                      <p>
+                        {capitalizeSentence(
+                          splitSentence(el.photo.description)
+                        )}
+                        ...
+                      </p>
+                      <p className="price"> {el.photo.price}€</p>
+                      <a href={"/photographer"}>More Info</a>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               <div className="costs">
                 <button onClick={() => handleSelect(el, user.id, navigator)}>
