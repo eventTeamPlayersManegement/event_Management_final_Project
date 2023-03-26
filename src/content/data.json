@@ -181,7 +181,7 @@
 
   "restaurant": { "title": "Our Restaurants" },
 
-  "baseURL": "https://event.ella-rotari.com",
+  "baseURL": "http://localhost:3000",
 
   "photographer": { "title": "Our photographers" },
 
