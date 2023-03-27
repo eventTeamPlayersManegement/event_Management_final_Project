@@ -249,7 +249,7 @@ $pad: 2rem;
           background-color: transparent;
           border: none;
           font-size: 2rem;
-          color: white;
+          color: $background;
           cursor: pointer;
         }
       }
@@ -271,5 +271,11 @@ $pad: 2rem;
     .carousel img {
       animation: changeImage 3s infinite;
     }
+  }
+}
+
+#dark .div-container {
+  h1 {
+    color: $primary;
   }
 }
