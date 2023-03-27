@@ -50,6 +50,7 @@
             margin: 0.75rem;
             box-shadow:  2px 2px 6px #000000,
             4px 4px 6px #010101;
+            
             .photo-card--image__item{
                 max-width: 100%;
                 height: auto;
@@ -59,6 +60,9 @@
             //     color: var(--black);
             //     text-align: center;
             // }
+        }
+        .photo-card__container--polaroid:hover{
+            transform: scale(2);
         }
     }
   
