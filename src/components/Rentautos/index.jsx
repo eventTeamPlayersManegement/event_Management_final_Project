@@ -14,27 +14,25 @@ export default function index() {
   }, []);
   const Rentauto = ({ rentauto }) => {
     return (
-      <>
-        <div className="home-galerie__container1">
-          {/* <h1>{rentauto.name}</h1> */}
+      <div className="rentauto-main__container">
+        <div  className="rentauto-text__container">
           {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
           <h3> {capitalizeName(rentauto.name)}</h3>
           <p>{capitalize(rentauto.description)}</p>
           <p>Price ${rentauto.price}</p>
         </div>
-        <div className="home-galerie__container">
+        <div className="rentauto-gallery__container">
           {rentauto.fotos.map((el) => (
             <div className="photo-card__container--polaroid" key={el._id}>
               <img
                 className="photo-card--image__item"
                 src={el}
                 alt="rentauto"
-                />
-              <div className="photo-card--image__text"></div>
+              />
             </div>
           ))}
         </div>
-      </>
+      </div>
     );
   };
   return (
