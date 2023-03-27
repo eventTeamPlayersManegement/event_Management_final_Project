@@ -1,5 +1,5 @@
 .servicesBlock {
-  // padding: $pad;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   flex: wrap;
@@ -124,6 +124,9 @@
   color: $background;
 }
 #dark input {
+  color: $background;
+}
+#dark label {
   color: $background;
 }
 #dark option {

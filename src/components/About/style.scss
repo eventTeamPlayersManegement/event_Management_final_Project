@@ -2,9 +2,8 @@
   height: 850px;
   overflow-y: scroll;
   padding-top: 4rem;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  margin-top: 100px;
+
   .about__title {
     font-family: "Italianno", cursive;
     font-size: calc($pad * 2);
