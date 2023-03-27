@@ -16,12 +16,14 @@ export default function index() {
   }, []);
   const Restaurant = ({ restaurant }) => {
     return (
-      <div >
-        <h2>{capitalizeName(restaurant.name)}</h2>
-        <p>{capitalize(restaurant.description)}</p>
-        <p>Price per person: ${restaurant.price}</p> 
-        <p>{capitalize(restaurant.street)}</p>
-        <p>{capitalize(restaurant.city)}</p>
+      <div className="restaurant-main__container">
+        <div className="restaurant-text__container">
+          <h2>{capitalizeName(restaurant.name)}</h2>
+          <p>{capitalize(restaurant.description)}</p>
+          <p>Price per person: ${restaurant.price}</p> 
+          <p>{capitalize(restaurant.street)}</p>
+          <p>{capitalize(restaurant.city)}</p>
+        </div>
         <div className="restaurant-gallery__container">
           {restaurant.fotos.map((el) => (
             <div className="photo-card__container--polaroid" key={el._id}>
@@ -30,8 +32,6 @@ export default function index() {
                 src={el}
                 alt="restaurant"
               />
-
-              <div className="photo-card--image__text"></div>
             </div>
           ))}
         </div>
