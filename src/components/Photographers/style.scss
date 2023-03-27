@@ -1,189 +1,203 @@
-.photographers__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/* //-----Profil Picture round
-// .profile-picture__image--container{
-//     display: flex;
-//     width: min( 100%, 300px);
-//     height: auto;
-//     margin: .5rem;
-//     padding: .2rem;
-//     border: solid 2px black;
 
-//     .profile-picture--image__item{
-//         max-width: 100%;
-//         height: 150px;
-//         border-radius: 50%;
-//         object-fit: cover; 
-//         aspect-ratio: 1/1;
-//     }
-
-// } */
-/* //-----Photo Gallery */
 .home-galerie__container{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
+   
+    .photographer__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        // border-top: solid 1px $secondary;
+        border-radius: 5px;
+        box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #ffffff;
+
+        .profile-picture__container{
+            display: flex;
+            width: min( 100%, 600px);
+            height: auto;
+            margin: .5rem;
+            padding: .2rem;
+           
+            .profile-picture__image--item{
+                max-width: 100%;
+                height: 300px;
+                border-radius: 50%;
+                object-fit: cover; 
+                aspect-ratio: 1/1;
+                box-shadow:  2px 2px 6px #000000,
+                4px 4px 6px #010101;
+            }
+            .profile-picture__text--container{
+                padding-left: 2rem;
+                padding-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+              
+            }
+        
+        }
+        .photo-card__container--polaroid{
+            width: min( 100%, 300px);
+            height: auto;
+            background: #fff;
+            padding: 0.25rem;
+            margin: 0.75rem;
+            box-shadow:  2px 2px 6px #000000,
+            4px 4px 6px #010101;
+            .photo-card--image__item{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover; 
+            }
+            // .photo-card--image__text{
+            //     color: var(--black);
+            //     text-align: center;
+            // }
+        }
+    }
   
+    
 }
+
+/* //-----Photo Gallery */
 @media screen and (max-width: 768px) { 
   .home-galerie__container{
     flex-direction: column;
     align-items: center;
   }
 }
-.photo-card__container--polaroid{
-    width: min( 100%, 480px);
-    height: auto;
-    background: #fff;
-    padding: 0.25rem;
-    margin: 0.75rem;
-    box-shadow:  2px 2px 6px #000000,
-    4px 4px 6px #010101;
-}
-.photo-card--image__item{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; 
 
-}
-/* // .photo-card--image__text{
-//     color: var(--black);
-//     text-align: center;
-// }
 
 //---- 3d CARD */
 
-.profilbild__container {
-	width: 150px;
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-}
+// .profilbild__container {
+// 	width: 150px;
+// 	display: flex;
+// 	flex-direction: row;
+// 	gap: 1rem;
+// }
 
-$transition-time: 2.3s;
-.card{
-	display: flex;
-	flex-direction: row;
-	width: min( 100%, 300px);
-	height: 300px;
-	position: relative;
-	// margin: 10px 0;
-	transition: ease all $transition-time;
-	// perspective: 1200px;
-	&:hover{
-		.cover{
-			transform: rotateX(0deg) rotateY(-180deg);
-			&:before{
-				transform: translateZ(30px);
-			}
-			&:after{
-				background-color: black;
-			}
-			h3{
-				transform: translateZ(100px);
-			}
-			.price{
-				transform: translateZ(60px);
-			}
-			span{
-				transform: translateZ(-60px) rotatey(-180deg);
-			}
-		}
-	}
+// $transition-time: 2.3s;
+// .card{
+// 	display: flex;
+// 	flex-direction: row;
+// 	width: min( 100%, 300px);
+// 	height: 300px;
+// 	position: relative;
+// 	// margin: 10px 0;
+// 	transition: ease all $transition-time;
+// 	// perspective: 1200px;
+// 	&:hover{
+// 		.cover{
+// 			transform: rotateX(0deg) rotateY(-180deg);
+// 			&:before{
+// 				transform: translateZ(30px);
+// 			}
+// 			&:after{
+// 				background-color: black;
+// 			}
+// 			h3{
+// 				transform: translateZ(100px);
+// 			}
+// 			.price{
+// 				transform: translateZ(60px);
+// 			}
+// 			span{
+// 				transform: translateZ(-60px) rotatey(-180deg);
+// 			}
+// 		}
+// 	}
 	
-	.cover{
-		max-width: 100%;
-		height: 300px;
-		object-fit: cover; 
-		aspect-ratio: 1/1;
-		position: absolute;
-		transform-style: preserve-3d;
-  			transition: ease all $transition-time;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		&:before{
-			content: '';
-			position: absolute;
-			border: 5px solid rgba(255,255,255,.5);
-			box-shadow: 0 0 12px rgba(0,0,0,.3); 
-			top:20px;
-			left:20px;
-			right:20px;
-			bottom:20px;
-			z-index: 2;
-			transition: ease all $transition-time;
-			transform-style: preserve-3d;
-			transform: translateZ(0px);
-		}
-		&:after{
-			content: '';
-			position: absolute;
-			top:0px;
-			left:0px;
-			right:0px;
-			bottom:0px;
-			z-index: 2;
-			transition: ease all 1.3s;
-			background: rgba(0,0,0,.4);
-		}
+// 	.cover{
+// 		max-width: 100%;
+// 		height: 300px;
+// 		object-fit: cover; 
+// 		aspect-ratio: 1/1;
+// 		position: absolute;
+// 		transform-style: preserve-3d;
+//   			transition: ease all $transition-time;
+// 		background-size: cover;
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+// 		&:before{
+// 			content: '';
+// 			position: absolute;
+// 			border: 5px solid rgba(255,255,255,.5);
+// 			box-shadow: 0 0 12px rgba(0,0,0,.3); 
+// 			top:20px;
+// 			left:20px;
+// 			right:20px;
+// 			bottom:20px;
+// 			z-index: 2;
+// 			transition: ease all $transition-time;
+// 			transform-style: preserve-3d;
+// 			transform: translateZ(0px);
+// 		}
+// 		&:after{
+// 			content: '';
+// 			position: absolute;
+// 			top:0px;
+// 			left:0px;
+// 			right:0px;
+// 			bottom:0px;
+// 			z-index: 2;
+// 			transition: ease all 1.3s;
+// 			background: rgba(0,0,0,.4);
+// 		}
 		
-		h3{
-			position: absolute;
-			bottom: 55px;
-			left: 50px;
-			color: white;
-			transform-style: preserve-3d;
-  			transition: ease all $transition-time;
-			z-index:3;
-			transform: translateZ(0px);
-		}
-		.price{
-			position: absolute;
-			top: 55px;
-			right: 50px;
-			color: white;
-			transform-style: preserve-3d;
-  			transition: ease all $transition-time;
-			z-index:4;
-			transform: translateZ(0px);
-		}
-	}
-	.card-back{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background: #0b0f08;
-		transform-style: preserve-3d;
-  		transition: ease all $transition-time;
-		transform: translateZ(-1px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		span {
-			color: white;
-			font-size: .5rem;
-			transform-style: preserve-3d;
-			transition: ease transform $transition-time, ease background .5s;
-			transform: translateZ(-1px) rotatey(-180deg);
-			background: transparent;
-			border: 1px solid white;
-			padding: 7px 8px;
-			margin-inline: 1rem;
-			outline: none;
-			text-decoration: none;
-			&:hover{
-				background-color: white;
-				color: black;
-			}
-		}
-	}
-}
+// 		h3{
+// 			position: absolute;
+// 			bottom: 55px;
+// 			left: 50px;
+// 			color: white;
+// 			transform-style: preserve-3d;
+//   			transition: ease all $transition-time;
+// 			z-index:3;
+// 			transform: translateZ(0px);
+// 		}
+// 		.price{
+// 			position: absolute;
+// 			top: 55px;
+// 			right: 50px;
+// 			color: white;
+// 			transform-style: preserve-3d;
+//   			transition: ease all $transition-time;
+// 			z-index:4;
+// 			transform: translateZ(0px);
+// 		}
+// 	}
+// 	.card-back{
+// 		position: absolute;
+// 		height: 100%;
+// 		width: 100%;
+// 		background: #0b0f08;
+// 		transform-style: preserve-3d;
+//   		transition: ease all $transition-time;
+// 		transform: translateZ(-1px);
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		span {
+// 			color: white;
+// 			font-size: .5rem;
+// 			transform-style: preserve-3d;
+// 			transition: ease transform $transition-time, ease background .5s;
+// 			transform: translateZ(-1px) rotatey(-180deg);
+// 			background: transparent;
+// 			border: 1px solid white;
+// 			padding: 7px 8px;
+// 			margin-inline: 1rem;
+// 			outline: none;
+// 			text-decoration: none;
+// 			&:hover{
+// 				background-color: white;
+// 				color: black;
+// 			}
+// 		}
+// 	}
+// }
