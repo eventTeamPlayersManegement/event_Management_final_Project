@@ -10,20 +10,19 @@
     font-size: calc($pad * 2);
     font-weight: 500;
   }
+  padding-top: 2rem;
   .div-container {
     width: 100%;
     text-align: center;
-
     h1 {
       color: $sometextcolor;
+
       font-size: 1.8rem;
       margin-bottom: 15px;
       margin-top: 15px;
-
       text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
         0px -4px 10px rgba(255, 255, 255, 0.3);
     }
-
     p {
       color: $secondary;
     }
@@ -50,7 +49,7 @@
       width: 50%;
       height: 450px;
       object-fit: cover;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -61,7 +60,7 @@
       flex-direction: column;
       .text-video {
         padding: 20px;
-
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         font-size: 20px;
         color: $sometextcolor;
       }
@@ -108,17 +107,17 @@
 
     .carousel-inner {
       display: flex;
-      gap: calc($size);
       height: 100%;
       transition: transform 0.5s ease-in-out;
-      padding: 50px;
+      padding-bottom: 50px;
 
       img {
         flex: 1 0 auto;
         width: 400px;
         height: 100%;
         object-fit: cover;
-        border-radius: 5px;
+        padding: 20px;
+        border-radius: 30px;
       }
     }
 
@@ -132,7 +131,7 @@
       padding: 0 1rem;
 
       button {
-        background: inherit;
+        background-color: inherit;
         border: none;
         color: $primary;
         cursor: pointer;
@@ -146,7 +145,7 @@
   }
 }
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1560px) {
   .about {
     .div-container {
       .steps-container {
@@ -162,7 +161,7 @@
     .carousel {
       position: relative;
       overflow: hidden;
-      height: 200px;
+      height: 300px;
       margin: 0 auto;
 
       .carousel-inner {
@@ -182,19 +181,19 @@
 }
 
 // @media only screen and (max-width: 950px) {
-//   .about {
-//     .div-container {
-//       .steps-container {
-//         flex-direction: column;
-//       }
-//     }
-//     .wedding-video {
-//       flex-direction: column;
-//       .Video {
-//         width: 100%;
-//       }
-//     }
-//   }
+// .about {
+// .div-container {
+// .steps-container {
+// flex-direction: column;
+// }
+// }
+// .wedding-video {
+// flex-direction: column;
+// .Video {
+// width: 100%;
+// }
+// }
+// }
 // }
 
 @media only screen and (max-width: 550px) {
@@ -240,7 +239,7 @@
           background-color: transparent;
           border: none;
           font-size: 2rem;
-          color: white;
+
           cursor: pointer;
         }
       }
@@ -262,5 +261,11 @@
     .carousel img {
       animation: changeImage 3s infinite;
     }
+  }
+}
+
+#dark .div-container {
+  h1 {
+    color: $primary;
   }
 }
