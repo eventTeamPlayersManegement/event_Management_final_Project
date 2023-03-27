@@ -190,21 +190,21 @@ $pad: 2rem;
   }
 }
 
-// @media only screen and (max-width: 950px) {
-//   .about {
-//     .div-container {
-//       .steps-container {
-//         flex-direction: column;
-//       }
-//     }
-//     .wedding-video {
-//       flex-direction: column;
-//       .Video {
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 950px) {
+  .about {
+    .div-container {
+      .steps-container {
+        flex-direction: column;
+      }
+    }
+    .wedding-video {
+      flex-direction: column;
+      .Video {
+        width: 100%;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 550px) {
   .about {

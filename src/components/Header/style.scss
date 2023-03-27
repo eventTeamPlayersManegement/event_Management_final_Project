@@ -104,7 +104,11 @@ $pad: 2rem;
     }
   }
 }
-
+@media (max-width: 850px) {
+  .header {
+    width: 100vw;
+  }
+}
 @media screen and (max-width: 650px) {
   .header {
     .nav {

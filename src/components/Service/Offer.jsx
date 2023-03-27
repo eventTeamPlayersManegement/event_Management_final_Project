@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { EventContext } from "../../context/Context.jsx";
-import { redirect } from "react-router-dom";
+
 import {
   capitalizeName,
   capitalizeSentence,

@@ -16,15 +16,32 @@ $pad: 2rem;
   justify-content: center;
   align-self: center;
   gap: $pad;
+  padding-top: $pad;
   height: 850px;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
   }
+
   .offerCard {
     display: flex;
     flex-wrap: wrap;
     width: 950px;
+    @media (min-width: 375px) {
+      width: 374px;
+      margin-bottom: calc($pad * 1.5);
+    }
+    @media (min-width: 475px) {
+      width: 474px;
+      margin-bottom: calc($pad * 1.5);
+    }
+    @media (min-width: 575px) {
+      width: 574px;
+      margin-bottom: calc($pad * 1.5);
+    }
+    @media (min-width: 955px) {
+      width: 950px;
+    }
     .costs {
       display: flex;
       width: 100%;
@@ -51,11 +68,11 @@ $pad: 2rem;
       }
     }
 
-    img {
-      width: 80px;
-      height: 180px;
-      object-fit: cover;
-    }
+    // img {
+    //   width: 80px;
+    //   height: 180px;
+    //   object-fit: cover;
+    // }
 
     .rest {
       display: flex;
@@ -67,6 +84,9 @@ $pad: 2rem;
         width: 100%;
         height: 250px;
         clip-path: polygon(75% 0%, 100% 0, 100% 100%, 30% 100%);
+        @media (min-width: 375px) {
+          height: 350px;
+        }
       }
 
       .restText {
@@ -102,6 +122,22 @@ $pad: 2rem;
       justify-items: center;
       padding: $size;
       width: 100%;
+      @media (min-width: 375px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $size;
+      }
+      @media (min-width: 955px) {
+        width: 100%;
+      }
+      @media (min-width: 1175px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding: $size;
+        width: 100%;
+      }
       .small {
         position: relative;
         display: flex;
@@ -114,6 +150,11 @@ $pad: 2rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         overflow: hidden;
+        @media (min-width: 375px) {
+          width: 95%;
+          gap: $pad;
+        }
+
         &:hover {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
@@ -156,6 +197,12 @@ $pad: 2rem;
         bottom: -44%;
         left: 0;
         width: 100%;
+        @media (min-width: 475px) {
+          bottom: -39%;
+        }
+        @media (min-width: 1175px) {
+          bottom: -44%;
+        }
         content: space-between;
         margin: 0;
         padding: 30px;
