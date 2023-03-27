@@ -8,9 +8,9 @@ $size: 1rem;
 $pad: 2rem;
 
 .about {
-  padding-top: 2rem;
   height: 850px;
   overflow-y: scroll;
+  padding-top: 4rem;
   &::-webkit-scrollbar {
     display: none;
   }

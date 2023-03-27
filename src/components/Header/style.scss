@@ -6,6 +6,8 @@ $size: 1rem;
 $pad: 2rem;
 .header {
   background-color: $secondary;
+  position: fixed;
+  width: 100%;
 
   .nav__logo {
     font-size: 20px;
