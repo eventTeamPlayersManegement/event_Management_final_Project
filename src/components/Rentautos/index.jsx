@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
-import { capitalizeName } from "../lib/ultilitis";
+import { capitalizeName, capitalize } from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -18,8 +18,9 @@ export default function index() {
         <div className="home-galerie__container1">
           {/* <h1>{rentauto.name}</h1> */}
           {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
-          <p> {capitalizeName(rentauto.name)}</p>
-          <p> {rentauto.price}</p>
+          <h3> {capitalizeName(rentauto.name)}</h3>
+          <p>{capitalize(rentauto.description)}</p>
+          <p>Price ${rentauto.price}</p>
         </div>
         <div className="home-galerie__container">
           {rentauto.fotos.map((el) => (
