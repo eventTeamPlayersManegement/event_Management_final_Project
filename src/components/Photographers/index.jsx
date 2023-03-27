@@ -3,7 +3,6 @@ import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
 import { capitalizeName, capitalize } from "../lib/ultilitis";
-import SuppliersNav from "../SuppliersNav";
 
 function Index() {
   const [data, setData] = useState([]);

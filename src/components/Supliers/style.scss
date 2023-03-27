@@ -5,18 +5,19 @@ $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
 .ourSuppliers {
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 1rem;
-  h1 {
-    margin: 1rem 0;
-  }
-  .caruselContainer {
-    flex: grid;
-  }
-  .mobile_grid_photos {
-    flex: 1;
-  }
+  // h1 {
+  //   margin: 1rem 0;
+  // }
+  // .caruselContainer {
+  //   flex: grid;
+  // }
+  // .mobile_grid_photos {
+  //   flex: 1;
+  // }
 }

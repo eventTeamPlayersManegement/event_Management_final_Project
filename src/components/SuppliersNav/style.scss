@@ -6,11 +6,13 @@ $sometextcolor: #555;
 $size: 1rem;
 $pad: 2rem;
 .suppliers__nav--container {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0.5rem 0;
+  padding-top: 4rem;
   .suppliers__nav--ul {
     list-style-type: none;
     margin: 0;
