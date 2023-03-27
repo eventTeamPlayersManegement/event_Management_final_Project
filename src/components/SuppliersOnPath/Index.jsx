@@ -291,15 +291,18 @@ function Index({ path }) {
                   <div key={el._id} className="data">
                     <div className="top">
                       <img src={el.avatar} alt="avatar" />
-                      <h3>{capitalizeName(el.name)}</h3>
+                      <div>
+                        <h3>{capitalizeName(el.name)}</h3>
+                        <h2>{capitalizeName(el.city)}</h2>
+                      </div>
                     </div>
                     <div className="details">
-                      <p>{capitalize(el.description)}</p>
+                      <p>{capitalize(el.description.slice(0, 150))}...</p>
                     </div>
                     <div className="bottom">
                       {path === "restaurant" && (
                         <p className="capacity">
-                          Capacity: {el.capacitymin} - {el.capacitymax} pers.
+                          Capacity: {el.capacitymax} pers.
                         </p>
                       )}
                       {path === "photographer" && (

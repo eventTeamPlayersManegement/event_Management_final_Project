@@ -16,8 +16,6 @@ export default function index() {
   const Entertainment = ({ entertainment }) => {
     return (
       <div className="home-galerie__container">
-        <h3>{entertainment.name}</h3>
-        <p>{entertainment.description}</p>
         <>
           {entertainment.fotos.map((fotos) => (
             

@@ -145,7 +145,7 @@ export default function About() {
 
       <section className="div-container">
         <div className="div-line"></div>
-        <h1>{about.aboutUs[0].stepstitle}</h1>
+        <h1 className="steps">{about.aboutUs[0].stepstitle}</h1>
         <div className="steps-container">
           <div>
             <h1>
