@@ -130,14 +130,12 @@ $pad: 2rem;
       }
       @media (min-width: 955px) {
         width: 100%;
-      }
-      @media (min-width: 1175px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         padding: $size;
-        width: 100%;
       }
+
       .small {
         position: relative;
         display: flex;
