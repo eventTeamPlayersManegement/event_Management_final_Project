@@ -35,11 +35,10 @@ export default function index() {
     );
   };
   return (
-    <div>
-      <SuppliersNav/>
+    <section id="entertainments">
       {database.map((el) => (
         <Entertainment key={el._id} entertainment={el} />
       ))}
-    </div>
+    </section>
   );
 }

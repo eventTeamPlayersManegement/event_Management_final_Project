@@ -3,7 +3,6 @@ import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
 import { capitalizeName, capitalize } from "../lib/ultilitis";
-import SuppliersNav from "../SuppliersNav";
 
 function Index() {
   const [data, setData] = useState([]);
@@ -14,33 +13,33 @@ function Index() {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data)
-  const Photograph = ({ photograph }) => {
+
+  const Profilepicture = ({ photograph }) => {
     return (
       <>
+       <section className="profilbild__container">
+          <div className="card">
+
+            <div className="cover" style={{backgroundImage: `url(${photograph.avatar})`}}  >
+
+              <h3>{capitalizeName(photograph.name)}</h3>
+              {/* <span className="price">€{photograph.price}</span> */}
+              <div className="card-back">
+                <span>{capitalize(photograph.description)}</span>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
         <div className="home-galerie__container">
           {photograph.fotos.map((el, i) => (
             <Images key={i} image={el} />
             ))}
         </div>
       </>
-    );
-  };
-  const Profilepicture = ({ photograph }) => {
-    return (
-      <section className="profilbild__container">
-        <div className="card">
-      
-          <div className="cover" style={{backgroundImage: `url(${photograph.avatar})`}}  >
-       
-            <h3>{capitalizeName(photograph.name)}</h3>
-            <span className="price">€{photograph.price}</span>
-            <div className="card-back">
-              <span>{capitalize(photograph.description)}</span>
-            </div>
-
-          </div>
-        </div>
+      );
+     
         {/*-----Profil Picture round  */}
         {/* <div className="profile-picture__image--container">
           <img
@@ -53,8 +52,6 @@ function Index() {
             <p className="profile-picture--image__text">{capitalize(photograph.description)}</p>
           </div>
         </div> */}
-      </section>
-    );
   };
   const Images = ({ image }) => {
     return (
@@ -66,18 +63,14 @@ function Index() {
   };
   
   return (
-    <div className="photographers__container">
-      <SuppliersNav/>
-      {/* <h2>{text.photographer.title}</h2> */}
+    <section className="photographers__container" id="photographers">
+      <h2>{text.photographer.title}</h2>
       <div className="home-galerie__container">
         {data.map((el, i) => (
           <Profilepicture key={i} photograph={el} />
           ))}
       </div>
-      {data.map((el, i) => (
-        <Photograph key={i} photograph={el} />
-        ))}
-    </div>
+    </section>
   );
 }
 

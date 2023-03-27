@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import suppliers from "../../content/data.json";
 
 function SuppliersNav() {
   return (
@@ -8,16 +7,16 @@ function SuppliersNav() {
 
       <ul className="suppliers__nav--ul">
         <li className="suppliers__nav--li">
-          <a href="/restaurant">Restaurants</a>
+          <a className="suppliers__nav--a" href="#restaurants">Restaurants</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/photographer">Photographers</a>
+          <a className="suppliers__nav--a" href="#photographers">Photographers</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/rentauto">Rent Autos</a>
+          <a className="suppliers__nav--a" href="#rentautos">Rent Autos</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/entertainment">Entertainments</a>
+          <a className="suppliers__nav--a" href="#entertainments">Entertainments</a>
         </li>
       </ul>
       
