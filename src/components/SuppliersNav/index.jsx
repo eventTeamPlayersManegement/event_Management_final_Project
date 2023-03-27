@@ -8,16 +8,16 @@ function SuppliersNav() {
 
       <ul className="suppliers__nav--ul">
         <li className="suppliers__nav--li">
-          <a href="/restaurant">Restaurants</a>
+          <a className="suppliers__nav--a" href="/restaurant">Restaurants</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/photographer">Photographers</a>
+          <a className="suppliers__nav--a" href="/photographer">Photographers</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/rentauto">Rent Autos</a>
+          <a className="suppliers__nav--a" href="/rentauto">Rent Autos</a>
         </li>
         <li className="suppliers__nav--li">
-          <a href="/entertainment">Entertainments</a>
+          <a className="suppliers__nav--a" href="/entertainment">Entertainments</a>
         </li>
       </ul>
       
