@@ -28,4 +28,13 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 20000,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/variables.scss";
+        `,
+      },
+    },
+  },
 });

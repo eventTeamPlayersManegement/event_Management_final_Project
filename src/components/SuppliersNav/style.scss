@@ -1,15 +1,11 @@
-$primary: #9505e3;
-$secondary: #333;
-$background: #eaeaea;
-$sometextcolor: #555;
-$size: 1rem;
-$pad: 2rem;
 .suppliers__nav--container {
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0;
+  // margin: 0.5rem 0;
+  top: 4.5rem;
   .suppliers__nav--ul {
     list-style-type: none;
     margin: 0;
@@ -17,16 +13,24 @@ $pad: 2rem;
     overflow: hidden;
     .suppliers__nav--li {
       display: inline;
-      border-right: 3px solid $primary;
-      a {
+      border-right: 2px solid $primary;
+      .suppliers__nav--a {
         color: $secondary;
-        font-weight: bolder;
+        font-size: 2rem;
+        font-family: "Italianno", cursive;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
       }
-      a:hover {
+      .suppliers__nav--a:hover {
         background-color: $primary;
+      }
+      @media screen and (max-width: 615px) { 
+        .suppliers__nav--a {
+          font-size: 1rem;
+          padding: 7px 8px;
+          
+        }
       }
     }
     .suppliers__nav--li:last-child {

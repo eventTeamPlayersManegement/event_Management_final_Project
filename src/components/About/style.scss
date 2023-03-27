@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-
-$primary: #9505e3;
-$secondary: #333;
-$background: #eaeaea;
-$sometextcolor: #555;
-$size: 1rem;
-$pad: 2rem;
-
 .about {
+  height: 850px;
+  overflow-y: scroll;
+  padding-top: 4rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .about__title {
+    font-family: "Italianno", cursive;
+    font-size: calc($pad * 2);
+    font-weight: 500;
+  }
   padding-top: 2rem;
   .div-container {
     width: 100%;

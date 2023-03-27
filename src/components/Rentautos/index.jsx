@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
-import text from "../../content/data.json";
-import SuppliersNav from "../SuppliersNav";
+import { capitalizeName } from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -15,41 +14,34 @@ export default function index() {
   }, []);
   const Rentauto = ({ rentauto }) => {
     return (
-      <div>
-        <>
-          <div className="home-galerie__container1">
-            <h1> {rentauto.name}</h1>
-
-            {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
-            <p> {rentauto.name}</p>
-
-            <p> {rentauto.price}</p>
-          </div>
-          <div className="home-galerie__container">
-            {rentauto.fotos.map((el) => (
-              <div className="photo-card__container--polaroid" key={el._id}>
-                <img
-                  className="photo-card--image__item"
-                  src={el}
-                  alt="rentauto"
-                  />
-                <div className="photo-card--image__text"></div>
-              </div>
-            ))}
-          </div>
-        </>
-      </div>
+      <>
+        <div className="home-galerie__container1">
+          {/* <h1>{rentauto.name}</h1> */}
+          {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
+          <p> {capitalizeName(rentauto.name)}</p>
+          <p> {rentauto.price}</p>
+        </div>
+        <div className="home-galerie__container">
+          {rentauto.fotos.map((el) => (
+            <div className="photo-card__container--polaroid" key={el._id}>
+              <img
+                className="photo-card--image__item"
+                src={el}
+                alt="rentauto"
+                />
+              <div className="photo-card--image__text"></div>
+            </div>
+          ))}
+        </div>
+      </>
     );
   };
   return (
-    <div>
+    <section id="rentautos">
 
-      <SuppliersNav />
- 
-      <h2>{text.rentauto.title}</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
       ))}
-    </div>
+    </section>
   );
 }
