@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
+import SuppliersNav from "../SuppliersNav";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -31,7 +32,7 @@ export default function index() {
                   className="photo-card--image__item"
                   src={el}
                   alt="rentauto"
-                />
+                  />
                 <div className="photo-card--image__text"></div>
               </div>
             ))}
@@ -42,7 +43,10 @@ export default function index() {
   };
   return (
     <div>
-      <h1>{text.rentauto.title}</h1>
+
+      <SuppliersNav />
+ 
+      <h2>{text.rentauto.title}</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
       ))}

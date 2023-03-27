@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
+import SuppliersNav from "../SuppliersNav";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -34,6 +35,7 @@ export default function index() {
   };
   return (
     <>
+      <SuppliersNav/>
       <h1>{text.restaurant.title} </h1>
       {database.map((el) => (
         <Restaurant key={el._id} restaurant={el} />

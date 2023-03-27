@@ -22,7 +22,6 @@ const Form = ({ data, path }) => {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
-    fields("");
   };
 
   return (

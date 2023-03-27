@@ -9,17 +9,32 @@ $pad: 2rem;
 
 .about {
   padding-top: 2rem;
+  height: 850px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .about__title {
+    font-family: "Italianno", cursive;
+    font-size: calc($pad * 2);
+    font-weight: 500;
+  }
   .div-container {
     width: 100%;
     text-align: center;
+
     h1 {
-      color: $secondary;
-      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      color: $sometextcolor;
       font-size: 1.8rem;
       margin-bottom: 15px;
       margin-top: 15px;
+
       text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
         0px -4px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    p {
+      color: $secondary;
     }
     .div-line {
       width: 80vw;
@@ -44,7 +59,7 @@ $pad: 2rem;
       width: 50%;
       height: 450px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -55,7 +70,7 @@ $pad: 2rem;
       flex-direction: column;
       .text-video {
         padding: 20px;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
         font-size: 20px;
         color: $sometextcolor;
       }
@@ -90,7 +105,7 @@ $pad: 2rem;
 
     .about-text {
       font-family: "Italianno", cursive;
-      font-size: 1.8rem;
+      font-size: 2.4rem;
       font-weight: 400;
       color: $sometextcolor;
     }
@@ -102,17 +117,17 @@ $pad: 2rem;
 
     .carousel-inner {
       display: flex;
+      gap: calc($size);
       height: 100%;
       transition: transform 0.5s ease-in-out;
-      padding-bottom: 50px;
+      padding: 50px;
 
       img {
         flex: 1 0 auto;
         width: 400px;
         height: 100%;
         object-fit: cover;
-        padding: 20px;
-        border-radius: 50px;
+        border-radius: 5px;
       }
     }
 
@@ -126,9 +141,9 @@ $pad: 2rem;
       padding: 0 1rem;
 
       button {
-        background: rgba(255, 255, 255, 0.5);
+        background: inherit;
         border: none;
-        color: black;
+        color: $primary;
         cursor: pointer;
         font-size: 2rem;
         line-height: 1;
@@ -140,7 +155,7 @@ $pad: 2rem;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1450px) {
   .about {
     .div-container {
       .steps-container {
@@ -175,8 +190,27 @@ $pad: 2rem;
   }
 }
 
-@media only screen and (max-width: 500px) {
+// @media only screen and (max-width: 950px) {
+//   .about {
+//     .div-container {
+//       .steps-container {
+//         flex-direction: column;
+//       }
+//     }
+//     .wedding-video {
+//       flex-direction: column;
+//       .Video {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 550px) {
   .about {
+    .about-text {
+      font-size: 1.4rem;
+    }
     .wedding-video {
       flex-direction: column;
       .Video {

@@ -3,7 +3,7 @@ import storePicture from "../../library/storePicture.js";
 import { capitalize } from "../lib/ultilitis.js";
 
 function Input({ data, handleChange }) {
-  const { name, type, placeholder, multiple = false } = data;
+  const { name, type, placeholder, multiple = false, options = [] } = data;
   const handleData = (e) => {
     handleChange(
       (prev) => (prev = { ...prev, [e.target.name]: e.target.value })
@@ -30,27 +30,70 @@ function Input({ data, handleChange }) {
       });
     }
   };
+
+  const getInputType = (type) => {
+    switch (type) {
+      case "textarea":
+        return (
+          <textarea
+            cols={28}
+            rows={10}
+            name={name}
+            onChange={handleData}
+            placeholder={placeholder}
+            style={{ resize: false }}
+          />
+        );
+      case "text":
+        return (
+          <input
+            name={name}
+            type={type}
+            onChange={handleData}
+            placeholder={placeholder}
+          />
+        );
+      case "number":
+        return (
+          <input
+            name={name}
+            type={type}
+            onChange={handleData}
+            placeholder={placeholder}
+          />
+        );
+      case "file":
+        return (
+          <input
+            name={name}
+            type={type}
+            onChange={handleFile}
+            placeholder={placeholder}
+            multiple={multiple}
+          />
+        );
+      case "select":
+        return (
+          <select
+            name={name}
+            type={type}
+            onChange={handleData}
+            placeholder={placeholder}
+          >
+            {options.map((el) => (
+              <option value={el}>{el}</option>
+            ))}
+          </select>
+        );
+      default:
+        break;
+    }
+  };
+
   return (
     <label>
       {capitalize(name)}
-      {type === "textarea" ? (
-        <textarea
-          cols={28}
-          rows={10}
-          name={name}
-          onChange={handleData}
-          placeholder={placeholder}
-          style={{ resize: false }}
-        />
-      ) : (
-        <input
-          name={name}
-          type={type}
-          onChange={type === "file" ? handleFile : handleData}
-          placeholder={placeholder}
-          multiple={multiple}
-        />
-      )}
+      {getInputType(type)}
     </label>
   );
 }

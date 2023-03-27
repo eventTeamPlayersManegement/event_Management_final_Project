@@ -1,4 +1,4 @@
-$primary: #9962d7;
+$primary: #9505e3;
 $secondary: #333;
 $background: #eaeaea;
 $sometextcolor: #555;
@@ -9,6 +9,10 @@ $pad: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+  h1 {
+    margin: 1rem 0;
+  }
   .caruselContainer {
     flex: grid;
   }
