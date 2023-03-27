@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-
 .suppliers__nav--container {
-  // position: fixed;
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0;
-  padding-top: 4rem;
+  // margin: 0.5rem 0;
+  top: 4.5rem;
   .suppliers__nav--ul {
     list-style-type: none;
     margin: 0;
