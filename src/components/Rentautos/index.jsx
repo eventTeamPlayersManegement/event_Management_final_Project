@@ -32,7 +32,7 @@ export default function index() {
                   className="photo-card--image__item"
                   src={el}
                   alt="rentauto"
-                />
+                  />
                 <div className="photo-card--image__text"></div>
               </div>
             ))}
@@ -43,7 +43,9 @@ export default function index() {
   };
   return (
     <div>
+
       <SuppliersNav />
+ 
       <h2>{text.rentauto.title}</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
