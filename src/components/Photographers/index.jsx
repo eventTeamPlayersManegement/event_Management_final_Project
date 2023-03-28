@@ -17,23 +17,7 @@ function Index() {
   const Profilepicture = ({ photograph }) => {
     return (
       <div className="photographer__container">
-       {/* 3d Card 
-          <section className="profilbild__container">
-          <div className="card">
-
-            <div className="cover" style={{backgroundImage: `url(${photograph.avatar})`}}  >
-
-              <h3>{capitalizeName(photograph.name)}</h3>
-              <span className="price">€{photograph.price}</span> 
-              <div className="card-back">
-                <span>{capitalize(photograph.description)}</span>
-              </div>
-
-            </div>
-
-          </div>
-        </section> */}
-        
+      
         <div className="profile-picture__container">
           <img
             className="profile-picture__image--item"
