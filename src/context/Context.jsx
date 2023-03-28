@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { checkProfile } from "../library/api.jsx";
-import config from "../content/data.json";
 export const EventContext = createContext();
 
 /*
@@ -12,12 +11,13 @@ function Context({ children }) {
   const [data, setData] = useState({});
   const [theme, setTheme] = useState("light");
   const filtred = JSON.parse(sessionStorage.getItem("offers")) || [];
-  console.log(filtred);
+
   const toggleModus = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
+
   useEffect(() => {
     checkProfile().then(async (res) => {
       const userId = res.user.sub.split("|")[1];

@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   top: 4.5rem;
   .suppliers__nav--ul {
     list-style-type: none;
@@ -25,16 +26,17 @@
       .suppliers__nav--a:hover {
         background-color: $primary;
       }
+
       @media screen and (max-width: 858px) { 
         .suppliers__nav--a {
           font-size: 2rem;
         }
       }
-      @media screen and (max-width: 628px) { 
+
+      @media screen and (max-width: 615px) {
         .suppliers__nav--a {
           font-size: 1rem;
           padding: 7px 8px;
-          
         }
       }
     }

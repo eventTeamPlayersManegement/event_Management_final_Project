@@ -28,7 +28,7 @@ export default function Service() {
     photographer: false,
   };
   const partners = ["entertainment", "rentauto", "photographer"];
-  const navigate = useNavigate();
+
   const [values, setValues] = useState(inicialValues);
   const [suppliers, setSuppliers] = useState([]);
   useEffect(() => {
@@ -154,15 +154,14 @@ export default function Service() {
               </option>
             </select>
 
-            <div>
-              <DatePicker
-                className="datepicker"
-                selected={values.date}
-                onChange={(date) =>
-                  setValues((prev) => (prev = { ...prev, date }))
-                }
-              />
-            </div>
+            <DatePicker
+              className="datepicker"
+              selected={values.date}
+              onChange={(date) =>
+                setValues((prev) => (prev = { ...prev, date }))
+              }
+            />
+
             <label htmlFor="inOutdoor"></label>
             <select
               id="inOutdoor"
@@ -189,7 +188,7 @@ export default function Service() {
               onChange={handleOptionChange}
               value={values.guestNumber}
               min="10"
-              max="1000"
+              max="200"
             ></input>
             <label htmlFor="entertainment"></label>
             <select
@@ -252,10 +251,10 @@ export default function Service() {
               onChange={handleOptionChange}
             >
               <option value="">{ServiceData.Services.select.budget}</option>
-              <option value="500">
+              <option value="2000">
                 {ServiceData.Services.options.budget.option1}
               </option>
-              <option value="3000">
+              <option value="5000">
                 {ServiceData.Services.options.budget.option2}
               </option>
               <option value="10000">

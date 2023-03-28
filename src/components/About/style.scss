@@ -2,9 +2,8 @@
   height: 850px;
   overflow-y: scroll;
   padding-top: 4rem;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  margin-top: 100px;
+
   .about__title {
     font-family: "Italianno", cursive;
     font-size: calc($pad * 2);
@@ -180,6 +179,21 @@
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .about {
+    .div-container {
+      .steps-container {
+        flex-direction: column;
+      }
+    }
+    .wedding-video {
+      flex-direction: column;
+      .Video {
+        width: 100%;
+      }
+    }
+  }
+}
 // @media only screen and (max-width: 950px) {
 // .about {
 // .div-container {
@@ -239,6 +253,7 @@
           background-color: transparent;
           border: none;
           font-size: 2rem;
+          color: $background;
 
           cursor: pointer;
         }

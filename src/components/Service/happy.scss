@@ -2,7 +2,20 @@
   display: flex;
   flex-direction: column;
   padding: calc($pad * 2);
-  //   gap: calc($pad * 2);
+  @media (min-width: 400px) {
+    padding: calc($size * 0.5);
+    margin-bottom: calc($pad * 2);
+  }
+  @media (min-width: 650px) {
+    padding: $size;
+    margin-bottom: calc($pad * 2);
+  }
+  @media (min-width: 750px) {
+    margin-bottom: calc($pad * 2);
+  }
+  @media (min-width: 850px) {
+    padding: calc($size * 1.5);
+  }
 
   height: 850px;
   overflow-y: scroll;
@@ -16,12 +29,24 @@
     font-weight: 500;
     font-size: calc($pad * 2);
     color: $primary;
+    @media (max-width: 750px) {
+      font-size: calc($pad * 1.2);
+    }
+    @media (max-width: 650px) {
+      font-size: $pad;
+    }
   }
   h1 {
     font-family: "Italianno", cursive;
     font-weight: 500;
     font-size: calc($pad * 2);
     color: $secondary;
+    @media (max-width: 750px) {
+      font-size: calc($pad * 1.6);
+    }
+    @media (max-width: 650px) {
+      font-size: calc($pad * 1.3);
+    }
   }
   .gallery {
     display: grid;
@@ -51,5 +76,12 @@
       height: 100%;
       object-fit: cover;
     }
+    @media (max-width: 650) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
+}
+#dark h1 {
+  color: $background;
 }

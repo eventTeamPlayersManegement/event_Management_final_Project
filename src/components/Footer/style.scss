@@ -5,8 +5,10 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
+
   .footerContent {
     color: $sometextcolor;
     font-size: calc($size / 1.3);
+    align-items: center;
   }
 }
