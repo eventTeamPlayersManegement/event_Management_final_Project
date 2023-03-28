@@ -3,8 +3,7 @@
   inset: 70px 16px 50px 16px;
   z-index: 9999;
   background-color: $background;
-  display: flex;
-  flex-direction: column;
+
   @media (min-width: 640px) {
     inset: 70px 16px 150px 70%;
   }
@@ -54,6 +53,7 @@
     .chatList {
       padding: $size;
       flex: 1;
+      background-color: $background;
       .message {
         display: flex;
         flex-direction: column;

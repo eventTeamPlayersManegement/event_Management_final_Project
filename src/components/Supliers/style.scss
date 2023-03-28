@@ -1,17 +1,15 @@
 .ourSuppliers {
   margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 1rem;
-  // h1 {
-  //   margin: 1rem 0;
-  // }
-  // .caruselContainer {
-  //   flex: grid;
-  // }
-  // .mobile_grid_photos {
-  //   flex: 1;
-  // }
+  margin-inline: .5rem;
+  font-size: large;
+  padding-bottom: 3rem;
+  h2{
+    text-align:start;
+    margin-left: $size;
+    margin-bottom: $size;
+    margin-top: calc($size / 2);
+  }
+  section{
+    padding-top: calc($size * 6);
+  }
 }

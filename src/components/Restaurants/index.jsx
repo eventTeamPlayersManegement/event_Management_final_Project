@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
-import SuppliersNav from "../SuppliersNav";
+
 import { capitalizeName, capitalize } from "../lib/ultilitis";
 
 export default function index() {
@@ -16,9 +16,15 @@ export default function index() {
   }, []);
   const Restaurant = ({ restaurant }) => {
     return (
-      <div className="home-galerie__container">
-        <h1>{capitalizeName(restaurant.name)}</h1>
-        <>
+      <div className="restaurant-main__container">
+        <div className="restaurant-text__container">
+          <h2>{capitalizeName(restaurant.name)}</h2>
+          <p>{capitalize(restaurant.description)}</p>
+          <p>Price per person: ${restaurant.price}</p> 
+          <p>{capitalize(restaurant.street)}</p>
+          <p>{capitalize(restaurant.city)}</p>
+        </div>
+        <div className="restaurant-gallery__container">
           {restaurant.fotos.map((el) => (
             <div className="photo-card__container--polaroid" key={el._id}>
               <img
@@ -26,17 +32,15 @@ export default function index() {
                 src={el}
                 alt="restaurant"
               />
-
-              <div className="photo-card--image__text"></div>
             </div>
           ))}
-        </>
+        </div>
       </div>
     );
   };
   return (
     <section id="restaurants">
-      
+      <h2>Restaurants</h2>
       {database.map((el) => (
         <Restaurant key={el._id} restaurant={el} />
       ))}

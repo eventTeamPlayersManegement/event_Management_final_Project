@@ -4,19 +4,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: $size;
   top: 4.5rem;
   .suppliers__nav--ul {
+    background-color: $background;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 2px;
     .suppliers__nav--li {
       display: inline;
       border-right: 2px solid $primary;
       .suppliers__nav--a {
         color: $secondary;
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 400;
         font-family: "Italianno", cursive;
         text-align: center;
         padding: 14px 16px;
@@ -25,6 +27,13 @@
       .suppliers__nav--a:hover {
         background-color: $primary;
       }
+
+      @media screen and (max-width: 858px) { 
+        .suppliers__nav--a {
+          font-size: 2rem;
+        }
+      }
+
       @media screen and (max-width: 615px) {
         .suppliers__nav--a {
           font-size: 1rem;
@@ -36,4 +45,7 @@
       border-right: none;
     }
   }
+}
+#dark .suppliers__nav--ul {
+  background-color: $secondary;
 }
