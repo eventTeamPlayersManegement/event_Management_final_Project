@@ -1,8 +1,11 @@
 .rentauto-main__container{
   display: grid;
   grid-template-columns: 1fr 3fr;
+  box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #ffffff;
   .rentauto-text__container{
     padding-left: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     p{

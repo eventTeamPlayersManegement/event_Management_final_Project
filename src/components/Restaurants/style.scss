@@ -1,8 +1,11 @@
 .restaurant-main__container{
   display: grid;
   grid-template-columns: 1fr 2fr;
+  box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #ffffff;
   .restaurant-text__container{
     padding-left: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     p{

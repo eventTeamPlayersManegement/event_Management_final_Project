@@ -40,7 +40,6 @@ export default function index() {
   };
   return (
     <section id="restaurants">
-      
       {database.map((el) => (
         <Restaurant key={el._id} restaurant={el} />
       ))}
