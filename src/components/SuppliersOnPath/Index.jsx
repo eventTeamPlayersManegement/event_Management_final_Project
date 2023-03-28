@@ -312,7 +312,6 @@ function Index({ path }) {
                       )}
                       {path === "restaurant" ? (
                         <h4>
-                          {" "}
                           Price: from <span>{el.price}€</span> pro Pers.
                         </h4>
                       ) : (
