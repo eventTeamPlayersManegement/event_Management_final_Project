@@ -50,7 +50,6 @@ function Index() {
   
   return (
     <section id="photographers">
-      <h2>{text.photographer.title}</h2>
       <div className="home-galerie__container">
         {data.map((el, i) => (
           <Profilepicture key={i} photograph={el} />
