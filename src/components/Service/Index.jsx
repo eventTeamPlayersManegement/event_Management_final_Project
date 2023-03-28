@@ -28,7 +28,7 @@ export default function Service() {
     photographer: false,
   };
   const partners = ["entertainment", "rentauto", "photographer"];
-
+  const navigator = useNavigate();
   const [values, setValues] = useState(inicialValues);
   const [suppliers, setSuppliers] = useState([]);
   useEffect(() => {
@@ -53,7 +53,9 @@ export default function Service() {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-
+    if (!user.id) {
+      navigator("/signin");
+    }
     const restaurants = fetch("api/restaurant/filtered", {
       method: "POST",
       body: JSON.stringify({
