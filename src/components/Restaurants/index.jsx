@@ -18,7 +18,7 @@ export default function index() {
     return (
       <div className="restaurant-main__container">
         <div className="restaurant-text__container">
-          <h2>{capitalizeName(restaurant.name)}</h2>
+          <h3>{capitalizeName(restaurant.name)}</h3>
           <p>{capitalize(restaurant.description)}</p>
           <p>Price per person: ${restaurant.price}</p> 
           <p>{capitalize(restaurant.street)}</p>

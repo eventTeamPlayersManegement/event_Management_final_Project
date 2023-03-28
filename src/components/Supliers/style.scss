@@ -4,8 +4,10 @@
   font-size: large;
   padding-bottom: 3rem;
   h2{
-    text-align:start;
-    margin-left: $size;
+    font-family: "Italianno", cursive;
+    letter-spacing: 2px;
+    text-align: right;
+    margin-right: calc($size * 4);
     margin-bottom: $size;
     margin-top: calc($size / 2);
   }
