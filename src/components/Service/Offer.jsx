@@ -8,7 +8,7 @@ import {
 } from "../lib/ultilitis.js";
 import "./offer.scss";
 
-const handleSelect = async (obj, id, navigator) => {
+const handleSelect = async (obj, id) => {
   const res = await fetch("/api/stripe/create", {
     method: "POST",
     body: JSON.stringify({
