@@ -1,8 +1,11 @@
 .rentauto-main__container{
   display: grid;
   grid-template-columns: 1fr 3fr;
+  box-shadow: inset 20px 20px 60px #bebebe,
+            inset -20px -20px 60px #ffffff;
   .rentauto-text__container{
     padding-left: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     p{
@@ -28,11 +31,18 @@
         object-fit: cover;
       }
     }
+    .photo-card__container--polaroid:hover{
+      transform: scale(2);
+    }
   }
 }
-// @media screen and (max-width: 768px) {
-//   .rentauto-gallery__container {
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
+@media screen and (max-width: 768px) {
+  .rentauto-gallery__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#dark .rentauto-main__container {
+  box-shadow: inset 10px 10px 30px #0000009c,
+          inset -10px -10px 30px  #010101a2;
+}

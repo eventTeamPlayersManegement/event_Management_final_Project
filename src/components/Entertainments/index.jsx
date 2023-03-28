@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getPath } from "../../library/api";
 import "./style.scss";
-import SuppliersNav from "../SuppliersNav";
-// const database = await getPath("entertainment");
-// console.log(database);
+import { capitalizeName, capitalize } from "../lib/ultilitis";
+
 export default function index() {
   const [database, setData] = useState([]);
   async function getData() {
@@ -15,27 +14,30 @@ export default function index() {
   }, []);
   const Entertainment = ({ entertainment }) => {
     return (
-      <div className="home-galerie__container">
-        <>
+      <div className="entertainment-main__container">
+        <div className="entertainment-text__container">
+          <h2>{capitalizeName(entertainment.name)}</h2>
+          <p>{capitalize(entertainment.description)}</p>
+          <p>Price: ${entertainment.price}</p>
+          <p>{capitalize(entertainment.city)}</p>
+        </div>
+        <div className="entertainment-gallery__container">
           {entertainment.fotos.map((fotos) => (
-            
             <div className="photo-card__container--polaroid" key={fotos._id}>
               <img
                 className="photo-card--image__item"
                 src={fotos}
                 alt="entertainment"
               />
-              {/* <div className="photo-card--image__text">
-                <p>{fotos.title}</p>
-              </div> */}
             </div>
           ))}
-        </>
+        </div>
       </div>
     );
   };
   return (
     <section id="entertainments">
+      <h2>Entertainments</h2>
       {database.map((el) => (
         <Entertainment key={el._id} entertainment={el} />
       ))}
