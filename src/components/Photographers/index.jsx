@@ -16,14 +16,15 @@ function Index() {
 
   const Profilepicture = ({ photograph }) => {
     return (
-      <>
-       <section className="profilbild__container">
+      <div className="photographer__container">
+       {/* 3d Card 
+          <section className="profilbild__container">
           <div className="card">
 
             <div className="cover" style={{backgroundImage: `url(${photograph.avatar})`}}  >
 
               <h3>{capitalizeName(photograph.name)}</h3>
-              {/* <span className="price">€{photograph.price}</span> */}
+              <span className="price">€{photograph.price}</span> 
               <div className="card-back">
                 <span>{capitalize(photograph.description)}</span>
               </div>
@@ -31,27 +32,28 @@ function Index() {
             </div>
 
           </div>
-        </section>
-        <div className="home-galerie__container">
-          {photograph.fotos.map((el, i) => (
-            <Images key={i} image={el} />
-            ))}
-        </div>
-      </>
-      );
-     
-        {/*-----Profil Picture round  */}
-        {/* <div className="profile-picture__image--container">
+        </section> */}
+        
+        <div className="profile-picture__container">
           <img
-            className="profile-picture--image__item"
+            className="profile-picture__image--item"
             src={photograph.avatar}
             alt="photograph"
           />
-          <div>
-            <h3 className="profile-picture--image__title">{capitalizeName(photograph.name)}</h3>
-            <p className="profile-picture--image__text">{capitalize(photograph.description)}</p>
+          <div className="profile-picture__text--container">
+            <h3 className="profile-picture__text--title">{capitalizeName(photograph.name)}</h3>
+            <p className="profile-picture__text--paragraph">{capitalize(photograph.description)}</p>
+            <p className="profile-picture__text--price">Price €{photograph.price}</p> 
           </div>
-        </div> */}
+        </div> 
+        {photograph.fotos.map((el, i) => (
+          <Images key={i} image={el} />
+        ))}
+       
+      </div>
+    );
+     
+        
   };
   const Images = ({ image }) => {
     return (
@@ -63,13 +65,14 @@ function Index() {
   };
   
   return (
-    <section className="photographers__container" id="photographers">
+    <section id="photographers">
       <h2>{text.photographer.title}</h2>
       <div className="home-galerie__container">
         {data.map((el, i) => (
           <Profilepicture key={i} photograph={el} />
           ))}
       </div>
+    
     </section>
   );
 }
