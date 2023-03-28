@@ -10,12 +10,12 @@
 }
 
 #dark {
-  background-color: #333;
+  background-color: $secondary;
   color: $background;
 }
 #dark p {
-  color: #eaeaea;
+  color: $background;
 }
 #dark a {
-  color: #eaeaea;
+  color: $background;
 }
