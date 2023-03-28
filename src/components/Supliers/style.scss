@@ -4,10 +4,12 @@
   font-size: large;
   padding-bottom: 3rem;
   h2{
-    text-align: center;
+    text-align:start;
+    margin-left: $size;
+    margin-bottom: $size;
     margin-top: calc($size / 2);
   }
   section{
-    padding-top: calc($size * 9);
+    padding-top: calc($size * 6);
   }
 }
