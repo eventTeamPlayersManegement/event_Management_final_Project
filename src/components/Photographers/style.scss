@@ -9,7 +9,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-bottom: 2rem;
         border-radius: 2px;
         box-shadow: inset 20px 20px 40px #bebebe,
             inset -20px -20px 40px #ffffff;
@@ -41,7 +40,7 @@
             }   
         }
         .photo-card__container--polaroid{
-            width: min( 100%, 150px);
+            width: min( 100%, 200px);
             height: auto;
             background: #fff;
             padding: 0.25rem;
