@@ -37,7 +37,7 @@ export default function index() {
   };
   return (
     <section id="rentautos">
-
+      <h2>Rent Autos</h2>
       {database.map((el) => (
         <Rentauto key={el._id} rentauto={el} />
       ))}

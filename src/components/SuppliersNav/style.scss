@@ -4,13 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   top: 4.5rem;
   .suppliers__nav--ul {
+    background-color: $background;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 2px;
     .suppliers__nav--li {
       display: inline;
       border-right: 2px solid $primary;
@@ -44,4 +45,7 @@
       border-right: none;
     }
   }
+}
+#dark .suppliers__nav--ul {
+  background-color: $secondary;
 }

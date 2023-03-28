@@ -11,8 +11,8 @@
         justify-content: center;
         margin-bottom: 2rem;
         border-radius: 2px;
-        box-shadow: inset 20px 20px 60px #bebebe,
-            inset -20px -20px 60px #ffffff;
+        box-shadow: inset 20px 20px 40px #bebebe,
+            inset -20px -20px 40px #ffffff;
 
         .profile-picture__container{
             display: flex;
@@ -38,8 +38,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
               
-            }
-           
+            }   
         }
         .photo-card__container--polaroid{
             width: min( 100%, 150px);
@@ -55,17 +54,11 @@
                 height: auto;
                 object-fit: cover; 
             }
-            // .photo-card--image__text{
-            //     color: var(--black);
-            //     text-align: center;
-            // }
         }
         .photo-card__container--polaroid:hover{
             transform: scale(2);
         }
     }
-  
-    
 }
 
 @media screen and (max-width: 768px) { 
@@ -74,3 +67,8 @@
     align-items: center;
   }
 }
+#dark .photographer__container {
+    box-shadow: inset 10px 10px 10px #000000,
+            inset -10px -10px 10px  #010101;
+}
+  

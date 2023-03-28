@@ -42,3 +42,7 @@
     align-items: center;
   }
 }
+#dark .photographer__container {
+  box-shadow: inset 20px 20px 40px #000000,
+          inset -20px -20px 40px  #010101;
+}
