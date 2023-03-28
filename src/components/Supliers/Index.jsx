@@ -25,10 +25,10 @@ export default function Supliers() {
     <div className="ourSuppliers">
 
       <SuppliersNav />
-      <Restaurants />
       <Photographers />
-      <Rentautos />
       <Entertainments />
+      <Rentautos />
+      <Restaurants />
       {/* 
       <div className="caruselContainer">
         <div className="restaurants"></div>
