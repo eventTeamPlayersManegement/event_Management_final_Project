@@ -36,13 +36,13 @@
     }
   }
 }
-// @media screen and (max-width: 768px) {
-//   .rentauto-gallery__container {
-//     flex-direction: column;
-//     align-items: center;
-//   }
-// }
-#dark .photographer__container {
-  box-shadow: inset 20px 20px 40px #000000,
-          inset -20px -20px 40px  #010101;
+@media screen and (max-width: 768px) {
+  .rentauto-gallery__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#dark .rentauto-main__container {
+  box-shadow: inset 10px 10px 30px #0000009c,
+          inset -10px -10px 30px  #010101a2;
 }

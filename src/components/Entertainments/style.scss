@@ -37,8 +37,12 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .entertainment-gallery__container {
+  .entertainment-main__container {
     flex-direction: column;
     align-items: center;
   }
+}
+#dark .entertainment-main__container {
+  box-shadow: inset 10px 10px 30px #0000009c,
+          inset -10px -10px 30px  #010101a2;
 }
