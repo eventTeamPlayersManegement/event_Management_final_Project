@@ -22,7 +22,7 @@ export default function index() {
           <p>{capitalizeSentence(restaurant.description)}</p>
           <p>{capitalize(restaurant.street)}</p>
           <p>{capitalize(restaurant.city)}</p>
-          <p>Price per person: €{restaurant.price}</p> 
+          <p>{text.suppliers.price}{restaurant.price}</p> 
         </div>
         <div className="supplier-gallery__container">
           {restaurant.fotos.map((el) => (
