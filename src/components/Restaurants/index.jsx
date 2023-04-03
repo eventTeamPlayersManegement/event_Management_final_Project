@@ -27,7 +27,7 @@ export default function index() {
         <div className="supplier-gallery__container">
           {restaurant.fotos.map((el) => (
             <img
-              className="photo-card--image__item"
+              className="supplier-card__image"
               src={el}
               alt="restaurant"
             />
@@ -37,14 +37,14 @@ export default function index() {
     );
   };
   return (
-    <>
+    <section id="restaurants">
       <h2>Restaurants</h2>
-      <section id="restaurants" className="supplier">
+      <div  className="supplier">
         {database.map((el) => (
           <Restaurant key={el._id} restaurant={el} />
         ))}
-      </section>
-    </>
+      </div>
+    </section>
    
   );
 }
