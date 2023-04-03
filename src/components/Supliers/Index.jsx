@@ -10,10 +10,10 @@ export default function Supliers() {
     <div className="ourSuppliers">
 
       <SuppliersNav />
+      <Restaurants />
       <Photographers />
       <Entertainments />
       <Rentautos />
-      <Restaurants />
      
     </div>
   );
