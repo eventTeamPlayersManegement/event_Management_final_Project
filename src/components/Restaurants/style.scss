@@ -1,48 +1,77 @@
-.restaurant-main__container{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  box-shadow: inset 20px 20px 60px #bebebe,
-            inset -20px -20px 60px #ffffff;
-  .restaurant-text__container{
-    padding-left: 2rem;
-    padding-top: 2rem;
+h2 {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Italianno", cursive;
+  font-size: calc($pad * 2);
+  font-weight: 300;
+  color: $primary;
+  text-decoration: underline;
+  padding-right: $size;
+  @media (max-width: 450px) {
+    font-size: $pad;
+  }
+}
+.supplier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: $size;
+
+  @media (max-width: 1595px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .supplier-main__container {
     display: flex;
     flex-direction: column;
-    p{
-      padding-top: .5rem;
-    }
-  }
-  .restaurant-gallery__container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
-    .photo-card__container--polaroid {
-      width: min(100%, 250px);
-      background: #fff;
-      padding: 0.25rem;
-      margin: 0.75rem;
-      box-shadow: 2px 2px 6px #000000, 4px 4px 6px #010101;
-      .photo-card--image__item {
-        max-width: 100%;
-        object-fit: cover;
+    align-items: center;
+    width: 45%;
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+
+    .supplier-text__container {
+      width: 60%;
+      text-align: center;
+      @media (min-width: 400px) {
+        width: 100%;
+      }
+      & :last-child {
+        color: $primary;
+        font-weight: 900;
+      }
+
+      h3 {
+        text-align: center;
+        color: $primary;
       }
     }
-    .photo-card__container--polaroid:hover{
-      transform: scale(2);
+    .supplier-gallery__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      justify-items: center;
+      @media (max-width: 775px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .photo-card--image__item {
+        width: 330px;
+        aspect-ratio: 16/9;
+        background: #fff;
+        padding: 0.25rem;
+        margin: 0.75rem;
+        box-shadow: 2px 2px 6px #000000, 4px 4px 6px #010101;
+        object-fit: cover;
+        @media (max-width: 375px) {
+          width: 300px;
+        }
+      }
     }
   }
-}
-@media screen and (max-width: 768px) {
-  .restaurant-gallery__container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-#dark .restaurant-main__container {
-  box-shadow: inset 10px 10px 30px #0000009c,
-          inset -10px -10px 30px  #010101a2;
 }
