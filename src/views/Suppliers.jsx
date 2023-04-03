@@ -1,4 +1,4 @@
-import Index from "../components/Supliers/Index.jsx";
+import Index from "../components/Suppliers/Index.jsx";
 
 function Suppliers() {
   return <Index />;

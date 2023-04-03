@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
 
-import { capitalizeName, capitalize } from "../lib/ultilitis";
+import { capitalizeName, capitalize, capitalizeSentence } from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -16,23 +15,21 @@ export default function index() {
   }, []);
   const Restaurant = ({ restaurant }) => {
     return (
-      <div className="restaurant-main__container">
-        <div className="restaurant-text__container">
-          <h2>{capitalizeName(restaurant.name)}</h2>
-          <p>{capitalize(restaurant.description)}</p>
-          <p>Price per person: ${restaurant.price}</p> 
+      <div className="supplier-main__container">
+        <div className="supplier-text__container">
+          <h3>{capitalizeName(restaurant.name)}</h3>
+          <p>{capitalizeSentence(restaurant.description)}</p>
           <p>{capitalize(restaurant.street)}</p>
           <p>{capitalize(restaurant.city)}</p>
+          <p>{text.suppliers.price}{restaurant.price}</p> 
         </div>
-        <div className="restaurant-gallery__container">
+        <div className="supplier-gallery__container">
           {restaurant.fotos.map((el) => (
-            <div className="photo-card__container--polaroid" key={el._id}>
-              <img
-                className="photo-card--image__item"
-                src={el}
-                alt="restaurant"
-              />
-            </div>
+            <img
+              className="supplier-card__image"
+              src={el}
+              alt="restaurant"
+            />
           ))}
         </div>
       </div>
@@ -41,9 +38,12 @@ export default function index() {
   return (
     <section id="restaurants">
       <h2>Restaurants</h2>
-      {database.map((el) => (
-        <Restaurant key={el._id} restaurant={el} />
-      ))}
+      <div className="supplier">
+        {database.map((el) => (
+          <Restaurant key={el._id} restaurant={el} />
+        ))}
+      </div>
     </section>
+   
   );
 }

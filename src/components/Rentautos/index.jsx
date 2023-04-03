@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./style.scss";
 import { getPath } from "../../library/api";
-import { capitalizeName, capitalize } from "../lib/ultilitis";
+import { capitalizeName, capitalizeSentence } from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -14,22 +13,20 @@ export default function index() {
   }, []);
   const Rentauto = ({ rentauto }) => {
     return (
-      <div className="rentauto-main__container">
-        <div  className="rentauto-text__container">
+      <div className="supplier-main__container">
+        <div  className="supplier-text__container">
           {rentauto.provider.address && <p>Provider City: {rentauto.city}</p>}
           <h3> {capitalizeName(rentauto.name)}</h3>
-          <p>{capitalize(rentauto.description)}</p>
-          <p>Price ${rentauto.price}</p>
+          <p>{capitalizeSentence(rentauto.description)}</p>
+          <p>Price €{rentauto.price}</p>
         </div>
-        <div className="rentauto-gallery__container">
+        <div className="supplier-gallery__container">
           {rentauto.fotos.map((el) => (
-            <div className="photo-card__container--polaroid" key={el._id}>
-              <img
-                className="photo-card--image__item"
-                src={el}
-                alt="rentauto"
-              />
-            </div>
+            <img
+              className="supplier-card__image"
+              src={el}
+              alt="rentauto"
+            />
           ))}
         </div>
       </div>
@@ -38,9 +35,11 @@ export default function index() {
   return (
     <section id="rentautos">
       <h2>Rent Autos</h2>
-      {database.map((el) => (
-        <Rentauto key={el._id} rentauto={el} />
-      ))}
+      <div className="supplier">
+        {database.map((el) => (
+          <Rentauto key={el._id} rentauto={el} />
+        ))}
+      </div>
     </section>
   );
 }

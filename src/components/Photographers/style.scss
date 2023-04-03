@@ -39,21 +39,33 @@
               
             }   
         }
-        .photo-card__container--polaroid{
-            width: min( 100%, 200px);
-            height: auto;
-            background: #fff;
-            padding: 0.25rem;
-            margin: 0.75rem;
-            box-shadow:  2px 2px 6px #000000,
-            4px 4px 6px #010101;
-            
-            .photo-card--image__item{
-                max-width: 100%;
-                height: auto;
-                object-fit: cover; 
+        
+        .photographer-gallery__container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            // grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            @media (max-width: 775px) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             }
-        }
+            .photo-card--image__item{
+                width: 330px;
+                aspect-ratio: 4/5;
+                background: #fff;
+                padding: 0.25rem;
+                margin: 0.75rem;
+                box-shadow: 2px 2px 6px #000000, 4px 4px 6px #010101;
+                object-fit: cover;
+                @media (max-width: 375px) {
+                  width: 300px;
+                }
+                
+            }
+      
+        }    
+        
         .photo-card__container--polaroid:hover{
             transform: scale(2);
         }
