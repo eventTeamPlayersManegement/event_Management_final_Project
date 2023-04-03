@@ -13,10 +13,10 @@
     letter-spacing: 2px;
     text-align: start;
     margin-right: calc($size * 4);
-    margin-bottom: $size;
+    margin-bottom: calc($size / 3);
     margin-top: calc($size / 2);
   }
   section {
-    padding-top: calc($size * 6);
+    padding-top: calc($size * 2);
   }
 }
