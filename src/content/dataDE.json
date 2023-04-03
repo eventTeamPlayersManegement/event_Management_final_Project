@@ -9,10 +9,10 @@
     "copyright": "Copyright @ 2023 Event Elite Planners "
   },
   "contactUs": [
-    "Contact Us",
-    "The Elite Event Planners will plan and design your big day.",
-    "Tell us your story and put the planning of your event in our hands.",
-    "Elite Event Planners Team "
+    "Kontaktiere uns",
+    "Die Elite-Veranstaltungsplaner planen und gestalten Ihren großen Tag.",
+    "Erzählen Sie uns Ihre Geschichte und legen Sie die Planung Ihres Events in unsere Hände.",
+    "Elite Event Planners Team"
   ],
   "developers": [
     {
@@ -52,7 +52,6 @@
       "portfolio": "",
       "linkedin": "",
       "github": "https://github.com/Vlada99",
-
       "located": "Köln"
     }
   ],
@@ -77,29 +76,29 @@
   ],
 
   "Services": {
-    "submit": "Get Your Offer",
-    "title": "Your Event In Our Hands ",
+    "submit": "Holen Sie sich Ihr Angebot",
+    "title": "Ihre Veranstaltung in unseren Händen",
     "select": {
-      "location": "Select Location",
-      "event": "Select Type Event",
-      "date": "Select Your Event Date",
-      "inOutdoor": "Select Space Preference",
-      "entertainment": "Select Entertainment",
-      "guestNumber": "Guest number",
+      "location": "Wählen Sie Standort aus",
+      "event": "Wählen Sie Ereignistyp aus",
+      "date": "Wählen Sie Ihr Veranstaltungsdatum aus",
+      "inOutdoor": "Wählen Sie Raumpräferenz",
+      "entertainment": "Wählen Sie Unterhaltung",
+      "guestNumber": "Gast Nummer",
       "budget": "Budget",
-      "rentAuto": "Rent car",
-      "photographer": "Photographer"
+      "rentAuto": "Auto mieten",
+      "photographer": "Fotograf"
     },
     "options": {
       "event": {
-        "option1": "Birthday",
-        "option2": "Wedding"
+        "option1": "Geburtstag",
+        "option2": "Hochzeit"
       },
       "location": {},
       "date": "",
       "inOutdoor": {
-        "option1": "Indoor Party",
-        "option2": "Outdoor Party"
+        "option1": "Party im Innenbereich",
+        "option2": "Party im Freien"
       },
 
       "entertainment": {},
@@ -113,7 +112,7 @@
       "rentAuto": {},
       "photographer": {}
     },
-    "text": "At our company, we believe that life's special moments should be celebrated in style.That's why we specialize in creating unforgettable birthday and wedding events that reflect your unique personality and style.  For birthdays, we offer a wide range of customizable options to suit any age or theme. From fun and playful children's parties to sophisticated adult celebrations, we'll work with you to create an event that is tailored to your needs and budget. Our team of experienced event planners and designers will take care of every detail, from venue selection to catering, entertainment, and decorations.  When it comes to weddings, we understand that this is one of the most important days of your life. That's why we offer a full range of wedding planning services, from engagement parties to rehearsal dinners, ceremonies, and receptions. We'll work closely with you to understand your vision and preferences, and then bring that vision to life with expert planning and execution. Our services include everything from venue selection and vendor management to decor, catering, and entertainment. No matter what type of event we're planning, we're committed to providing exceptional service and attention to detail. We know that birthdays and weddings are once-in-a-lifetime events, and we're honored to be a part of your special day. Contact us today to learn more about our services and how we can help you create an unforgettable celebration!"
+    "text": "Wir in unserem Unternehmen glauben, dass die besonderen Momente des Lebens stilvoll gefeiert werden sollten. Deshalb haben wir uns darauf spezialisiert, unvergessliche Geburtstags- und Hochzeitsveranstaltungen zu kreieren, die Ihre einzigartige Persönlichkeit und Ihren Stil widerspiegeln. Für Geburtstage bieten wir eine große Auswahl an anpassbaren Optionen für jeden Geschmack Alter oder Thema. Von lustigen und verspielten Kinderfesten bis hin zu anspruchsvollen Erwachsenenfeiern arbeiten wir mit Ihnen zusammen, um eine Veranstaltung zu erstellen, die auf Ihre Bedürfnisse und Ihr Budget zugeschnitten ist. Unser Team aus erfahrenen Veranstaltungsplanern und Designern kümmert sich um jedes Detail, von von der Auswahl des Veranstaltungsortes bis hin zu Catering, Unterhaltung und Dekoration. Wenn es um Hochzeiten geht, wissen wir, dass dies einer der wichtigsten Tage Ihres Lebens ist. Deshalb bieten wir eine umfassende Palette an Hochzeitsplanungsdiensten an, von Verlobungsfeiern bis hin zu Probeessen. Zeremonien und Empfänge. Wir arbeiten eng mit Ihnen zusammen, um Ihre Vision und Vorlieben zu verstehen und diese Vision dann mit fachmännischer Planung und Ausführung zum Leben zu erwecken. Unsere Dienstleistungen umfassen alles von der Auswahl des Veranstaltungsortes und dem Lieferantenmanagement bis hin zu Dekoration, Catering und Unterhaltung. Ganz gleich, welche Art von Veranstaltung wir planen, wir verpflichten uns, außergewöhnlichen Service und Liebe zum Detail zu bieten. Wir wissen, dass Geburtstage und Hochzeiten einmalige Ereignisse sind, und wir fühlen uns geehrt, ein Teil Ihres besonderen Tages zu sein. Kontaktieren Sie uns noch heute, um mehr über unsere Dienstleistungen zu erfahren und wie wir Ihnen helfen können, eine unvergessliche Feier zu gestalten!"
   },
   "suppliers": { "title": "Our Suppliers", "price": "Price per person: €" },
 

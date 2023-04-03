@@ -27,8 +27,9 @@ function LanguageSwitcher() {
         <header className="App-header">
           {/* <h1>{t("welcome")}</h1>*/}
           <select name="language" onChange={onChange}>
-            <option value="en">English</option>
-            <option value="de">German</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="de">GR</option>
           </select>
         </header>
       </div>

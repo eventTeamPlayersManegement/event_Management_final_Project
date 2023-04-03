@@ -12,8 +12,11 @@ import { EventContext } from "../../context/Context.jsx";
 import "react-datepicker/dist/react-datepicker.css";
 import "./style.scss";
 import HappyCustomers from "./HappyCustomers.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function Service() {
+  const { t } = useTranslation();
+
   const data = useContext(EventContext);
   const [user, setUser] = data;
   const inicialValues = {
@@ -125,7 +128,7 @@ export default function Service() {
   return (
     <div className="servicesBlock">
       <div className="formBlock">
-        <h1 className="title">{ServiceData.Services.title}</h1>
+        <h1 className="title">{t("Services.title")}</h1>
 
         <form onSubmit={onSubmitHandler}>
           <div className="input-select-container">
@@ -137,7 +140,7 @@ export default function Service() {
               onChange={handleOptionChange}
               required
             >
-              <option>{ServiceData.Services.select.location}</option>
+              <option>{t("Services.select.location")}</option>
               {cityOptions}
             </select>
             <label htmlFor="event"></label>
@@ -147,12 +150,12 @@ export default function Service() {
               value={values.event}
               onChange={handleOptionChange}
             >
-              <option>{ServiceData.Services.select.event}</option>
+              <option>{t("Services.select.event")}</option>
               <option value="Birthday">
-                {ServiceData.Services.options.event.option1}
+                {t("Services.options.event.option1")}
               </option>
               <option value="Wedding">
-                {ServiceData.Services.options.event.option2}
+                {t("Services.options.event.option2")}
               </option>
             </select>
 
@@ -171,16 +174,16 @@ export default function Service() {
               name="indoor"
               onChange={handleOptionChange}
             >
-              <option value="">{ServiceData.Services.select.inOutdoor}</option>
+              <option value="">{t("Services.select.inOutdoor")}</option>
               <option value={true}>
-                {ServiceData.Services.options.inOutdoor.option1}
+                {t("Services.options.inOutdoor.option1")}
               </option>
               <option value={false}>
-                {ServiceData.Services.options.inOutdoor.option2}
+                {t("Services.options.inOutdoor.option2")}
               </option>
             </select>
             <label htmlFor="guestNumber">
-              {ServiceData.Services.select.guestNumber}
+              {t("Services.select.guestNumber")}
             </label>
             <input
               className="guests"
@@ -199,9 +202,7 @@ export default function Service() {
               name="entertainment"
               onChange={handleOptionChange}
             >
-              <option value="">
-                {ServiceData.Services.select.entertainment}
-              </option>
+              <option value="">{t("Services.select.entertainment")}</option>
               {suppliers?.entertainment?.map((enter) => {
                 return (
                   <option key={enter._id} value={enter._id}>
@@ -218,7 +219,7 @@ export default function Service() {
               value={values.rentAuto}
               onChange={handleOptionChange}
             >
-              <option value="">{ServiceData.Services.select.rentAuto}</option>
+              <option value="">{t("Services.select.rentAuto")}</option>
               {suppliers?.rentauto?.map((auto) => {
                 return (
                   <option key={auto._id} value={auto._id}>
@@ -234,9 +235,7 @@ export default function Service() {
               value={values.photographer}
               onChange={handleOptionChange}
             >
-              <option value="">
-                {ServiceData.Services.select.photographer}
-              </option>
+              <option value="">{t("Services.select.photographer")}</option>
               {suppliers?.photographer?.map((photo) => {
                 return (
                   <>
@@ -259,7 +258,7 @@ export default function Service() {
               name="budget"
               onChange={handleOptionChange}
             >
-              <option value="">{ServiceData.Services.select.budget}</option>
+              <option value="">{t("Services.select.budget")}</option>
               <option value="2000">
                 {ServiceData.Services.options.budget.option1}
               </option>
@@ -273,7 +272,7 @@ export default function Service() {
 
             <CustomButton
               type="submit"
-              submit={ServiceData.Services.submit}
+              submit={t("Services.submit")}
               style={"customBtnDefault"}
             />
           </div>
