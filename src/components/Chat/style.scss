@@ -3,24 +3,42 @@
   inset: 70px 16px 50px 16px;
   z-index: 9999;
   background-color: $background;
-
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid $secondary;
   @media (min-width: 640px) {
     inset: 70px 16px 150px 70%;
   }
   .top {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 1fr 100px;
     overflow-y: auto;
     .conversations {
       background-color: #555;
       display: flex;
       flex-direction: column;
       overflow-y: auto;
+      .customBtnDefault {
+        background-color: $primary;
+        border-radius: 0;
+        font-size: calc($size * 0.8);
+        padding: calc($size * 0.9);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
       button {
         border-radius: 0;
         font-size: calc($size/1.3);
-        padding: 0.5rem 1rem;
+        padding: 0.9rem;
+        background-color: inherit;
+        color: $background;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
       .usersChatsList {
         border: none;
@@ -35,7 +53,7 @@
       }
     }
     .chatList {
-      padding: calc($size / 2);
+      padding: $size;
       flex: 1;
       background-color: $background;
       .message {
@@ -83,5 +101,15 @@
       padding: 0.5rem 1rem;
       width: 80px;
     }
+  }
+}
+#dark .message {
+  p {
+    color: $secondary;
+  }
+}
+#dark .userBlock {
+  p {
+    color: $primary;
   }
 }

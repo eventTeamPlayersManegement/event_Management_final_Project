@@ -1,16 +1,17 @@
 .ourSuppliers {
-  margin-inline: .5rem;
+  margin-top: 4rem;
+  margin-inline: 0.5rem;
   font-size: large;
   padding-bottom: 3rem;
-  h2{
+  h2 {
     font-family: "Italianno", cursive;
     letter-spacing: 2px;
-    text-align: right;
+    text-align: start;
     margin-right: calc($size * 4);
     margin-bottom: $size;
     margin-top: calc($size / 2);
   }
-  section{
+  section {
     padding-top: calc($size * 6);
   }
 }
