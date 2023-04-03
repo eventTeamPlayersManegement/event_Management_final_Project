@@ -10,8 +10,7 @@
 
   .link {
     background-color: transparent;
-    font-size: 28px;
-    font-weight: 900;
+    font-size: calc($size * 1.3);
     letter-spacing: 2px;
     color: yellow;
     position: relative;
