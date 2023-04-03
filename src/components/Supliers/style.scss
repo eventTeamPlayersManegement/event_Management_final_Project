@@ -3,6 +3,11 @@
   margin-inline: 0.5rem;
   font-size: large;
   padding-bottom: 3rem;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   h2 {
     font-family: "Italianno", cursive;
     letter-spacing: 2px;
