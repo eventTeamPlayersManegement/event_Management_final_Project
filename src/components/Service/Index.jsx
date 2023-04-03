@@ -12,6 +12,7 @@ import { EventContext } from "../../context/Context.jsx";
 import "react-datepicker/dist/react-datepicker.css";
 import "./style.scss";
 import HappyCustomers from "./HappyCustomers.jsx";
+import CustomSelect from "./CustomSelect.jsx";
 
 export default function Service() {
   const data = useContext(EventContext);
@@ -21,11 +22,11 @@ export default function Service() {
     location: "",
     date: new Date(),
     indoor: true,
-    entertainment: "",
+    entertainment: "Entertainment",
     guestNumber: 10,
     budget: 500,
-    rentAuto: false,
-    photographer: false,
+    rentAuto: "Select Auto",
+    photographer: "Select Photographer",
   };
   const partners = ["entertainment", "rentauto", "photographer"];
   const navigator = useNavigate();
@@ -192,7 +193,15 @@ export default function Service() {
               min="10"
               max="200"
             ></input>
-            <label htmlFor="entertainment"></label>
+
+            <CustomSelect
+              description={values.entertainment}
+              name="entertainment"
+              setValue={setValues}
+              dataArr={suppliers.entertainment}
+            />
+
+            {/* <label htmlFor="entertainment"></label>
             <select
               id="entertainment"
               value={values.entertainment}
@@ -209,9 +218,14 @@ export default function Service() {
                   </option>
                 );
               })}
-            </select>
-
-            <label htmlFor="rentAuto"></label>
+            </select> */}
+            <CustomSelect
+              description={values.rentAuto}
+              name="rentAuto"
+              setValue={setValues}
+              dataArr={suppliers.rentauto}
+            />
+            {/* <label htmlFor="rentAuto"></label>
             <select
               id="rentAuto"
               name="rentAuto"
@@ -226,8 +240,15 @@ export default function Service() {
                   </option>
                 );
               })}
-            </select>
-            <label htmlFor="photographer"></label>
+            </select> */}
+            <CustomSelect
+              description={values.photographer}
+              name="photographer"
+              setValue={setValues}
+              dataArr={suppliers.photographer}
+            />
+
+            {/* <label htmlFor="photographer"></label>
             <select
               id="photographer"
               name="photographer"
@@ -251,7 +272,8 @@ export default function Service() {
                   </>
                 );
               })}
-            </select>
+            </select> */}
+
             <label htmlFor="budget"></label>
             <select
               id="budget"
