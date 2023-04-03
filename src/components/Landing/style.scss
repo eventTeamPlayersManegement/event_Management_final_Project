@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 
   .landingImg {
     background-color: $secondary;
@@ -26,9 +27,42 @@
   .video {
     display: none;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 650px) {
     .video {
       display: block;
+    }
+    .button {
+      position: absolute;
+      bottom: 12%;
+      left: 30%;
+    }
+    @media (min-width: 750px) {
+      .button {
+        left: 35%;
+      }
+    }
+    @media (min-width: 850px) {
+      .button {
+        left: 38%;
+      }
+    }
+    @media (min-width: 1050px) {
+      .button {
+        left: 5%;
+        bottom: 20%;
+      }
+    }
+    @media (min-width: 1150px) {
+      .button {
+        left: 7%;
+        bottom: 15%;
+      }
+    }
+    @media (min-width: 1250px) {
+      .button {
+        left: 10%;
+        bottom: 12%;
+      }
     }
     .moto,
     .landingImg {

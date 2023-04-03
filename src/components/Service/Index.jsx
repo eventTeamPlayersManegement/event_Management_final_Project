@@ -239,9 +239,16 @@ export default function Service() {
               </option>
               {suppliers?.photographer?.map((photo) => {
                 return (
-                  <option key={photo._id} value={photo._id}>
-                    {capitalizeName(photo.name)}
-                  </option>
+                  <>
+                    <option
+                      key={photo._id}
+                      value={photo._id}
+                      // style={{ backgroundImage: `url(${photo.avatar})` }}
+                    >
+                      {<img src={photo.avatar} height="30px" width="30px" />}
+                      {capitalizeName(photo.name)}
+                    </option>
+                  </>
                 );
               })}
             </select>

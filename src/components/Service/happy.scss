@@ -1,7 +1,8 @@
 .happyBlock {
   display: flex;
+
   flex-direction: column;
-  padding: calc($pad * 2);
+  // padding: calc($pad * 2);
   @media (min-width: 400px) {
     padding: calc($size * 0.5);
     margin-bottom: calc($pad * 2);
@@ -27,7 +28,7 @@
     justify-content: end;
     font-family: "Italianno", cursive;
     font-weight: 500;
-    font-size: calc($pad * 2);
+    font-size: calc($pad * 1.3);
     color: $primary;
     @media (max-width: 750px) {
       font-size: calc($pad * 1.2);
