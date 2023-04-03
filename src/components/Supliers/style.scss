@@ -1,14 +1,11 @@
 .ourSuppliers {
-  margin-top: 4rem;
+  margin-top: .5rem;
   margin-inline: 0.5rem;
   padding-bottom: 3rem;
   height: 900px;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
-  }
-  @media (min-width: 375px) {
-    width: 100vw;
   }
 
   h2 {
