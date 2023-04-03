@@ -212,20 +212,38 @@
 
 @media only screen and (max-width: 550px) {
   .about {
-    .about-text {
-      font-size: 1.4rem;
+    padding-top: 0;
+    width: 100%;
+    .about__title {
+      margin-bottom: 0;
     }
-    .wedding-video {
-      flex-direction: column;
-      .Video {
-        width: 100%;
+    .about__description {
+      margin: 0;
+      padding: 5px;
+      .about-text {
+        font-size: 1.8rem;
+      }
+      .wedding-video {
+        flex-direction: column;
+        padding: 10px;
+        .text-video {
+          font-size: 18px;
+        }
+      }
+    }
+    .div-container h1 {
+      font-size: 22px;
+    }
+    .steps-container {
+      div p {
+        font-size: 18px;
       }
     }
 
     .carousel {
       position: relative;
       overflow: hidden;
-      height: 200px;
+      height: 250px;
       margin: 0 auto;
 
       .carousel-inner {
@@ -253,7 +271,7 @@
           background-color: transparent;
           border: none;
           font-size: 2rem;
-          color: $background;
+          color: $primary;
 
           cursor: pointer;
         }
@@ -266,7 +284,7 @@
         opacity: 1;
       }
       50% {
-        opacity: 0.5;
+        opacity: 0.8;
       }
       100% {
         opacity: 1;
