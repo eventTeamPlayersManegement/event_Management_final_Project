@@ -3,7 +3,7 @@ import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
 
-import { capitalizeName, capitalize } from "../lib/ultilitis";
+import { capitalizeName, capitalize, capitalizeSentence } from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -19,8 +19,8 @@ export default function index() {
       <div className="restaurant-main__container">
         <div className="restaurant-text__container">
           <h3>{capitalizeName(restaurant.name)}</h3>
-          <p>{capitalize(restaurant.description)}</p>
-          <p>Price per person: ${restaurant.price}</p> 
+          <p>{capitalizeSentence(restaurant.description)}</p>
+          <p>Price per person: €{restaurant.price}</p> 
           <p>{capitalize(restaurant.street)}</p>
           <p>{capitalize(restaurant.city)}</p>
         </div>

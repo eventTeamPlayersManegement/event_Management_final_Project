@@ -18,7 +18,7 @@ export default function index() {
         <div className="entertainment-text__container">
           <h3>{capitalizeName(entertainment.name)}</h3>
           <p>{capitalize(entertainment.description)}</p>
-          <p>Price: ${entertainment.price}</p>
+          <p>Price: €{entertainment.price}</p>
           <p>{capitalize(entertainment.city)}</p>
         </div>
         <div className="entertainment-gallery__container">

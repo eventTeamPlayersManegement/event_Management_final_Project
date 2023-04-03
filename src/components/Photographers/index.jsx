@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
 import "./style.scss";
 import text from "../../content/data.json";
-import { capitalizeName, capitalize } from "../lib/ultilitis";
+import { capitalizeName, capitalizeSentence } from "../lib/ultilitis";
 
 function Index() {
   const [data, setData] = useState([]);
@@ -26,7 +26,7 @@ function Index() {
           />
           <div className="profile-picture__text--container">
             <h3 className="profile-picture__text--title">{capitalizeName(photograph.name)}</h3>
-            <p className="profile-picture__text--paragraph">{capitalize(photograph.description)}</p>
+            <p className="profile-picture__text--paragraph">{capitalizeSentence(photograph.description)}</p>
             <p className="profile-picture__text--price">Price €{photograph.price}</p> 
           </div>
         </div> 
