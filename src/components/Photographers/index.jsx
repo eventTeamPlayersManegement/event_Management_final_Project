@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPath } from "../../library/api";
 import "./style.scss";
-import text from "../../content/data.json";
 import { capitalizeName, capitalizeSentence } from "../lib/ultilitis";
 
 function Index() {
@@ -30,22 +29,15 @@ function Index() {
             <p className="profile-picture__text--price">Price €{photograph.price}</p> 
           </div>
         </div> 
-        {photograph.fotos.map((el, i) => (
-          <Images key={i} image={el} />
-        ))}
-       
+        <div className="photographer-gallery__container">
+          {photograph.fotos.map((el) => (
+            // <div className="photo-card__container--polaroid">
+            <img className="photo-card--image__item" src={el} alt="image" />
+          // </div>
+          ))}
+        </div>
       </div>
-    );
-     
-        
-  };
-  const Images = ({ image }) => {
-    return (
-      <div className="photo-card__container--polaroid">
-        <img className="photo-card--image__item" src={image} alt="image" />
-        {/* <div className="photo-card--image__text">Test</div> */}
-      </div>
-    );
+    );   
   };
   
   return (
