@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./style.scss";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
 
@@ -39,7 +38,7 @@ export default function index() {
   return (
     <section id="restaurants">
       <h2>Restaurants</h2>
-      <div  className="supplier">
+      <div className="supplier">
         {database.map((el) => (
           <Restaurant key={el._id} restaurant={el} />
         ))}
