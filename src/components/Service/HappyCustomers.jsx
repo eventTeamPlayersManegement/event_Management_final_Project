@@ -16,7 +16,7 @@ function HappyCustomers() {
 
       {customers.map((el, i) => (
         <>
-          <h2>{customerName[i]}</h2>
+          <h2 key={i}>{customerName[i]}</h2>
           <div className="gallery">
             {customersPic.map((pic) => {
               return (
