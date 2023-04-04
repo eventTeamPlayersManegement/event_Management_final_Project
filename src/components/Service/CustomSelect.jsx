@@ -13,16 +13,17 @@ function CustomSelect({ description, name, setValue, dataArr }) {
         {capitalizeName(selected.name)}
       </span>
       <ul className={!selected.show ? "hidden" : ""}>
-        {dataArr?.map((el) => {
+        {dataArr?.map((el, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 setSelected({ show: false, name: el.name });
                 setValue((prev) => (prev = { ...prev, [name]: el._id }));
               }}
             >
               <img src={el?.avatar} alt="" />
-              <span>{capitalizeName(el.name)}</span>
+              <span className="name">{capitalizeName(el.name)}</span>
             </li>
           );
         })}
