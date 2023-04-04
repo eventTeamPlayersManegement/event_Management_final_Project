@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import "./style.scss";
 import navitems from "../../content/data.json";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/Logo2.svg";
 import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
 
@@ -33,12 +33,14 @@ export default function Header() {
           onClick={() => navigate("/")}
         />
         <label className="switchmodus">
-          <span>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
+          <span>{theme === "light" ? " 🌞 " : " 🌙 "}</span>
           <div className="switch">
             <Switch
               onChange={toggleModus}
               checked={theme === "light"}
               onColor={"#9505e3"}
+              width={40}
+              height={20}
             />
           </div>
         </label>
