@@ -63,7 +63,7 @@
       justify-content: center;
       @media (min-width: 650px) {
         width: 500px;
-        padding: $pad;
+        // padding: $pad;
       }
       form {
         display: flex;
@@ -132,17 +132,17 @@
       flex-direction: column;
       flex: 1;
 
-      @media (max-width: 1075px) {
-        height: 900px;
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      }
+      // height: 900px;
+      // overflow-y: scroll;
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
 
       h1 {
         color: $primary;
         text-decoration: underline;
+        text-align: center;
+
         @media (min-width: 370px) {
           font-size: calc($size * 1.2);
         }

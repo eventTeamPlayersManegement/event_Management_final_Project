@@ -4,8 +4,6 @@
   section {
     padding-top: 7rem;
   }
-  
-  
 
   h2 {
     display: flex;
@@ -48,7 +46,7 @@
         width: 60%;
         text-align: left;
         @media (min-width: 400px) {
-          width: 100%;
+          width: 80%;
         }
         & :last-child {
           color: $primary;
