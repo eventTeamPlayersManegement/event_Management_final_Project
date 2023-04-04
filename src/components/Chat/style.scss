@@ -1,18 +1,23 @@
 .chat {
   position: absolute;
+
   top: 70px;
   right: $size;
   width: 500px;
   height: 550px;
+
   z-index: 9999;
   background-color: $background;
   display: flex;
   flex-direction: column;
   border: 0.5px solid $secondary;
+
+
   @media (max-width: 650px) {
     width: 100%;
     right: 0;
   }
+
   .top {
     flex: 1;
     display: grid;

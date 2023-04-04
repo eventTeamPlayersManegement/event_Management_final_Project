@@ -1,16 +1,17 @@
 .ourSuppliers {
   padding-bottom: 3rem;
-  // height: 900px;
-  // overflow-y: scroll;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+
+  section {
+    padding-top: 7rem;
+  }
+  
+  
 
   h2 {
     display: flex;
     justify-content: flex-end;
     font-family: "Italianno", cursive;
-    font-size: calc($pad * 2);
+    font-size: calc($pad * 1.5);
     font-weight: 300;
     color: $primary;
     text-decoration: underline;
@@ -26,6 +27,8 @@
     justify-content: space-evenly;
     align-items: center;
     padding: $size;
+
+    gap: $size;
 
     @media (max-width: 1595px) {
       flex-direction: column;
@@ -43,12 +46,13 @@
 
       .supplier-text__container {
         width: 60%;
-        text-align: center;
+        text-align: left;
         @media (min-width: 400px) {
           width: 100%;
         }
         & :last-child {
           color: $primary;
+          text-align: center;
           font-weight: 900;
         }
 

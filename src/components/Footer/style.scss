@@ -2,9 +2,10 @@
   text-align: center;
   padding: calc($pad / 2);
   background-color: $secondary;
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  width: 100vw;
+  left: 0;
+  right: 0;
   z-index: 999;
 
   .footerContent {

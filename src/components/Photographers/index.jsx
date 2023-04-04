@@ -31,9 +31,7 @@ function Index() {
         </div> 
         <div className="photographer-gallery__container">
           {photograph.fotos.map((el) => (
-            // <div className="photo-card__container--polaroid">
             <img className="photo-card--image__item" src={el} alt="image" />
-          // </div>
           ))}
         </div>
       </div>
