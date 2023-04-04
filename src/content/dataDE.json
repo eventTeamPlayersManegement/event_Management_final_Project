@@ -1,5 +1,5 @@
 {
-  "navItems": ["Arxiki", "Promh8eutes", "services", "Epikoinonia"],
+  "navItems": ["über Uns", "Anbieter", "Dienstleistungen", "Kontakt"],
 
   "landingText": {
     "wish": "Ihr Event, Ihr Wunsch",
@@ -116,21 +116,22 @@
   },
   "suppliers": { "title": "Our Suppliers", "price": "Price per person: €" },
 
-  "restaurant": { "title": "Our Restaurants" },
+  "restaurant": { "title": "Unsere Restaurants" },
 
   "baseURL": "http://localhost:3000",
 
-  "photographer": { "title": "Our photographers" },
+  "photographer": { "title": "Unsere Fotografen" },
 
-  "rentauto": { "title": "Rent Autos" },
+  "rentauto": { "title": "Autos mieten" },
   "dashboard": {
     "paths": [
-      "photographer",
-      "restaurant",
-      "rentauto",
-      "entertainment",
-      "message"
+      "Fotograf",
+      "Restaurant",
+      "mietauto",
+      "Unterhaltung",
+      "Nachricht"
     ],
-    "title": "Admins Dashboard"
-  }
+    "title": "Verwaltungs-Dashboard"
+  },
+  "customers": ["Unsere glücklichen Kunden"]
 }

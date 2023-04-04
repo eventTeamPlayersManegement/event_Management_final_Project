@@ -133,5 +133,6 @@
       "message"
     ],
     "title": "Admins Dashboard"
-  }
+  },
+  "customers": ["Our Happy Customers"]
 }
