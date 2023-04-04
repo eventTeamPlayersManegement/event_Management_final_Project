@@ -9,8 +9,12 @@ import { EventContext } from "../../context/Context.jsx";
 import Index from "../Chat/Index.jsx";
 import { MdDashboard } from "react-icons/md";
 import Switch from "react-switch";
+import LanguageSwitcher from "../Switchlanguage/Index.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   const [toggle, setToggle] = useState(false);
   const [toggleChat, setToggleChat] = useState(false);
 
@@ -38,6 +42,7 @@ export default function Header() {
             />
           </div>
         </label>
+        <LanguageSwitcher />
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           {navitems.navItems.map((el, i) => {

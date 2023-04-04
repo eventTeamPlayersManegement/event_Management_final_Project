@@ -1,0 +1,137 @@
+{
+  "navItems": ["über Uns", "Anbieter", "Dienstleistungen", "Kontakt"],
+
+  "landingText": {
+    "wish": "Ihr Event, Ihr Wunsch",
+    "our": "Unser Vergnügen"
+  },
+  "footer": {
+    "copyright": "Copyright @ 2023 Event Elite Planners "
+  },
+  "contactUs": [
+    "Kontaktiere uns",
+    "Die Elite-Veranstaltungsplaner planen und gestalten Ihren großen Tag.",
+    "Erzählen Sie uns Ihre Geschichte und legen Sie die Planung Ihres Events in unsere Hände.",
+    "Elite Event Planners Team"
+  ],
+  "developers": [
+    {
+      "name": "Ella Rotari",
+      "portfolio": "https://www.ella-rotari.com/",
+      "linkedin": "https://www.linkedin.com/in/elena-rotari-45b330243/",
+      "github": "https://github.com/elenaRotari",
+
+      "located": "Berlin"
+    },
+    {
+      "name": "Marcel Jaworski",
+      "portfolio": "https://marceljaworski.de/",
+      "linkedin": "https://www.linkedin.com/in/marcel-jaworski-0b58aba9/",
+      "github": "https://github.com/marceljaworski",
+
+      "located": "Regensburg"
+    },
+    {
+      "name": "Vaso Thom",
+      "portfolio": "https://vasosportofolio.vercel.app/",
+      "linkedin": "https://www.linkedin.com/in/vaso-thomopoulou-6820a21b9/",
+      "github": "https://github.com/VasoThom",
+
+      "located": "Düsseldorf"
+    },
+    {
+      "name": "Leo Volwahsen",
+      "portfolio": "https://portfolio-lv.netlify.app",
+      "linkedin": "https://www.linkedin.com/in/leo-volwahsen/",
+      "github": "https://github.com/leovolwahsen",
+
+      "located": "Berlin"
+    },
+    {
+      "name": "Vladislava Pavliy",
+      "portfolio": "",
+      "linkedin": "",
+      "github": "https://github.com/Vlada99",
+      "located": "Köln"
+    }
+  ],
+  "aboutUs": [
+    {
+      "title": "Über uns",
+      "description": "Event Elite Planners ist ein Veranstaltungsunternehmen, das 2023 gegründet wurde. Das Unternehmen bietet Veranstaltungsplanungsdienste von einem Team erfahrener Veranstaltungsplaner, Lieferanten, Veranstaltungsorte und mehr. In unserem Unternehmen glauben wir, dass die besonderen Momente des Lebens stilvoll gefeiert werden sollten. Deshalb sind wir darauf spezialisiert, unvergessliche Geburtstags- und Hochzeitsveranstaltungen zu kreieren, die Ihre einzigartige Persönlichkeit und Ihren einzigartigen Stil widerspiegeln. Ganz gleich, welche Art von Veranstaltung wir planen, wir verpflichten uns, außergewöhnlichen Service und Liebe zum Detail zu bieten. Wir wissen, dass Geburtstage und Hochzeiten einmalige Ereignisse sind, und wir fühlen uns geehrt, ein Teil Ihres besonderen Tages zu sein.",
+      "wedding": "Eine Hochzeit ist eines der wichtigsten Ereignisse im Leben eines Menschen und es ist eine Zeit, Liebe und Bindung mit Familie und Freunden zu feiern. Als Eventveranstalter für Hochzeiten ist es unsere Aufgabe, ein nahtloses und unvergessliches Erlebnis für das Paar und seine Gäste zu schaffen. Mit unserem Fachwissen und unserer Kreativität gestalten wir einen Hochzeitstag, den das Paar für immer in Erinnerung behalten wird.",
+      "birthday": "Für Geburtstage bieten wir eine große Auswahl an anpassbaren Optionen für jedes Alter und Thema. Von lustigen und spielerischen Kinderpartys bis hin zu anspruchsvollen Feiern für Erwachsene, wir arbeiten mit Ihnen zusammen, um eine Veranstaltung zu gestalten, die auf Ihre Bedürfnisse und Ihr Budget zugeschnitten ist. Unser Team aus erfahrenen Veranstaltungsplanern und Designern kümmert sich um jedes Detail, von der Auswahl des Veranstaltungsortes bis hin zu Catering, Unterhaltung und Dekoration.",
+      "stepstitle": "Unsere Zusammenarbeit in 5 Schritten",
+      "step1": "Kennenlernen",
+      "step1text": "Wir möchten so viel wie möglich über Sie, Ihre Liebesgeschichte und Ihre Vorstellungen von der Hochzeit erfahren. Am liebsten lernen wir Sie persönlich in unserem Studio oder virtuell kennen.",
+      "step2": "Planungsphase",
+      "step2text": "Nach erfolgreichem Vertragsabschluss gehen wir in die Planungsphase über. Alle Grundlagen sind gelegt und die ersten Zeitpläne geschrieben.",
+      "step3": "Kreative Phase",
+      "step3text": "Wir legen großen Wert auf Individualität und Qualität. Unsere Designkonzepte sind für jedes unserer Brautpaare einzigartig, voller Ideen und immer wieder neuer Inspiration.",
+      "step4": "Endkontrolle",
+      "step4text": "Zeitpläne werden finalisiert und Details bis ins kleinste Detail festgelegt. Alle Puzzleteile ergeben nun das große Ganze.",
+      "step5": "Veranstaltungstag",
+      "step5text": "Das große Finale! Wir unterstützen Sie am Tag Ihrer Veranstaltung und sorgen dafür, dass Sie die Feier in vollen Zügen genießen können."
+    }
+  ],
+
+  "Services": {
+    "submit": "Holen Sie sich Ihr Angebot",
+    "title": "Ihre Veranstaltung in unseren Händen",
+    "select": {
+      "location": "Wählen Sie Standort aus",
+      "event": "Wählen Sie Ereignistyp aus",
+      "date": "Wählen Sie Ihr Veranstaltungsdatum aus",
+      "inOutdoor": "Wählen Sie Raumpräferenz",
+      "entertainment": "Wählen Sie Unterhaltung",
+      "guestNumber": "Gast Nummer",
+      "budget": "Budget",
+      "rentAuto": "Auto mieten",
+      "photographer": "Fotograf"
+    },
+    "options": {
+      "event": {
+        "option1": "Geburtstag",
+        "option2": "Hochzeit"
+      },
+      "location": {},
+      "date": "",
+      "inOutdoor": {
+        "option1": "Party im Innenbereich",
+        "option2": "Party im Freien"
+      },
+
+      "entertainment": {},
+      "guestNumber": 0,
+      "budget": {
+        "option1": "€",
+        "option2": "€€",
+        "option3": "€€€"
+      },
+
+      "rentAuto": {},
+      "photographer": {}
+    },
+    "text": "Wir in unserem Unternehmen glauben, dass die besonderen Momente des Lebens stilvoll gefeiert werden sollten. Deshalb haben wir uns darauf spezialisiert, unvergessliche Geburtstags- und Hochzeitsveranstaltungen zu kreieren, die Ihre einzigartige Persönlichkeit und Ihren Stil widerspiegeln. Für Geburtstage bieten wir eine große Auswahl an anpassbaren Optionen für jeden Geschmack Alter oder Thema. Von lustigen und verspielten Kinderfesten bis hin zu anspruchsvollen Erwachsenenfeiern arbeiten wir mit Ihnen zusammen, um eine Veranstaltung zu erstellen, die auf Ihre Bedürfnisse und Ihr Budget zugeschnitten ist. Unser Team aus erfahrenen Veranstaltungsplanern und Designern kümmert sich um jedes Detail, von von der Auswahl des Veranstaltungsortes bis hin zu Catering, Unterhaltung und Dekoration. Wenn es um Hochzeiten geht, wissen wir, dass dies einer der wichtigsten Tage Ihres Lebens ist. Deshalb bieten wir eine umfassende Palette an Hochzeitsplanungsdiensten an, von Verlobungsfeiern bis hin zu Probeessen. Zeremonien und Empfänge. Wir arbeiten eng mit Ihnen zusammen, um Ihre Vision und Vorlieben zu verstehen und diese Vision dann mit fachmännischer Planung und Ausführung zum Leben zu erwecken. Unsere Dienstleistungen umfassen alles von der Auswahl des Veranstaltungsortes und dem Lieferantenmanagement bis hin zu Dekoration, Catering und Unterhaltung. Ganz gleich, welche Art von Veranstaltung wir planen, wir verpflichten uns, außergewöhnlichen Service und Liebe zum Detail zu bieten. Wir wissen, dass Geburtstage und Hochzeiten einmalige Ereignisse sind, und wir fühlen uns geehrt, ein Teil Ihres besonderen Tages zu sein. Kontaktieren Sie uns noch heute, um mehr über unsere Dienstleistungen zu erfahren und wie wir Ihnen helfen können, eine unvergessliche Feier zu gestalten!"
+  },
+  "suppliers": { "title": "Our Suppliers", "price": "Price per person: €" },
+
+  "restaurant": { "title": "Unsere Restaurants" },
+
+  "baseURL": "http://localhost:3000",
+
+  "photographer": { "title": "Unsere Fotografen" },
+
+  "rentauto": { "title": "Autos mieten" },
+  "dashboard": {
+    "paths": [
+      "Fotograf",
+      "Restaurant",
+      "mietauto",
+      "Unterhaltung",
+      "Nachricht"
+    ],
+    "title": "Verwaltungs-Dashboard"
+  },
+  "customers": ["Unsere glücklichen Kunden"]
+}
