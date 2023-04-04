@@ -43,6 +43,7 @@
       border-radius: 50%;
       width: 35px;
     }
+   
   }
   .nav__menu {
     display: flex;
@@ -96,6 +97,11 @@
       .avatar {
         border-radius: 50%;
         width: 25px;
+      }
+      .nickName{
+        width: calc($pad * 2);
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
   }
