@@ -47,7 +47,7 @@ export default function Header() {
         <LanguageSwitcher />
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
-          {t("navItems", { returnObjects: true }).map((el, i) => {
+          {navitems.navItems.map((el, i) => {
             return (
               <li
                 className="nav__item"
@@ -55,7 +55,10 @@ export default function Header() {
                 onClick={() => setToggle(!toggle)}
               >
                 <Link to={`/${el}`} className="nav__link">
-                  {el.charAt(0).toUpperCase() + el.slice(1)}
+                  {t("navItems", { returnObjects: true })
+                    [i].charAt(0)
+                    .toUpperCase() +
+                    t("navItems", { returnObjects: true })[i].slice(1)}
                 </Link>
               </li>
             );
