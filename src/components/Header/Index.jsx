@@ -2,15 +2,19 @@ import { useState, useContext } from "react";
 import "./style.scss";
 import navitems from "../../content/data.json";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/Logo2.svg";
 import Footer from "../Footer/Index.jsx";
 import { EventContext } from "../../context/Context.jsx";
 
 import Index from "../Chat/Index.jsx";
 import { MdDashboard } from "react-icons/md";
 import Switch from "react-switch";
+import LanguageSwitcher from "../Switchlanguage/Index.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   const [toggle, setToggle] = useState(false);
   const [toggleChat, setToggleChat] = useState(false);
 
@@ -29,15 +33,18 @@ export default function Header() {
           onClick={() => navigate("/")}
         />
         <label className="switchmodus">
-          <span>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
+          <span>{theme === "light" ? " 🌞 " : " 🌙 "}</span>
           <div className="switch">
             <Switch
               onChange={toggleModus}
               checked={theme === "light"}
               onColor={"#9505e3"}
+              width={40}
+              height={20}
             />
           </div>
         </label>
+        <LanguageSwitcher />
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           {navitems.navItems.map((el, i) => {

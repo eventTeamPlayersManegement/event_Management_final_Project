@@ -3,8 +3,10 @@ import "./style.scss";
 import contact from "../../content/data.json";
 import { useState } from "react";
 import Team from "./Team.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const initial = {
     name: "",
     email: "",
@@ -50,18 +52,18 @@ export default function Contact() {
     <div className="blockContact">
       <div className="team">
         <div>
-          <h1>{contact.contactUs[3]}</h1>
+          <h1>{t("contactUs.3")}</h1>
         </div>
         <ul className="images">
           <Team />
         </ul>
         <div className="bottom">
-          <h1>{contact.contactUs[1]}</h1>
-          <h1>{contact.contactUs[2]}</h1>
+          <h1>{t("contactUs.1")}</h1>
+          <h1>{t("contactUs.2")}</h1>
         </div>
       </div>
       <div className="form-container">
-        <h1>{contact.contactUs[0]}</h1>
+        <h1>{t("contactUs.0")}</h1>
 
         <form onSubmit={onSubmitHandler}>
           <input

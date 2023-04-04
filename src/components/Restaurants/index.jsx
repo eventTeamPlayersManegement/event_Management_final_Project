@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { getPath } from "../../library/api";
 import text from "../../content/data.json";
 
-import { capitalizeName, capitalize, capitalizeSentence } from "../lib/ultilitis";
+import {
+  capitalizeName,
+  capitalize,
+  capitalizeSentence,
+} from "../lib/ultilitis";
 
 export default function index() {
   const [database, setData] = useState([]);
@@ -21,15 +25,14 @@ export default function index() {
           <p>{capitalizeSentence(restaurant.description)}</p>
           <p>{capitalize(restaurant.street)}</p>
           <p>{capitalize(restaurant.city)}</p>
-          <p>{text.suppliers.price}{restaurant.price}</p> 
+          <p>
+            {text.suppliers.price}
+            {restaurant.price}
+          </p>
         </div>
         <div className="supplier-gallery__container">
           {restaurant.fotos.map((el) => (
-            <img
-              className="supplier-card__image"
-              src={el}
-              alt="restaurant"
-            />
+            <img className="supplier-card__image" src={el} alt="restaurant" />
           ))}
         </div>
       </div>
@@ -44,6 +47,5 @@ export default function index() {
         ))}
       </div>
     </section>
-   
   );
 }

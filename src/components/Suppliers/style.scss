@@ -1,10 +1,12 @@
 .ourSuppliers {
   padding-bottom: 3rem;
+
   section {
     padding-top: 7rem;
   }
   
   
+
   h2 {
     display: flex;
     justify-content: flex-end;
@@ -25,9 +27,9 @@
     justify-content: space-evenly;
     align-items: center;
     padding: $size;
+
     gap: $size;
 
-    
     @media (max-width: 1595px) {
       flex-direction: column;
       justify-content: center;
@@ -41,7 +43,7 @@
       @media (max-width: 650px) {
         width: 100%;
       }
-  
+
       .supplier-text__container {
         width: 60%;
         text-align: left;
@@ -53,7 +55,7 @@
           text-align: center;
           font-weight: 900;
         }
-  
+
         h3 {
           text-align: center;
           color: $primary;
@@ -63,14 +65,14 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-  
+
         justify-items: center;
         @media (max-width: 775px) {
           display: flex;
           flex-direction: column;
           justify-content: center;
         }
-  
+
         .supplier-card__image {
           width: 330px;
           aspect-ratio: 5/4;
@@ -86,5 +88,4 @@
       }
     }
   }
-  
 }

@@ -1,3 +1,6 @@
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+
 import "./happy.scss";
 
 function HappyCustomers() {
@@ -9,10 +12,11 @@ function HappyCustomers() {
     "Lessy & John",
     "Andrew & Tanny",
   ];
+  const { t } = useTranslation();
 
   return (
     <div className="happyBlock">
-      <h1>Our Happy Customers</h1>
+      <h1>{t("customers.0")}</h1>
 
       {customers.map((el, i) => (
         <>

@@ -39,10 +39,13 @@ import weddingVideo from "../../assets/bilderEvent/wedding1.mp4";
 import birthVideo from "../../assets/bilderEvent/birth.mp4";
 import ring from "../../assets/bilderEvent/ring.jpg";
 import ringw from "../../assets/bilderEvent/ring1.jpeg";
+import { useTranslation } from "react-i18next";
 
 import { useState, useEffect } from "react";
 
 export default function About() {
+  const { t } = useTranslation();
+
   const images = [
     img1,
 
@@ -79,6 +82,7 @@ export default function About() {
     img33,
     img34,
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,17 +112,17 @@ export default function About() {
   };
   return (
     <div className="about">
-      <h1 className="about__title">{about.aboutUs[0].title}</h1>
+      <h1 className="about__title">{t("aboutUs.0.title")}</h1>
 
       <section className="about__description">
-        <p className="about-text">{about.aboutUs[0].description}</p>
+        <p className="about-text">{t("aboutUs.0.description")}</p>
 
         <div className="wedding-video">
           <video className="Video" controls autoPlay muted>
             <source src={weddingVideo} type="video/mp4" />
           </video>
           <div className="wedding-container">
-            <p className="text-video">{about.aboutUs[0].wedding}</p>
+            <p className="text-video">{t("aboutUs.0.wedding")}</p>
             <div className="ring-container">
               <img className="img-ring" src={ring} alt="" />
               <img className="img-ring" src={ringw} alt="" />
@@ -129,7 +133,7 @@ export default function About() {
         </div>
         <div className="wedding-video">
           <div className="wedding-container">
-            <p className="text-video">{about.aboutUs[0].birthday}</p>
+            <p className="text-video">{t("aboutUs.0.birthday")}</p>
             <div className="ring-container">
               <img className="img-ring" src={img34} alt="" />
               <img className="img-ring" src={img25} alt="" />
@@ -145,42 +149,42 @@ export default function About() {
 
       <section className="div-container">
         <div className="div-line"></div>
-        <h1 className="steps">{about.aboutUs[0].stepstitle}</h1>
+        <h1 className="steps">{t("aboutUs.0.stepstitle")}</h1>
         <div className="steps-container">
           <div>
             <h1>
               1. <br />
-              {about.aboutUs[0].step1}
+              {t("aboutUs.0.step1")}
             </h1>
-            <p>{about.aboutUs[0].step1text}</p>
+            <p>{t("aboutUs.0.step1text")}</p>
           </div>
           <div>
             <h1>
               2. <br />
-              {about.aboutUs[0].step2}
+              {t("aboutUs.0.step2")}
             </h1>
-            <p>{about.aboutUs[0].step2text}</p>
+            <p>{t("aboutUs.0.step2text")}</p>
           </div>
           <div>
             <h1>
               3. <br />
-              {about.aboutUs[0].step3}
+              {t("aboutUs.0.step3")}
             </h1>
-            <p>{about.aboutUs[0].step3text}</p>
+            <p>{t("aboutUs.0.step3text")}</p>
           </div>
           <div>
             <h1>
               4. <br />
-              {about.aboutUs[0].step4}
+              {t("aboutUs.0.step4")}
             </h1>
-            <p>{about.aboutUs[0].step4text}</p>
+            <p>{t("aboutUs.0.step4text")}</p>
           </div>
           <div>
             <h1>
               5. <br />
-              {about.aboutUs[0].step5}
+              {t("aboutUs.0.step5")}
             </h1>
-            <p>{about.aboutUs[0].step5text}</p>
+            <p>{t("aboutUs.0.step5text")}</p>
           </div>
         </div>
 
