@@ -1,7 +1,7 @@
 .header {
   background-color: $secondary;
-  // position: fixed;
-  width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 999;
   .nav__logo {
     font-size: 20px;
@@ -100,11 +100,7 @@
     }
   }
 }
-@media (max-width: 850px) {
-  .header {
-    width: 100vw;
-  }
-}
+
 @media screen and (max-width: 650px) {
   .header {
     .nav {

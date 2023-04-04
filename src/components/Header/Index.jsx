@@ -59,7 +59,6 @@ export default function Header() {
             className="uil uil-times-circle nav__close"
             onClick={() => setToggle(!toggle)}
           ></i>
-          <Footer />
         </ul>
 
         <div className="nav__icons">

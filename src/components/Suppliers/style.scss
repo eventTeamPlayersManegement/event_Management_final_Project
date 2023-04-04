@@ -1,10 +1,9 @@
 .ourSuppliers {
   padding-bottom: 3rem;
-  height: 900px;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    display: none;
+  section {
+    padding-top: 7rem;
   }
+
 
   h2 {
     display: flex;
@@ -26,7 +25,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: $size;
-  
+    
     @media (max-width: 1595px) {
       flex-direction: column;
       justify-content: center;
