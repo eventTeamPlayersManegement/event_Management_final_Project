@@ -21,7 +21,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [data, setData] = useContext(EventContext);
   const { theme, setTheme, toggleModus } = useContext(EventContext)[2];
-
+  console.log(t("navItems", { returnObjects: true }));
   return (
     <header className="header">
       {toggleChat && <Index />}
@@ -47,7 +47,7 @@ export default function Header() {
         <LanguageSwitcher />
 
         <ul className={toggle ? "nav__menu show-menu" : "nav__menu"}>
-          {navitems.navItems.map((el, i) => {
+          {t("navItems", { returnObjects: true }).map((el, i) => {
             return (
               <li
                 className="nav__item"
