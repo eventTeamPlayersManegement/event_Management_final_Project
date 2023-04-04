@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import data from "../../content/data.json";
 import translationDE from "../../content/dataDE.json";
 import translationGR from "../../content/dataGR.json";
+import "./style.scss";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -28,7 +29,7 @@ function LanguageSwitcher() {
     <Suspense fallback={"Loading..."}>
       <div>
         <header className="App-header">
-          <select name="language" onChange={onChange}>
+          <select name="language" onChange={onChange} className="lang">
             <option value="en">🇺🇸</option>
             <option value="de">🇩🇪 </option>
             <option value="gr">🇬🇷</option>
