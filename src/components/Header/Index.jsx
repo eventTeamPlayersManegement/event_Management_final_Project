@@ -21,7 +21,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [data, setData] = useContext(EventContext);
   const { theme, setTheme, toggleModus } = useContext(EventContext)[2];
-  console.log(t("navItems", { returnObjects: true }));
+  // console.log(t("navItems", { returnObjects: true }));
   return (
     <header className="header">
       {toggleChat && <Index />}
