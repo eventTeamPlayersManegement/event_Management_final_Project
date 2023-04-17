@@ -23,12 +23,13 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-      }
-      .suppliers__nav--a:hover {
-        background-color: $primary;
+        &:hover {
+          background-color: $primary;
+          color: $background;
+        }
       }
 
-      @media screen and (max-width: 858px) { 
+      @media screen and (max-width: 858px) {
         .suppliers__nav--a {
           font-size: 2rem;
         }
@@ -40,9 +41,9 @@
           padding: 7px 8px;
         }
       }
-    }
-    .suppliers__nav--li:last-child {
-      border-right: none;
+      &:last-child {
+        border-right: none;
+      }
     }
   }
 }
