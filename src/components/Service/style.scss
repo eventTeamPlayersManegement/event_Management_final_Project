@@ -1,9 +1,9 @@
 .servicesBlock {
   display: flex;
-
+  position: relative;
   flex-direction: column;
-  flex: wrap;
-  justify-content: space-between;
+
+  // justify-content: space-between;
   @media (min-width: 1175px) {
     flex-direction: row;
   }
@@ -11,13 +11,20 @@
   .formBlock {
     padding: $pad;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    height: 100%;
 
     @media (min-width: 1175px) {
       min-width: 500px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      transform: translateY(-40%);
+      left: 0;
     }
 
     .title {

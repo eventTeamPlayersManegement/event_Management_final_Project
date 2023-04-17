@@ -9,28 +9,38 @@
   .div-container {
     width: 100%;
     text-align: center;
-    h1 {
+    .steps {
+      font-family: "Italianno", cursive;
       color: $sometextcolor;
+      font-size: calc($pad * 2);
+      font-weight: 500;
+    }
 
-      font-size: 1.8rem;
+    //   text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    //     0px -4px 10px rgba(255, 255, 255, 0.3);
+  }
+  p {
+    color: $secondary;
+  }
+  .div-line {
+    width: 80vw;
+    border: 1px solid $sometextcolor;
+    margin: 0 auto;
+  }
+  .steps-container {
+    display: flex;
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    gap: calc($pad * 1.5);
+    h1 {
+      font-size: 1.5rem;
       margin-bottom: 15px;
       margin-top: 15px;
-      text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-        0px -4px 10px rgba(255, 255, 255, 0.3);
     }
     p {
-      color: $secondary;
-    }
-    .div-line {
-      width: 80vw;
-      border: 1px solid $sometextcolor;
-      margin: 0 auto;
-    }
-    .steps-container {
-      display: flex;
-      width: 70vw;
-      margin: 0 auto;
-      margin-bottom: 50px;
+      text-align: justify;
+      font-size: calc($size * 1.2);
     }
   }
 
@@ -85,8 +95,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    padding: 20px 50px;
+
+    padding: 0px 50px;
 
     .about-text {
       font-family: "Italianno", cursive;
