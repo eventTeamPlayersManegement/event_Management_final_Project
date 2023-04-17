@@ -23,7 +23,7 @@ export default function () {
   if (isLoading) return <div className="chatList">loading...</div>;
   const customStyles = {
     alone: { gridTemplateColumns: "1fr" },
-    multiple: { gridTemplateColumns: "1fr 80px" },
+    multiple: { gridTemplateColumns: "1fr 100px" },
   };
   return (
     <div className="chat">
