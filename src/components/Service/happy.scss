@@ -18,7 +18,8 @@
     padding: calc($size * 1.5);
   }
   @media (min-width: 1175px) {
-    margin-left: 500px;
+    margin-left: 600px;
+    padding: calc($pad * 2);
   }
 
   overflow-y: scroll;

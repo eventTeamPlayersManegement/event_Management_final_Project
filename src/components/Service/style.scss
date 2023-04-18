@@ -3,7 +3,6 @@
   position: relative;
   flex-direction: column;
 
-  // justify-content: space-between;
   @media (min-width: 1175px) {
     flex-direction: row;
   }
@@ -11,14 +10,12 @@
   .formBlock {
     padding: $pad;
     margin: 0 auto;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+
     height: 100%;
 
     @media (min-width: 1175px) {
-      min-width: 500px;
+      min-width: 600px;
+      padding: 2rem;
       position: fixed;
       display: flex;
       flex-direction: column;
@@ -29,7 +26,7 @@
 
     .title {
       font-family: "Italianno", cursive;
-      font-size: calc($pad * 1.2);
+      text-align: center;
       font-weight: 500;
       @media (min-width: 375px) {
         font-size: calc($pad * 1.3);
