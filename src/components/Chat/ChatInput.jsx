@@ -30,7 +30,7 @@ function ChatInput({ conversationId, userId }) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         disabled={!conversationId}
-        placeholder={"Type your text..."}
+        placeholder={"Type your message..."}
       />
       {
         <CustomButton

@@ -23,7 +23,7 @@ function ChatList({ selected }) {
           key={el._id}
         >
           <div className="userBlock">
-            <img src={el.writer.data.picture} />
+            <img src={el.writer.data?.picture} />
             <p>{el.writer.data.name}:</p>
           </div>
           <div className="messages">
